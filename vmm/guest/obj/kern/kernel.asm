@@ -1259,15 +1259,15 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420019e:	55                   	push   %rbp
   800420019f:	48 89 e5             	mov    %rsp,%rbp
   80042001a2:	48 83 ec 10          	sub    $0x10,%rsp
-  80042001a6:	48 ba 10 e0 6d 04 80 	movabs $0x80046de010,%rdx
+  80042001a6:	48 ba 10 f0 6d 04 80 	movabs $0x80046df010,%rdx
   80042001ad:	00 00 00 
-  80042001b0:	48 b8 a0 be 49 04 80 	movabs $0x800449bea0,%rax
+  80042001b0:	48 b8 20 c0 49 04 80 	movabs $0x800449c020,%rax
   80042001b7:	00 00 00 
   80042001ba:	48 29 c2             	sub    %rax,%rdx
   80042001bd:	48 89 d0             	mov    %rdx,%rax
   80042001c0:	48 89 c2             	mov    %rax,%rdx
   80042001c3:	be 00 00 00 00       	mov    $0x0,%esi
-  80042001c8:	48 bf a0 be 49 04 80 	movabs $0x800449bea0,%rdi
+  80042001c8:	48 bf 20 c0 49 04 80 	movabs $0x800449c020,%rdi
   80042001cf:	00 00 00 
   80042001d2:	48 b8 70 ff 20 04 80 	movabs $0x800420ff70,%rax
   80042001d9:	00 00 00 
@@ -1328,13 +1328,13 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   80042002c4:	00 00 00 
   80042002c7:	ff d0                	callq  *%rax
   80042002c9:	be 01 00 00 00       	mov    $0x1,%esi
-  80042002ce:	48 bf 20 59 2b 04 80 	movabs $0x80042b5920,%rdi
+  80042002ce:	48 bf 90 59 2b 04 80 	movabs $0x80042b5990,%rdi
   80042002d5:	00 00 00 
   80042002d8:	48 b8 ea 88 20 04 80 	movabs $0x80042088ea,%rax
   80042002df:	00 00 00 
   80042002e2:	ff d0                	callq  *%rax
   80042002e4:	be 00 00 00 00       	mov    $0x0,%esi
-  80042002e9:	48 bf 40 d8 29 04 80 	movabs $0x800429d840,%rdi
+  80042002e9:	48 bf 98 d8 29 04 80 	movabs $0x800429d898,%rdi
   80042002f0:	00 00 00 
   80042002f3:	48 b8 ea 88 20 04 80 	movabs $0x80042088ea,%rax
   80042002fa:	00 00 00 
@@ -1356,7 +1356,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420032b:	48 c1 e8 0c          	shr    $0xc,%rax
   800420032f:	89 45 ec             	mov    %eax,-0x14(%rbp)
   8004200332:	8b 55 ec             	mov    -0x14(%rbp),%edx
-  8004200335:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004200335:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   800420033c:	00 00 00 
   800420033f:	48 8b 00             	mov    (%rax),%rax
   8004200342:	48 39 c2             	cmp    %rax,%rdx
@@ -1391,7 +1391,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   80042003bc:	48 b8 fb ff 20 04 80 	movabs $0x800420fffb,%rax
   80042003c3:	00 00 00 
   80042003c6:	ff d0                	callq  *%rax
-  80042003c8:	48 b8 20 d0 69 04 80 	movabs $0x800469d020,%rax
+  80042003c8:	48 b8 20 e0 69 04 80 	movabs $0x800469e020,%rax
   80042003cf:	00 00 00 
   80042003d2:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
   80042003d6:	e9 0e 01 00 00       	jmpq   80042004e9 <boot_aps+0x1d2>
@@ -1403,14 +1403,14 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   80042003ed:	48 89 c2             	mov    %rax,%rdx
   80042003f0:	48 c1 e2 04          	shl    $0x4,%rdx
   80042003f4:	48 01 c2             	add    %rax,%rdx
-  80042003f7:	48 b8 20 d0 69 04 80 	movabs $0x800469d020,%rax
+  80042003f7:	48 b8 20 e0 69 04 80 	movabs $0x800469e020,%rax
   80042003fe:	00 00 00 
   8004200401:	48 01 d0             	add    %rdx,%rax
   8004200404:	48 3b 45 f8          	cmp    -0x8(%rbp),%rax
   8004200408:	75 05                	jne    800420040f <boot_aps+0xf8>
   800420040a:	e9 d2 00 00 00       	jmpq   80042004e1 <boot_aps+0x1ca>
   800420040f:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
-  8004200413:	48 b8 20 d0 69 04 80 	movabs $0x800469d020,%rax
+  8004200413:	48 b8 20 e0 69 04 80 	movabs $0x800469e020,%rax
   800420041a:	00 00 00 
   800420041d:	48 29 c2             	sub    %rax,%rdx
   8004200420:	48 89 d0             	mov    %rdx,%rax
@@ -1422,10 +1422,10 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   8004200438:	48 83 c0 01          	add    $0x1,%rax
   800420043c:	48 c1 e0 10          	shl    $0x10,%rax
   8004200440:	48 89 c2             	mov    %rax,%rdx
-  8004200443:	48 b8 00 e0 69 04 80 	movabs $0x800469e000,%rax
+  8004200443:	48 b8 00 f0 69 04 80 	movabs $0x800469f000,%rax
   800420044a:	00 00 00 
   800420044d:	48 01 c2             	add    %rax,%rdx
-  8004200450:	48 b8 d8 b5 69 04 80 	movabs $0x800469b5d8,%rax
+  8004200450:	48 b8 d8 c5 69 04 80 	movabs $0x800469c5d8,%rax
   8004200457:	00 00 00 
   800420045a:	48 89 10             	mov    %rdx,(%rax)
   800420045d:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
@@ -1465,7 +1465,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   80042004df:	75 f4                	jne    80042004d5 <boot_aps+0x1be>
   80042004e1:	48 81 45 f8 88 00 00 	addq   $0x88,-0x8(%rbp)
   80042004e8:	00 
-  80042004e9:	48 b8 48 d2 69 04 80 	movabs $0x800469d248,%rax
+  80042004e9:	48 b8 48 e2 69 04 80 	movabs $0x800469e248,%rax
   80042004f0:	00 00 00 
   80042004f3:	8b 00                	mov    (%rax),%eax
   80042004f5:	48 98                	cltq   
@@ -1473,7 +1473,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   80042004fb:	48 89 c2             	mov    %rax,%rdx
   80042004fe:	48 c1 e2 04          	shl    $0x4,%rdx
   8004200502:	48 01 c2             	add    %rax,%rdx
-  8004200505:	48 b8 20 d0 69 04 80 	movabs $0x800469d020,%rax
+  8004200505:	48 b8 20 e0 69 04 80 	movabs $0x800469e020,%rax
   800420050c:	00 00 00 
   800420050f:	48 01 d0             	add    %rdx,%rax
   8004200512:	48 3b 45 f8          	cmp    -0x8(%rbp),%rax
@@ -1485,7 +1485,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420051e:	55                   	push   %rbp
   800420051f:	48 89 e5             	mov    %rsp,%rbp
   8004200522:	48 83 ec 10          	sub    $0x10,%rsp
-  8004200526:	48 b8 e0 b5 69 04 80 	movabs $0x800469b5e0,%rax
+  8004200526:	48 b8 e0 c5 69 04 80 	movabs $0x800469c5e0,%rax
   800420052d:	00 00 00 
   8004200530:	48 8b 00             	mov    (%rax),%rax
   8004200533:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
@@ -1524,7 +1524,7 @@ lcr3(uint64_t val)
   800420059d:	48 89 c2             	mov    %rax,%rdx
   80042005a0:	48 c1 e2 04          	shl    $0x4,%rdx
   80042005a4:	48 01 d0             	add    %rdx,%rax
-  80042005a7:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  80042005a7:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   80042005ae:	00 00 00 
   80042005b1:	48 01 d0             	add    %rdx,%rax
   80042005b4:	48 83 c0 04          	add    $0x4,%rax
@@ -1560,13 +1560,13 @@ lcr3(uint64_t val)
   800420062d:	0f 29 75 e0          	movaps %xmm6,-0x20(%rbp)
   8004200631:	0f 29 7d f0          	movaps %xmm7,-0x10(%rbp)
   8004200635:	48 89 95 18 ff ff ff 	mov    %rdx,-0xe8(%rbp)
-  800420063c:	48 b8 d0 b5 69 04 80 	movabs $0x800469b5d0,%rax
+  800420063c:	48 b8 d0 c5 69 04 80 	movabs $0x800469c5d0,%rax
   8004200643:	00 00 00 
   8004200646:	48 8b 00             	mov    (%rax),%rax
   8004200649:	48 85 c0             	test   %rax,%rax
   800420064c:	74 05                	je     8004200653 <_panic+0x6f>
   800420064e:	e9 b5 00 00 00       	jmpq   8004200708 <_panic+0x124>
-  8004200653:	48 b8 d0 b5 69 04 80 	movabs $0x800469b5d0,%rax
+  8004200653:	48 b8 d0 c5 69 04 80 	movabs $0x800469c5d0,%rax
   800420065a:	00 00 00 
   800420065d:	48 8b 95 18 ff ff ff 	mov    -0xe8(%rbp),%rdx
   8004200664:	48 89 10             	mov    %rdx,(%rax)
@@ -1734,7 +1734,7 @@ inb(int port)
 0000008004200898 <serial_intr>:
   8004200898:	55                   	push   %rbp
   8004200899:	48 89 e5             	mov    %rsp,%rbp
-  800420089c:	48 b8 00 c0 49 04 80 	movabs $0x800449c000,%rax
+  800420089c:	48 b8 00 d0 49 04 80 	movabs $0x800449d000,%rax
   80042008a3:	00 00 00 
   80042008a6:	0f b6 00             	movzbl (%rax),%eax
   80042008a9:	84 c0                	test   %al,%al
@@ -1847,7 +1847,7 @@ inb(int port)
   80042009c7:	0f b6 45 c3          	movzbl -0x3d(%rbp),%eax
   80042009cb:	3c ff                	cmp    $0xff,%al
   80042009cd:	0f 95 c2             	setne  %dl
-  80042009d0:	48 b8 00 c0 49 04 80 	movabs $0x800449c000,%rax
+  80042009d0:	48 b8 00 d0 49 04 80 	movabs $0x800449d000,%rax
   80042009d7:	00 00 00 
   80042009da:	88 10                	mov    %dl,(%rax)
   80042009dc:	c7 45 bc fa 03 00 00 	movl   $0x3fa,-0x44(%rbp)
@@ -1866,7 +1866,7 @@ inb(int port)
   80042009f6:	89 c2                	mov    %eax,%edx
   80042009f8:	ec                   	in     (%dx),%al
   80042009f9:	88 45 b3             	mov    %al,-0x4d(%rbp)
-  80042009fc:	48 b8 00 c0 49 04 80 	movabs $0x800449c000,%rax
+  80042009fc:	48 b8 00 d0 49 04 80 	movabs $0x800449d000,%rax
   8004200a03:	00 00 00 
   8004200a06:	0f b6 00             	movzbl (%rax),%eax
   8004200a09:	84 c0                	test   %al,%al
@@ -1950,17 +1950,17 @@ outb(int port, uint8_t data)
   8004200aee:	48 b8 00 00 0b 04 80 	movabs $0x80040b0000,%rax
   8004200af5:	00 00 00 
   8004200af8:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
-  8004200afc:	48 b8 04 c0 49 04 80 	movabs $0x800449c004,%rax
+  8004200afc:	48 b8 04 d0 49 04 80 	movabs $0x800449d004,%rax
   8004200b03:	00 00 00 
   8004200b06:	c7 00 b4 03 00 00    	movl   $0x3b4,(%rax)
   8004200b0c:	eb 1b                	jmp    8004200b29 <cga_init+0x72>
   8004200b0e:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
   8004200b12:	0f b7 55 f6          	movzwl -0xa(%rbp),%edx
   8004200b16:	66 89 10             	mov    %dx,(%rax)
-  8004200b19:	48 b8 04 c0 49 04 80 	movabs $0x800449c004,%rax
+  8004200b19:	48 b8 04 d0 49 04 80 	movabs $0x800449d004,%rax
   8004200b20:	00 00 00 
   8004200b23:	c7 00 d4 03 00 00    	movl   $0x3d4,(%rax)
-  8004200b29:	48 b8 04 c0 49 04 80 	movabs $0x800449c004,%rax
+  8004200b29:	48 b8 04 d0 49 04 80 	movabs $0x800449d004,%rax
   8004200b30:	00 00 00 
   8004200b33:	8b 00                	mov    (%rax),%eax
   8004200b35:	89 45 ec             	mov    %eax,-0x14(%rbp)
@@ -1968,7 +1968,7 @@ outb(int port, uint8_t data)
   8004200b3c:	0f b6 45 eb          	movzbl -0x15(%rbp),%eax
   8004200b40:	8b 55 ec             	mov    -0x14(%rbp),%edx
   8004200b43:	ee                   	out    %al,(%dx)
-  8004200b44:	48 b8 04 c0 49 04 80 	movabs $0x800449c004,%rax
+  8004200b44:	48 b8 04 d0 49 04 80 	movabs $0x800449d004,%rax
   8004200b4b:	00 00 00 
   8004200b4e:	8b 00                	mov    (%rax),%eax
   8004200b50:	83 c0 01             	add    $0x1,%eax
@@ -1988,7 +1988,7 @@ inb(int port)
   8004200b63:	0f b6 c0             	movzbl %al,%eax
   8004200b66:	c1 e0 08             	shl    $0x8,%eax
   8004200b69:	89 45 f0             	mov    %eax,-0x10(%rbp)
-  8004200b6c:	48 b8 04 c0 49 04 80 	movabs $0x800449c004,%rax
+  8004200b6c:	48 b8 04 d0 49 04 80 	movabs $0x800449d004,%rax
   8004200b73:	00 00 00 
   8004200b76:	8b 00                	mov    (%rax),%eax
   8004200b78:	89 45 dc             	mov    %eax,-0x24(%rbp)
@@ -2002,7 +2002,7 @@ outb(int port, uint8_t data)
   8004200b7f:	0f b6 45 db          	movzbl -0x25(%rbp),%eax
   8004200b83:	8b 55 dc             	mov    -0x24(%rbp),%edx
   8004200b86:	ee                   	out    %al,(%dx)
-  8004200b87:	48 b8 04 c0 49 04 80 	movabs $0x800449c004,%rax
+  8004200b87:	48 b8 04 d0 49 04 80 	movabs $0x800449d004,%rax
   8004200b8e:	00 00 00 
   8004200b91:	8b 00                	mov    (%rax),%eax
   8004200b93:	83 c0 01             	add    $0x1,%eax
@@ -2021,13 +2021,13 @@ inb(int port)
   8004200ba2:	0f b6 45 d3          	movzbl -0x2d(%rbp),%eax
   8004200ba6:	0f b6 c0             	movzbl %al,%eax
   8004200ba9:	09 45 f0             	or     %eax,-0x10(%rbp)
-  8004200bac:	48 b8 08 c0 49 04 80 	movabs $0x800449c008,%rax
+  8004200bac:	48 b8 08 d0 49 04 80 	movabs $0x800449d008,%rax
   8004200bb3:	00 00 00 
   8004200bb6:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
   8004200bba:	48 89 10             	mov    %rdx,(%rax)
   8004200bbd:	8b 45 f0             	mov    -0x10(%rbp),%eax
   8004200bc0:	89 c2                	mov    %eax,%edx
-  8004200bc2:	48 b8 10 c0 49 04 80 	movabs $0x800449c010,%rax
+  8004200bc2:	48 b8 10 d0 49 04 80 	movabs $0x800449d010,%rax
   8004200bc9:	00 00 00 
   8004200bcc:	66 89 10             	mov    %dx,(%rax)
   8004200bcf:	c9                   	leaveq 
@@ -2057,22 +2057,22 @@ inb(int port)
   8004200c0f:	83 f8 0d             	cmp    $0xd,%eax
   8004200c12:	0f 84 89 00 00 00    	je     8004200ca1 <cga_putc+0xd0>
   8004200c18:	e9 2b 01 00 00       	jmpq   8004200d48 <cga_putc+0x177>
-  8004200c1d:	48 b8 10 c0 49 04 80 	movabs $0x800449c010,%rax
+  8004200c1d:	48 b8 10 d0 49 04 80 	movabs $0x800449d010,%rax
   8004200c24:	00 00 00 
   8004200c27:	0f b7 00             	movzwl (%rax),%eax
   8004200c2a:	66 85 c0             	test   %ax,%ax
   8004200c2d:	74 50                	je     8004200c7f <cga_putc+0xae>
-  8004200c2f:	48 b8 10 c0 49 04 80 	movabs $0x800449c010,%rax
+  8004200c2f:	48 b8 10 d0 49 04 80 	movabs $0x800449d010,%rax
   8004200c36:	00 00 00 
   8004200c39:	0f b7 00             	movzwl (%rax),%eax
   8004200c3c:	8d 50 ff             	lea    -0x1(%rax),%edx
-  8004200c3f:	48 b8 10 c0 49 04 80 	movabs $0x800449c010,%rax
+  8004200c3f:	48 b8 10 d0 49 04 80 	movabs $0x800449d010,%rax
   8004200c46:	00 00 00 
   8004200c49:	66 89 10             	mov    %dx,(%rax)
-  8004200c4c:	48 b8 08 c0 49 04 80 	movabs $0x800449c008,%rax
+  8004200c4c:	48 b8 08 d0 49 04 80 	movabs $0x800449d008,%rax
   8004200c53:	00 00 00 
   8004200c56:	48 8b 10             	mov    (%rax),%rdx
-  8004200c59:	48 b8 10 c0 49 04 80 	movabs $0x800449c010,%rax
+  8004200c59:	48 b8 10 d0 49 04 80 	movabs $0x800449d010,%rax
   8004200c60:	00 00 00 
   8004200c63:	0f b7 00             	movzwl (%rax),%eax
   8004200c66:	0f b7 c0             	movzwl %ax,%eax
@@ -2084,17 +2084,17 @@ inb(int port)
   8004200c77:	66 89 02             	mov    %ax,(%rdx)
   8004200c7a:	e9 04 01 00 00       	jmpq   8004200d83 <cga_putc+0x1b2>
   8004200c7f:	e9 ff 00 00 00       	jmpq   8004200d83 <cga_putc+0x1b2>
-  8004200c84:	48 b8 10 c0 49 04 80 	movabs $0x800449c010,%rax
+  8004200c84:	48 b8 10 d0 49 04 80 	movabs $0x800449d010,%rax
   8004200c8b:	00 00 00 
   8004200c8e:	0f b7 00             	movzwl (%rax),%eax
   8004200c91:	8d 50 50             	lea    0x50(%rax),%edx
-  8004200c94:	48 b8 10 c0 49 04 80 	movabs $0x800449c010,%rax
+  8004200c94:	48 b8 10 d0 49 04 80 	movabs $0x800449d010,%rax
   8004200c9b:	00 00 00 
   8004200c9e:	66 89 10             	mov    %dx,(%rax)
-  8004200ca1:	48 b8 10 c0 49 04 80 	movabs $0x800449c010,%rax
+  8004200ca1:	48 b8 10 d0 49 04 80 	movabs $0x800449d010,%rax
   8004200ca8:	00 00 00 
   8004200cab:	0f b7 30             	movzwl (%rax),%esi
-  8004200cae:	48 b8 10 c0 49 04 80 	movabs $0x800449c010,%rax
+  8004200cae:	48 b8 10 d0 49 04 80 	movabs $0x800449d010,%rax
   8004200cb5:	00 00 00 
   8004200cb8:	0f b7 08             	movzwl (%rax),%ecx
   8004200cbb:	0f b7 c1             	movzwl %cx,%eax
@@ -2110,7 +2110,7 @@ inb(int port)
   8004200cd9:	89 ca                	mov    %ecx,%edx
   8004200cdb:	29 d6                	sub    %edx,%esi
   8004200cdd:	89 f2                	mov    %esi,%edx
-  8004200cdf:	48 b8 10 c0 49 04 80 	movabs $0x800449c010,%rax
+  8004200cdf:	48 b8 10 d0 49 04 80 	movabs $0x800449d010,%rax
   8004200ce6:	00 00 00 
   8004200ce9:	66 89 10             	mov    %dx,(%rax)
   8004200cec:	e9 92 00 00 00       	jmpq   8004200d83 <cga_putc+0x1b2>
@@ -2135,14 +2135,14 @@ inb(int port)
   8004200d41:	00 00 00 
   8004200d44:	ff d0                	callq  *%rax
   8004200d46:	eb 3b                	jmp    8004200d83 <cga_putc+0x1b2>
-  8004200d48:	48 b8 08 c0 49 04 80 	movabs $0x800449c008,%rax
+  8004200d48:	48 b8 08 d0 49 04 80 	movabs $0x800449d008,%rax
   8004200d4f:	00 00 00 
   8004200d52:	48 8b 30             	mov    (%rax),%rsi
-  8004200d55:	48 b8 10 c0 49 04 80 	movabs $0x800449c010,%rax
+  8004200d55:	48 b8 10 d0 49 04 80 	movabs $0x800449d010,%rax
   8004200d5c:	00 00 00 
   8004200d5f:	0f b7 00             	movzwl (%rax),%eax
   8004200d62:	8d 48 01             	lea    0x1(%rax),%ecx
-  8004200d65:	48 ba 10 c0 49 04 80 	movabs $0x800449c010,%rdx
+  8004200d65:	48 ba 10 d0 49 04 80 	movabs $0x800449d010,%rdx
   8004200d6c:	00 00 00 
   8004200d6f:	66 89 0a             	mov    %cx,(%rdx)
   8004200d72:	0f b7 c0             	movzwl %ax,%eax
@@ -2151,16 +2151,16 @@ inb(int port)
   8004200d7c:	8b 45 cc             	mov    -0x34(%rbp),%eax
   8004200d7f:	66 89 02             	mov    %ax,(%rdx)
   8004200d82:	90                   	nop
-  8004200d83:	48 b8 10 c0 49 04 80 	movabs $0x800449c010,%rax
+  8004200d83:	48 b8 10 d0 49 04 80 	movabs $0x800449d010,%rax
   8004200d8a:	00 00 00 
   8004200d8d:	0f b7 00             	movzwl (%rax),%eax
   8004200d90:	66 3d cf 07          	cmp    $0x7cf,%ax
   8004200d94:	0f 86 89 00 00 00    	jbe    8004200e23 <cga_putc+0x252>
-  8004200d9a:	48 b8 08 c0 49 04 80 	movabs $0x800449c008,%rax
+  8004200d9a:	48 b8 08 d0 49 04 80 	movabs $0x800449d008,%rax
   8004200da1:	00 00 00 
   8004200da4:	48 8b 00             	mov    (%rax),%rax
   8004200da7:	48 8d 88 a0 00 00 00 	lea    0xa0(%rax),%rcx
-  8004200dae:	48 b8 08 c0 49 04 80 	movabs $0x800449c008,%rax
+  8004200dae:	48 b8 08 d0 49 04 80 	movabs $0x800449d008,%rax
   8004200db5:	00 00 00 
   8004200db8:	48 8b 00             	mov    (%rax),%rax
   8004200dbb:	ba 00 0f 00 00       	mov    $0xf00,%edx
@@ -2171,7 +2171,7 @@ inb(int port)
   8004200dd0:	ff d0                	callq  *%rax
   8004200dd2:	c7 45 fc 80 07 00 00 	movl   $0x780,-0x4(%rbp)
   8004200dd9:	eb 22                	jmp    8004200dfd <cga_putc+0x22c>
-  8004200ddb:	48 b8 08 c0 49 04 80 	movabs $0x800449c008,%rax
+  8004200ddb:	48 b8 08 d0 49 04 80 	movabs $0x800449d008,%rax
   8004200de2:	00 00 00 
   8004200de5:	48 8b 00             	mov    (%rax),%rax
   8004200de8:	8b 55 fc             	mov    -0x4(%rbp),%edx
@@ -2182,14 +2182,14 @@ inb(int port)
   8004200df9:	83 45 fc 01          	addl   $0x1,-0x4(%rbp)
   8004200dfd:	81 7d fc cf 07 00 00 	cmpl   $0x7cf,-0x4(%rbp)
   8004200e04:	7e d5                	jle    8004200ddb <cga_putc+0x20a>
-  8004200e06:	48 b8 10 c0 49 04 80 	movabs $0x800449c010,%rax
+  8004200e06:	48 b8 10 d0 49 04 80 	movabs $0x800449d010,%rax
   8004200e0d:	00 00 00 
   8004200e10:	0f b7 00             	movzwl (%rax),%eax
   8004200e13:	8d 50 b0             	lea    -0x50(%rax),%edx
-  8004200e16:	48 b8 10 c0 49 04 80 	movabs $0x800449c010,%rax
+  8004200e16:	48 b8 10 d0 49 04 80 	movabs $0x800449d010,%rax
   8004200e1d:	00 00 00 
   8004200e20:	66 89 10             	mov    %dx,(%rax)
-  8004200e23:	48 b8 04 c0 49 04 80 	movabs $0x800449c004,%rax
+  8004200e23:	48 b8 04 d0 49 04 80 	movabs $0x800449d004,%rax
   8004200e2a:	00 00 00 
   8004200e2d:	8b 00                	mov    (%rax),%eax
   8004200e2f:	89 45 f8             	mov    %eax,-0x8(%rbp)
@@ -2203,12 +2203,12 @@ outb(int port, uint8_t data)
   8004200e36:	0f b6 45 f7          	movzbl -0x9(%rbp),%eax
   8004200e3a:	8b 55 f8             	mov    -0x8(%rbp),%edx
   8004200e3d:	ee                   	out    %al,(%dx)
-  8004200e3e:	48 b8 10 c0 49 04 80 	movabs $0x800449c010,%rax
+  8004200e3e:	48 b8 10 d0 49 04 80 	movabs $0x800449d010,%rax
   8004200e45:	00 00 00 
   8004200e48:	0f b7 00             	movzwl (%rax),%eax
   8004200e4b:	66 c1 e8 08          	shr    $0x8,%ax
   8004200e4f:	0f b6 c0             	movzbl %al,%eax
-  8004200e52:	48 ba 04 c0 49 04 80 	movabs $0x800449c004,%rdx
+  8004200e52:	48 ba 04 d0 49 04 80 	movabs $0x800449d004,%rdx
   8004200e59:	00 00 00 
   8004200e5c:	8b 12                	mov    (%rdx),%edx
   8004200e5e:	83 c2 01             	add    $0x1,%edx
@@ -2217,7 +2217,7 @@ outb(int port, uint8_t data)
   8004200e67:	0f b6 45 ef          	movzbl -0x11(%rbp),%eax
   8004200e6b:	8b 55 f0             	mov    -0x10(%rbp),%edx
   8004200e6e:	ee                   	out    %al,(%dx)
-  8004200e6f:	48 b8 04 c0 49 04 80 	movabs $0x800449c004,%rax
+  8004200e6f:	48 b8 04 d0 49 04 80 	movabs $0x800449d004,%rax
   8004200e76:	00 00 00 
   8004200e79:	8b 00                	mov    (%rax),%eax
   8004200e7b:	89 45 e8             	mov    %eax,-0x18(%rbp)
@@ -2225,11 +2225,11 @@ outb(int port, uint8_t data)
   8004200e82:	0f b6 45 e7          	movzbl -0x19(%rbp),%eax
   8004200e86:	8b 55 e8             	mov    -0x18(%rbp),%edx
   8004200e89:	ee                   	out    %al,(%dx)
-  8004200e8a:	48 b8 10 c0 49 04 80 	movabs $0x800449c010,%rax
+  8004200e8a:	48 b8 10 d0 49 04 80 	movabs $0x800449d010,%rax
   8004200e91:	00 00 00 
   8004200e94:	0f b7 00             	movzwl (%rax),%eax
   8004200e97:	0f b6 c0             	movzbl %al,%eax
-  8004200e9a:	48 ba 04 c0 49 04 80 	movabs $0x800449c004,%rdx
+  8004200e9a:	48 ba 04 d0 49 04 80 	movabs $0x800449d004,%rdx
   8004200ea1:	00 00 00 
   8004200ea4:	8b 12                	mov    (%rdx),%edx
   8004200ea6:	83 c2 01             	add    $0x1,%edx
@@ -2280,12 +2280,12 @@ inb(int port)
   8004200efd:	88 45 fb             	mov    %al,-0x5(%rbp)
   8004200f00:	80 7d fb e0          	cmpb   $0xe0,-0x5(%rbp)
   8004200f04:	75 27                	jne    8004200f2d <kbd_proc_data+0x74>
-  8004200f06:	48 b8 28 c2 49 04 80 	movabs $0x800449c228,%rax
+  8004200f06:	48 b8 28 d2 49 04 80 	movabs $0x800449d228,%rax
   8004200f0d:	00 00 00 
   8004200f10:	8b 00                	mov    (%rax),%eax
   8004200f12:	83 c8 40             	or     $0x40,%eax
   8004200f15:	89 c2                	mov    %eax,%edx
-  8004200f17:	48 b8 28 c2 49 04 80 	movabs $0x800449c228,%rax
+  8004200f17:	48 b8 28 d2 49 04 80 	movabs $0x800449d228,%rax
   8004200f1e:	00 00 00 
   8004200f21:	89 10                	mov    %edx,(%rax)
   8004200f23:	b8 00 00 00 00       	mov    $0x0,%eax
@@ -2293,7 +2293,7 @@ inb(int port)
   8004200f2d:	0f b6 45 fb          	movzbl -0x5(%rbp),%eax
   8004200f31:	84 c0                	test   %al,%al
   8004200f33:	79 65                	jns    8004200f9a <kbd_proc_data+0xe1>
-  8004200f35:	48 b8 28 c2 49 04 80 	movabs $0x800449c228,%rax
+  8004200f35:	48 b8 28 d2 49 04 80 	movabs $0x800449d228,%rax
   8004200f3c:	00 00 00 
   8004200f3f:	8b 00                	mov    (%rax),%eax
   8004200f41:	83 e0 40             	and    $0x40,%eax
@@ -2313,28 +2313,28 @@ inb(int port)
   8004200f6f:	0f b6 c0             	movzbl %al,%eax
   8004200f72:	f7 d0                	not    %eax
   8004200f74:	89 c2                	mov    %eax,%edx
-  8004200f76:	48 b8 28 c2 49 04 80 	movabs $0x800449c228,%rax
+  8004200f76:	48 b8 28 d2 49 04 80 	movabs $0x800449d228,%rax
   8004200f7d:	00 00 00 
   8004200f80:	8b 00                	mov    (%rax),%eax
   8004200f82:	21 c2                	and    %eax,%edx
-  8004200f84:	48 b8 28 c2 49 04 80 	movabs $0x800449c228,%rax
+  8004200f84:	48 b8 28 d2 49 04 80 	movabs $0x800449d228,%rax
   8004200f8b:	00 00 00 
   8004200f8e:	89 10                	mov    %edx,(%rax)
   8004200f90:	b8 00 00 00 00       	mov    $0x0,%eax
   8004200f95:	e9 77 01 00 00       	jmpq   8004201111 <kbd_proc_data+0x258>
-  8004200f9a:	48 b8 28 c2 49 04 80 	movabs $0x800449c228,%rax
+  8004200f9a:	48 b8 28 d2 49 04 80 	movabs $0x800449d228,%rax
   8004200fa1:	00 00 00 
   8004200fa4:	8b 00                	mov    (%rax),%eax
   8004200fa6:	83 e0 40             	and    $0x40,%eax
   8004200fa9:	85 c0                	test   %eax,%eax
   8004200fab:	74 21                	je     8004200fce <kbd_proc_data+0x115>
   8004200fad:	80 4d fb 80          	orb    $0x80,-0x5(%rbp)
-  8004200fb1:	48 b8 28 c2 49 04 80 	movabs $0x800449c228,%rax
+  8004200fb1:	48 b8 28 d2 49 04 80 	movabs $0x800449d228,%rax
   8004200fb8:	00 00 00 
   8004200fbb:	8b 00                	mov    (%rax),%eax
   8004200fbd:	83 e0 bf             	and    $0xffffffbf,%eax
   8004200fc0:	89 c2                	mov    %eax,%edx
-  8004200fc2:	48 b8 28 c2 49 04 80 	movabs $0x800449c228,%rax
+  8004200fc2:	48 b8 28 d2 49 04 80 	movabs $0x800449d228,%rax
   8004200fc9:	00 00 00 
   8004200fcc:	89 10                	mov    %edx,(%rax)
   8004200fce:	0f b6 45 fb          	movzbl -0x5(%rbp),%eax
@@ -2343,11 +2343,11 @@ inb(int port)
   8004200fdc:	48 98                	cltq   
   8004200fde:	0f b6 04 02          	movzbl (%rdx,%rax,1),%eax
   8004200fe2:	0f b6 d0             	movzbl %al,%edx
-  8004200fe5:	48 b8 28 c2 49 04 80 	movabs $0x800449c228,%rax
+  8004200fe5:	48 b8 28 d2 49 04 80 	movabs $0x800449d228,%rax
   8004200fec:	00 00 00 
   8004200fef:	8b 00                	mov    (%rax),%eax
   8004200ff1:	09 c2                	or     %eax,%edx
-  8004200ff3:	48 b8 28 c2 49 04 80 	movabs $0x800449c228,%rax
+  8004200ff3:	48 b8 28 d2 49 04 80 	movabs $0x800449d228,%rax
   8004200ffa:	00 00 00 
   8004200ffd:	89 10                	mov    %edx,(%rax)
   8004200fff:	0f b6 45 fb          	movzbl -0x5(%rbp),%eax
@@ -2356,14 +2356,14 @@ inb(int port)
   800420100d:	48 98                	cltq   
   800420100f:	0f b6 04 02          	movzbl (%rdx,%rax,1),%eax
   8004201013:	0f b6 d0             	movzbl %al,%edx
-  8004201016:	48 b8 28 c2 49 04 80 	movabs $0x800449c228,%rax
+  8004201016:	48 b8 28 d2 49 04 80 	movabs $0x800449d228,%rax
   800420101d:	00 00 00 
   8004201020:	8b 00                	mov    (%rax),%eax
   8004201022:	31 c2                	xor    %eax,%edx
-  8004201024:	48 b8 28 c2 49 04 80 	movabs $0x800449c228,%rax
+  8004201024:	48 b8 28 d2 49 04 80 	movabs $0x800449d228,%rax
   800420102b:	00 00 00 
   800420102e:	89 10                	mov    %edx,(%rax)
-  8004201030:	48 b8 28 c2 49 04 80 	movabs $0x800449c228,%rax
+  8004201030:	48 b8 28 d2 49 04 80 	movabs $0x800449d228,%rax
   8004201037:	00 00 00 
   800420103a:	8b 00                	mov    (%rax),%eax
   800420103c:	83 e0 03             	and    $0x3,%eax
@@ -2377,7 +2377,7 @@ inb(int port)
   8004201058:	0f b6 00             	movzbl (%rax),%eax
   800420105b:	0f b6 c0             	movzbl %al,%eax
   800420105e:	89 45 fc             	mov    %eax,-0x4(%rbp)
-  8004201061:	48 b8 28 c2 49 04 80 	movabs $0x800449c228,%rax
+  8004201061:	48 b8 28 d2 49 04 80 	movabs $0x800449d228,%rax
   8004201068:	00 00 00 
   800420106b:	8b 00                	mov    (%rax),%eax
   800420106d:	83 e0 08             	and    $0x8,%eax
@@ -2394,7 +2394,7 @@ inb(int port)
   800420108c:	83 7d fc 5a          	cmpl   $0x5a,-0x4(%rbp)
   8004201090:	7f 04                	jg     8004201096 <kbd_proc_data+0x1dd>
   8004201092:	83 45 fc 20          	addl   $0x20,-0x4(%rbp)
-  8004201096:	48 b8 28 c2 49 04 80 	movabs $0x800449c228,%rax
+  8004201096:	48 b8 28 d2 49 04 80 	movabs $0x800449d228,%rax
   800420109d:	00 00 00 
   80042010a0:	8b 00                	mov    (%rax),%eax
   80042010a2:	f7 d0                	not    %eax
@@ -2473,25 +2473,25 @@ outb(int port, uint8_t data)
   8004201172:	83 7d fc 00          	cmpl   $0x0,-0x4(%rbp)
   8004201176:	75 02                	jne    800420117a <cons_intr+0x16>
   8004201178:	eb 62                	jmp    80042011dc <cons_intr+0x78>
-  800420117a:	48 b8 20 c0 49 04 80 	movabs $0x800449c020,%rax
+  800420117a:	48 b8 20 d0 49 04 80 	movabs $0x800449d020,%rax
   8004201181:	00 00 00 
   8004201184:	8b 80 04 02 00 00    	mov    0x204(%rax),%eax
   800420118a:	8d 48 01             	lea    0x1(%rax),%ecx
-  800420118d:	48 ba 20 c0 49 04 80 	movabs $0x800449c020,%rdx
+  800420118d:	48 ba 20 d0 49 04 80 	movabs $0x800449d020,%rdx
   8004201194:	00 00 00 
   8004201197:	89 8a 04 02 00 00    	mov    %ecx,0x204(%rdx)
   800420119d:	8b 55 fc             	mov    -0x4(%rbp),%edx
   80042011a0:	89 d1                	mov    %edx,%ecx
-  80042011a2:	48 ba 20 c0 49 04 80 	movabs $0x800449c020,%rdx
+  80042011a2:	48 ba 20 d0 49 04 80 	movabs $0x800449d020,%rdx
   80042011a9:	00 00 00 
   80042011ac:	89 c0                	mov    %eax,%eax
   80042011ae:	88 0c 02             	mov    %cl,(%rdx,%rax,1)
-  80042011b1:	48 b8 20 c0 49 04 80 	movabs $0x800449c020,%rax
+  80042011b1:	48 b8 20 d0 49 04 80 	movabs $0x800449d020,%rax
   80042011b8:	00 00 00 
   80042011bb:	8b 80 04 02 00 00    	mov    0x204(%rax),%eax
   80042011c1:	3d 00 02 00 00       	cmp    $0x200,%eax
   80042011c6:	75 14                	jne    80042011dc <cons_intr+0x78>
-  80042011c8:	48 b8 20 c0 49 04 80 	movabs $0x800449c020,%rax
+  80042011c8:	48 b8 20 d0 49 04 80 	movabs $0x800449d020,%rax
   80042011cf:	00 00 00 
   80042011d2:	c7 80 04 02 00 00 00 	movl   $0x0,0x204(%rax)
   80042011d9:	00 00 00 
@@ -2513,33 +2513,33 @@ outb(int port, uint8_t data)
   8004201201:	48 b8 13 11 20 04 80 	movabs $0x8004201113,%rax
   8004201208:	00 00 00 
   800420120b:	ff d0                	callq  *%rax
-  800420120d:	48 b8 20 c0 49 04 80 	movabs $0x800449c020,%rax
+  800420120d:	48 b8 20 d0 49 04 80 	movabs $0x800449d020,%rax
   8004201214:	00 00 00 
   8004201217:	8b 90 00 02 00 00    	mov    0x200(%rax),%edx
-  800420121d:	48 b8 20 c0 49 04 80 	movabs $0x800449c020,%rax
+  800420121d:	48 b8 20 d0 49 04 80 	movabs $0x800449d020,%rax
   8004201224:	00 00 00 
   8004201227:	8b 80 04 02 00 00    	mov    0x204(%rax),%eax
   800420122d:	39 c2                	cmp    %eax,%edx
   800420122f:	74 69                	je     800420129a <cons_getc+0xad>
-  8004201231:	48 b8 20 c0 49 04 80 	movabs $0x800449c020,%rax
+  8004201231:	48 b8 20 d0 49 04 80 	movabs $0x800449d020,%rax
   8004201238:	00 00 00 
   800420123b:	8b 80 00 02 00 00    	mov    0x200(%rax),%eax
   8004201241:	8d 48 01             	lea    0x1(%rax),%ecx
-  8004201244:	48 ba 20 c0 49 04 80 	movabs $0x800449c020,%rdx
+  8004201244:	48 ba 20 d0 49 04 80 	movabs $0x800449d020,%rdx
   800420124b:	00 00 00 
   800420124e:	89 8a 00 02 00 00    	mov    %ecx,0x200(%rdx)
-  8004201254:	48 ba 20 c0 49 04 80 	movabs $0x800449c020,%rdx
+  8004201254:	48 ba 20 d0 49 04 80 	movabs $0x800449d020,%rdx
   800420125b:	00 00 00 
   800420125e:	89 c0                	mov    %eax,%eax
   8004201260:	0f b6 04 02          	movzbl (%rdx,%rax,1),%eax
   8004201264:	0f b6 c0             	movzbl %al,%eax
   8004201267:	89 45 fc             	mov    %eax,-0x4(%rbp)
-  800420126a:	48 b8 20 c0 49 04 80 	movabs $0x800449c020,%rax
+  800420126a:	48 b8 20 d0 49 04 80 	movabs $0x800449d020,%rax
   8004201271:	00 00 00 
   8004201274:	8b 80 00 02 00 00    	mov    0x200(%rax),%eax
   800420127a:	3d 00 02 00 00       	cmp    $0x200,%eax
   800420127f:	75 14                	jne    8004201295 <cons_getc+0xa8>
-  8004201281:	48 b8 20 c0 49 04 80 	movabs $0x800449c020,%rax
+  8004201281:	48 b8 20 d0 49 04 80 	movabs $0x800449d020,%rax
   8004201288:	00 00 00 
   800420128b:	c7 80 00 02 00 00 00 	movl   $0x0,0x200(%rax)
   8004201292:	00 00 00 
@@ -2584,7 +2584,7 @@ outb(int port, uint8_t data)
   80042012fd:	48 b8 2a 09 20 04 80 	movabs $0x800420092a,%rax
   8004201304:	00 00 00 
   8004201307:	ff d0                	callq  *%rax
-  8004201309:	48 b8 00 c0 49 04 80 	movabs $0x800449c000,%rax
+  8004201309:	48 b8 00 d0 49 04 80 	movabs $0x800449d000,%rax
   8004201310:	00 00 00 
   8004201313:	0f b6 00             	movzbl (%rax),%eax
   8004201316:	83 f0 01             	xor    $0x1,%eax
@@ -2721,9 +2721,9 @@ outb(int port, uint8_t data)
   80042014c8:	48 b9 1f 95 20 04 80 	movabs $0x800420951f,%rcx
   80042014cf:	00 00 00 
   80042014d2:	ff d1                	callq  *%rcx
-  80042014d4:	48 ba a0 be 49 00 00 	movabs $0x49bea0,%rdx
+  80042014d4:	48 ba 20 c0 49 00 00 	movabs $0x49c020,%rdx
   80042014db:	00 00 00 
-  80042014de:	48 be a0 be 49 04 80 	movabs $0x800449bea0,%rsi
+  80042014de:	48 be 20 c0 49 04 80 	movabs $0x800449c020,%rsi
   80042014e5:	00 00 00 
   80042014e8:	48 bf e0 8a 21 04 80 	movabs $0x8004218ae0,%rdi
   80042014ef:	00 00 00 
@@ -2731,9 +2731,9 @@ outb(int port, uint8_t data)
   80042014f7:	48 b9 1f 95 20 04 80 	movabs $0x800420951f,%rcx
   80042014fe:	00 00 00 
   8004201501:	ff d1                	callq  *%rcx
-  8004201503:	48 ba 10 e0 6d 00 00 	movabs $0x6de010,%rdx
+  8004201503:	48 ba 10 f0 6d 00 00 	movabs $0x6df010,%rdx
   800420150a:	00 00 00 
-  800420150d:	48 be 10 e0 6d 04 80 	movabs $0x80046de010,%rsi
+  800420150d:	48 be 10 f0 6d 04 80 	movabs $0x80046df010,%rsi
   8004201514:	00 00 00 
   8004201517:	48 bf 08 8b 21 04 80 	movabs $0x8004218b08,%rdi
   800420151e:	00 00 00 
@@ -2747,7 +2747,7 @@ outb(int port, uint8_t data)
   8004201541:	00 00 00 
   8004201544:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
   8004201548:	48 29 c2             	sub    %rax,%rdx
-  800420154b:	48 b8 10 e0 6d 04 80 	movabs $0x80046de010,%rax
+  800420154b:	48 b8 10 f0 6d 04 80 	movabs $0x80046df010,%rax
   8004201552:	00 00 00 
   8004201555:	48 83 e8 01          	sub    $0x1,%rax
   8004201559:	48 01 d0             	add    %rdx,%rax
@@ -3227,7 +3227,7 @@ read_rsp(void)
   8004201c3e:	48 83 ec 08          	sub    $0x8,%rsp
   8004201c42:	48 89 7d f8          	mov    %rdi,-0x8(%rbp)
   8004201c46:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
-  8004201c4a:	48 b8 f8 b5 69 04 80 	movabs $0x800469b5f8,%rax
+  8004201c4a:	48 b8 f8 c5 69 04 80 	movabs $0x800469c5f8,%rax
   8004201c51:	00 00 00 
   8004201c54:	48 8b 00             	mov    (%rax),%rax
   8004201c57:	48 29 c2             	sub    %rax,%rdx
@@ -3258,7 +3258,7 @@ read_rsp(void)
   8004201c94:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
   8004201c98:	48 c1 e8 0c          	shr    $0xc,%rax
   8004201c9c:	48 89 c2             	mov    %rax,%rdx
-  8004201c9f:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004201c9f:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004201ca6:	00 00 00 
   8004201ca9:	48 8b 00             	mov    (%rax),%rax
   8004201cac:	48 39 c2             	cmp    %rax,%rdx
@@ -3272,7 +3272,7 @@ read_rsp(void)
   8004201ccf:	48 b9 e4 05 20 04 80 	movabs $0x80042005e4,%rcx
   8004201cd6:	00 00 00 
   8004201cd9:	ff d1                	callq  *%rcx
-  8004201cdb:	48 b8 f8 b5 69 04 80 	movabs $0x800469b5f8,%rax
+  8004201cdb:	48 b8 f8 c5 69 04 80 	movabs $0x800469c5f8,%rax
   8004201ce2:	00 00 00 
   8004201ce5:	48 8b 00             	mov    (%rax),%rax
   8004201ce8:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
@@ -3297,7 +3297,7 @@ read_rsp(void)
   8004201d20:	48 c1 e8 0c          	shr    $0xc,%rax
   8004201d24:	89 45 f4             	mov    %eax,-0xc(%rbp)
   8004201d27:	8b 55 f4             	mov    -0xc(%rbp),%edx
-  8004201d2a:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004201d2a:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004201d31:	00 00 00 
   8004201d34:	48 8b 00             	mov    (%rax),%rax
   8004201d37:	48 39 c2             	cmp    %rax,%rdx
@@ -3814,7 +3814,7 @@ read_rsp(void)
   8004202456:	48 8b 45 c0          	mov    -0x40(%rbp),%rax
   800420245a:	48 c1 e8 0c          	shr    $0xc,%rax
   800420245e:	48 89 c2             	mov    %rax,%rdx
-  8004202461:	48 b8 30 c2 49 04 80 	movabs $0x800449c230,%rax
+  8004202461:	48 b8 30 d2 49 04 80 	movabs $0x800449d230,%rax
   8004202468:	00 00 00 
   800420246b:	48 89 10             	mov    %rdx,(%rax)
   800420246e:	48 8b 45 b8          	mov    -0x48(%rbp),%rax
@@ -3841,30 +3841,30 @@ read_rsp(void)
   80042024c3:	74 1a                	je     80042024df <i386_detect_memory+0x160>
   80042024c5:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
   80042024c9:	48 8d 90 00 01 00 00 	lea    0x100(%rax),%rdx
-  80042024d0:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  80042024d0:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   80042024d7:	00 00 00 
   80042024da:	48 89 10             	mov    %rdx,(%rax)
   80042024dd:	eb 1a                	jmp    80042024f9 <i386_detect_memory+0x17a>
-  80042024df:	48 b8 30 c2 49 04 80 	movabs $0x800449c230,%rax
+  80042024df:	48 b8 30 d2 49 04 80 	movabs $0x800449d230,%rax
   80042024e6:	00 00 00 
   80042024e9:	48 8b 10             	mov    (%rax),%rdx
-  80042024ec:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  80042024ec:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   80042024f3:	00 00 00 
   80042024f6:	48 89 10             	mov    %rdx,(%rax)
-  80042024f9:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  80042024f9:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004202500:	00 00 00 
   8004202503:	48 8b 30             	mov    (%rax),%rsi
   8004202506:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
   800420250a:	48 c1 e0 0c          	shl    $0xc,%rax
   800420250e:	48 c1 e8 0a          	shr    $0xa,%rax
   8004202512:	48 89 c1             	mov    %rax,%rcx
-  8004202515:	48 b8 30 c2 49 04 80 	movabs $0x800449c230,%rax
+  8004202515:	48 b8 30 d2 49 04 80 	movabs $0x800449d230,%rax
   800420251c:	00 00 00 
   800420251f:	48 8b 00             	mov    (%rax),%rax
   8004202522:	48 c1 e0 0c          	shl    $0xc,%rax
   8004202526:	48 c1 e8 0a          	shr    $0xa,%rax
   800420252a:	48 89 c2             	mov    %rax,%rdx
-  800420252d:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  800420252d:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004202534:	00 00 00 
   8004202537:	48 8b 00             	mov    (%rax),%rax
   800420253a:	48 c1 e0 0c          	shl    $0xc,%rax
@@ -3905,14 +3905,14 @@ read_rsp(void)
   80042025c6:	48 39 45 d0          	cmp    %rax,-0x30(%rbp)
   80042025ca:	48 0f 46 45 d0       	cmovbe -0x30(%rbp),%rax
   80042025cf:	48 89 45 c8          	mov    %rax,-0x38(%rbp)
-  80042025d3:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  80042025d3:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   80042025da:	00 00 00 
   80042025dd:	48 8b 00             	mov    (%rax),%rax
   80042025e0:	48 3b 45 c8          	cmp    -0x38(%rbp),%rax
   80042025e4:	76 3a                	jbe    8004202620 <i386_detect_memory+0x2a1>
   80042025e6:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
   80042025ea:	48 8d 90 00 fc ff ff 	lea    -0x400(%rax),%rdx
-  80042025f1:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  80042025f1:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   80042025f8:	00 00 00 
   80042025fb:	48 89 10             	mov    %rdx,(%rax)
   80042025fe:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
@@ -3931,14 +3931,14 @@ read_rsp(void)
   8004202623:	48 89 e5             	mov    %rsp,%rbp
   8004202626:	48 83 ec 40          	sub    $0x40,%rsp
   800420262a:	89 7d cc             	mov    %edi,-0x34(%rbp)
-  800420262d:	48 b8 48 c2 49 04 80 	movabs $0x800449c248,%rax
+  800420262d:	48 b8 48 d2 49 04 80 	movabs $0x800449d248,%rax
   8004202634:	00 00 00 
   8004202637:	48 8b 00             	mov    (%rax),%rax
   800420263a:	48 85 c0             	test   %rax,%rax
   800420263d:	75 4b                	jne    800420268a <boot_alloc+0x68>
   800420263f:	48 c7 45 f8 00 10 00 	movq   $0x1000,-0x8(%rbp)
   8004202646:	00 
-  8004202647:	48 b8 10 e0 6d 04 80 	movabs $0x80046de010,%rax
+  8004202647:	48 b8 10 f0 6d 04 80 	movabs $0x80046df010,%rax
   800420264e:	00 00 00 
   8004202651:	48 8d 50 ff          	lea    -0x1(%rax),%rdx
   8004202655:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
@@ -3952,25 +3952,25 @@ read_rsp(void)
   8004202674:	48 29 c2             	sub    %rax,%rdx
   8004202677:	48 89 d0             	mov    %rdx,%rax
   800420267a:	48 89 c2             	mov    %rax,%rdx
-  800420267d:	48 b8 48 c2 49 04 80 	movabs $0x800449c248,%rax
+  800420267d:	48 b8 48 d2 49 04 80 	movabs $0x800449d248,%rax
   8004202684:	00 00 00 
   8004202687:	48 89 10             	mov    %rdx,(%rax)
   800420268a:	8b 55 cc             	mov    -0x34(%rbp),%edx
-  800420268d:	48 b8 48 c2 49 04 80 	movabs $0x800449c248,%rax
+  800420268d:	48 b8 48 d2 49 04 80 	movabs $0x800449d248,%rax
   8004202694:	00 00 00 
   8004202697:	48 8b 00             	mov    (%rax),%rax
   800420269a:	48 01 c2             	add    %rax,%rdx
-  800420269d:	48 b8 48 c2 49 04 80 	movabs $0x800449c248,%rax
+  800420269d:	48 b8 48 d2 49 04 80 	movabs $0x800449d248,%rax
   80042026a4:	00 00 00 
   80042026a7:	48 8b 00             	mov    (%rax),%rax
   80042026aa:	48 39 c2             	cmp    %rax,%rdx
   80042026ad:	72 2f                	jb     80042026de <boot_alloc+0xbc>
-  80042026af:	48 b8 48 c2 49 04 80 	movabs $0x800449c248,%rax
+  80042026af:	48 b8 48 d2 49 04 80 	movabs $0x800449d248,%rax
   80042026b6:	00 00 00 
   80042026b9:	48 8b 10             	mov    (%rax),%rdx
   80042026bc:	8b 45 cc             	mov    -0x34(%rbp),%eax
   80042026bf:	48 01 c2             	add    %rax,%rdx
-  80042026c2:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  80042026c2:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   80042026c9:	00 00 00 
   80042026cc:	48 8b 00             	mov    (%rax),%rax
   80042026cf:	48 05 00 40 00 08    	add    $0x8004000,%rax
@@ -3986,13 +3986,13 @@ read_rsp(void)
   80042026fc:	48 b9 e4 05 20 04 80 	movabs $0x80042005e4,%rcx
   8004202703:	00 00 00 
   8004202706:	ff d1                	callq  *%rcx
-  8004202708:	48 b8 48 c2 49 04 80 	movabs $0x800449c248,%rax
+  8004202708:	48 b8 48 d2 49 04 80 	movabs $0x800449d248,%rax
   800420270f:	00 00 00 
   8004202712:	48 8b 00             	mov    (%rax),%rax
   8004202715:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
   8004202719:	48 c7 45 e0 00 10 00 	movq   $0x1000,-0x20(%rbp)
   8004202720:	00 
-  8004202721:	48 b8 48 c2 49 04 80 	movabs $0x800449c248,%rax
+  8004202721:	48 b8 48 d2 49 04 80 	movabs $0x800449d248,%rax
   8004202728:	00 00 00 
   800420272b:	48 8b 10             	mov    (%rax),%rdx
   800420272e:	8b 45 cc             	mov    -0x34(%rbp),%eax
@@ -4010,7 +4010,7 @@ read_rsp(void)
   800420275a:	48 29 c2             	sub    %rax,%rdx
   800420275d:	48 89 d0             	mov    %rdx,%rax
   8004202760:	48 89 c2             	mov    %rax,%rdx
-  8004202763:	48 b8 48 c2 49 04 80 	movabs $0x800449c248,%rax
+  8004202763:	48 b8 48 d2 49 04 80 	movabs $0x800449d248,%rax
   800420276a:	00 00 00 
   800420276d:	48 89 10             	mov    %rdx,(%rax)
   8004202770:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
@@ -4036,7 +4036,7 @@ read_rsp(void)
   80042027b0:	48 b8 70 ff 20 04 80 	movabs $0x800420ff70,%rax
   80042027b7:	00 00 00 
   80042027ba:	ff d0                	callq  *%rax
-  80042027bc:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  80042027bc:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   80042027c3:	00 00 00 
   80042027c6:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
   80042027ca:	48 89 10             	mov    %rdx,(%rax)
@@ -4061,10 +4061,10 @@ read_rsp(void)
   800420281e:	ff ff ff 
   8004202821:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
   8004202825:	48 01 c2             	add    %rax,%rdx
-  8004202828:	48 b8 e0 b5 69 04 80 	movabs $0x800469b5e0,%rax
+  8004202828:	48 b8 e0 c5 69 04 80 	movabs $0x800469c5e0,%rax
   800420282f:	00 00 00 
   8004202832:	48 89 10             	mov    %rdx,(%rax)
-  8004202835:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004202835:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   800420283c:	00 00 00 
   800420283f:	48 8b 00             	mov    (%rax),%rax
   8004202842:	48 c1 e0 04          	shl    $0x4,%rax
@@ -4074,10 +4074,10 @@ read_rsp(void)
   8004202850:	48 b8 22 26 20 04 80 	movabs $0x8004202622,%rax
   8004202857:	00 00 00 
   800420285a:	ff d0                	callq  *%rax
-  800420285c:	48 ba f8 b5 69 04 80 	movabs $0x800469b5f8,%rdx
+  800420285c:	48 ba f8 c5 69 04 80 	movabs $0x800469c5f8,%rdx
   8004202863:	00 00 00 
   8004202866:	48 89 02             	mov    %rax,(%rdx)
-  8004202869:	48 b8 f8 b5 69 04 80 	movabs $0x800469b5f8,%rax
+  8004202869:	48 b8 f8 c5 69 04 80 	movabs $0x800469c5f8,%rax
   8004202870:	00 00 00 
   8004202873:	48 8b 00             	mov    (%rax),%rax
   8004202876:	48 8b 55 e8          	mov    -0x18(%rbp),%rdx
@@ -4090,10 +4090,10 @@ read_rsp(void)
   8004202893:	48 b8 22 26 20 04 80 	movabs $0x8004202622,%rax
   800420289a:	00 00 00 
   800420289d:	ff d0                	callq  *%rax
-  800420289f:	48 ba 58 c2 49 04 80 	movabs $0x800449c258,%rdx
+  800420289f:	48 ba 58 d2 49 04 80 	movabs $0x800449d258,%rdx
   80042028a6:	00 00 00 
   80042028a9:	48 89 02             	mov    %rax,(%rdx)
-  80042028ac:	48 b8 58 c2 49 04 80 	movabs $0x800449c258,%rax
+  80042028ac:	48 b8 58 d2 49 04 80 	movabs $0x800449d258,%rax
   80042028b3:	00 00 00 
   80042028b6:	48 8b 00             	mov    (%rax),%rax
   80042028b9:	ba 00 a0 05 00       	mov    $0x5a000,%edx
@@ -4105,12 +4105,12 @@ read_rsp(void)
   80042028d2:	48 b8 30 2d 20 04 80 	movabs $0x8004202d30,%rax
   80042028d9:	00 00 00 
   80042028dc:	ff d0                	callq  *%rax
-  80042028de:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  80042028de:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   80042028e5:	00 00 00 
   80042028e8:	48 8b 00             	mov    (%rax),%rax
   80042028eb:	48 c1 e0 04          	shl    $0x4,%rax
   80042028ef:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
-  80042028f3:	48 b8 f8 b5 69 04 80 	movabs $0x800469b5f8,%rax
+  80042028f3:	48 b8 f8 c5 69 04 80 	movabs $0x800469c5f8,%rax
   80042028fa:	00 00 00 
   80042028fd:	48 8b 00             	mov    (%rax),%rax
   8004202900:	48 89 45 e0          	mov    %rax,-0x20(%rbp)
@@ -4133,7 +4133,7 @@ read_rsp(void)
   800420294d:	ff ff ff 
   8004202950:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
   8004202954:	48 8d 0c 02          	lea    (%rdx,%rax,1),%rcx
-  8004202958:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004202958:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   800420295f:	00 00 00 
   8004202962:	48 8b 00             	mov    (%rax),%rax
   8004202965:	48 8b 55 e8          	mov    -0x18(%rbp),%rdx
@@ -4157,7 +4157,7 @@ read_rsp(void)
   80042029b2:	48 29 c2             	sub    %rax,%rdx
   80042029b5:	48 89 d0             	mov    %rdx,%rax
   80042029b8:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
-  80042029bc:	48 b8 58 c2 49 04 80 	movabs $0x800449c258,%rax
+  80042029bc:	48 b8 58 d2 49 04 80 	movabs $0x800449d258,%rax
   80042029c3:	00 00 00 
   80042029c6:	48 8b 00             	mov    (%rax),%rax
   80042029c9:	48 89 45 c8          	mov    %rax,-0x38(%rbp)
@@ -4180,7 +4180,7 @@ read_rsp(void)
   8004202a16:	ff ff ff 
   8004202a19:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
   8004202a1d:	48 8d 0c 02          	lea    (%rdx,%rax,1),%rcx
-  8004202a21:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004202a21:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004202a28:	00 00 00 
   8004202a2b:	48 8b 00             	mov    (%rax),%rax
   8004202a2e:	48 8b 55 e8          	mov    -0x18(%rbp),%rdx
@@ -4213,7 +4213,7 @@ read_rsp(void)
   8004202aa8:	ff ff ff 
   8004202aab:	48 8b 45 c0          	mov    -0x40(%rbp),%rax
   8004202aaf:	48 01 c2             	add    %rax,%rdx
-  8004202ab2:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004202ab2:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004202ab9:	00 00 00 
   8004202abc:	48 8b 00             	mov    (%rax),%rax
   8004202abf:	41 b8 03 00 00 00    	mov    $0x3,%r8d
@@ -4225,12 +4225,12 @@ read_rsp(void)
   8004202ada:	48 b8 6f 38 20 04 80 	movabs $0x800420386f,%rax
   8004202ae1:	00 00 00 
   8004202ae4:	ff d0                	callq  *%rax
-  8004202ae6:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004202ae6:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004202aed:	00 00 00 
   8004202af0:	48 8b 00             	mov    (%rax),%rax
   8004202af3:	48 c1 e0 0c          	shl    $0xc,%rax
   8004202af7:	48 89 c2             	mov    %rax,%rdx
-  8004202afa:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004202afa:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004202b01:	00 00 00 
   8004202b04:	48 8b 00             	mov    (%rax),%rax
   8004202b07:	41 b8 03 00 00 00    	mov    $0x3,%r8d
@@ -4253,7 +4253,7 @@ read_rsp(void)
   8004202b50:	48 c1 e8 0c          	shr    $0xc,%rax
   8004202b54:	89 45 b4             	mov    %eax,-0x4c(%rbp)
   8004202b57:	8b 55 b4             	mov    -0x4c(%rbp),%edx
-  8004202b5a:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004202b5a:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004202b61:	00 00 00 
   8004202b64:	48 8b 00             	mov    (%rax),%rax
   8004202b67:	48 39 c2             	cmp    %rax,%rdx
@@ -4282,7 +4282,7 @@ read_rsp(void)
   8004202bc8:	48 c1 e8 0c          	shr    $0xc,%rax
   8004202bcc:	89 45 9c             	mov    %eax,-0x64(%rbp)
   8004202bcf:	8b 55 9c             	mov    -0x64(%rbp),%edx
-  8004202bd2:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004202bd2:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004202bd9:	00 00 00 
   8004202bdc:	48 8b 00             	mov    (%rax),%rax
   8004202bdf:	48 39 c2             	cmp    %rax,%rdx
@@ -4303,7 +4303,7 @@ read_rsp(void)
   8004202c20:	48 8b 45 a0          	mov    -0x60(%rbp),%rax
   8004202c24:	48 01 d0             	add    %rdx,%rax
   8004202c27:	48 89 45 90          	mov    %rax,-0x70(%rbp)
-  8004202c2b:	48 b8 e0 b5 69 04 80 	movabs $0x800469b5e0,%rax
+  8004202c2b:	48 b8 e0 c5 69 04 80 	movabs $0x800469c5e0,%rax
   8004202c32:	00 00 00 
   8004202c35:	48 8b 00             	mov    (%rax),%rax
   8004202c38:	48 89 45 88          	mov    %rax,-0x78(%rbp)
@@ -4339,7 +4339,7 @@ lcr3(uint64_t val)
   8004202c7e:	48 98                	cltq   
   8004202c80:	48 c1 e0 10          	shl    $0x10,%rax
   8004202c84:	48 89 c2             	mov    %rax,%rdx
-  8004202c87:	48 b8 00 e0 69 04 80 	movabs $0x800469e000,%rax
+  8004202c87:	48 b8 00 f0 69 04 80 	movabs $0x800469f000,%rax
   8004202c8e:	00 00 00 
   8004202c91:	48 01 d0             	add    %rdx,%rax
   8004202c94:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
@@ -4364,7 +4364,7 @@ lcr3(uint64_t val)
   8004202ce8:	48 01 c2             	add    %rax,%rdx
   8004202ceb:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
   8004202cef:	48 8d b0 00 00 ff ff 	lea    -0x10000(%rax),%rsi
-  8004202cf6:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004202cf6:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004202cfd:	00 00 00 
   8004202d00:	48 8b 00             	mov    (%rax),%rax
   8004202d03:	41 b8 03 00 00 00    	mov    $0x3,%r8d
@@ -4397,7 +4397,7 @@ lcr3(uint64_t val)
   8004202d62:	c7 45 f4 01 00 00 00 	movl   $0x1,-0xc(%rbp)
   8004202d69:	48 83 7d f8 00       	cmpq   $0x0,-0x8(%rbp)
   8004202d6e:	74 1a                	je     8004202d8a <page_init+0x5a>
-  8004202d70:	48 b8 30 c2 49 04 80 	movabs $0x800449c230,%rax
+  8004202d70:	48 b8 30 d2 49 04 80 	movabs $0x800449d230,%rax
   8004202d77:	00 00 00 
   8004202d7a:	48 8b 00             	mov    (%rax),%rax
   8004202d7d:	48 39 45 f8          	cmp    %rax,-0x8(%rbp)
@@ -4442,7 +4442,7 @@ lcr3(uint64_t val)
   8004202e28:	48 c1 e8 0c          	shr    $0xc,%rax
   8004202e2c:	89 45 c4             	mov    %eax,-0x3c(%rbp)
   8004202e2f:	8b 55 c4             	mov    -0x3c(%rbp),%edx
-  8004202e32:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004202e32:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004202e39:	00 00 00 
   8004202e3c:	48 8b 00             	mov    (%rax),%rax
   8004202e3f:	48 39 c2             	cmp    %rax,%rdx
@@ -4472,7 +4472,7 @@ lcr3(uint64_t val)
   8004202ea9:	48 c1 e8 0c          	shr    $0xc,%rax
   8004202ead:	89 45 b4             	mov    %eax,-0x4c(%rbp)
   8004202eb0:	8b 55 b4             	mov    -0x4c(%rbp),%edx
-  8004202eb3:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004202eb3:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004202eba:	00 00 00 
   8004202ebd:	48 8b 00             	mov    (%rax),%rax
   8004202ec0:	48 39 c2             	cmp    %rax,%rdx
@@ -4495,7 +4495,7 @@ lcr3(uint64_t val)
   8004202f08:	48 3b 45 d0          	cmp    -0x30(%rbp),%rax
   8004202f0c:	76 07                	jbe    8004202f15 <page_init+0x1e5>
   8004202f0e:	c7 45 f4 01 00 00 00 	movl   $0x1,-0xc(%rbp)
-  8004202f15:	48 b8 f8 b5 69 04 80 	movabs $0x800469b5f8,%rax
+  8004202f15:	48 b8 f8 c5 69 04 80 	movabs $0x800469c5f8,%rax
   8004202f1c:	00 00 00 
   8004202f1f:	48 8b 00             	mov    (%rax),%rax
   8004202f22:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
@@ -4503,7 +4503,7 @@ lcr3(uint64_t val)
   8004202f2a:	48 01 c2             	add    %rax,%rdx
   8004202f2d:	8b 45 f4             	mov    -0xc(%rbp),%eax
   8004202f30:	66 89 42 08          	mov    %ax,0x8(%rdx)
-  8004202f34:	48 b8 f8 b5 69 04 80 	movabs $0x800469b5f8,%rax
+  8004202f34:	48 b8 f8 c5 69 04 80 	movabs $0x800469c5f8,%rax
   8004202f3b:	00 00 00 
   8004202f3e:	48 8b 00             	mov    (%rax),%rax
   8004202f41:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
@@ -4514,7 +4514,7 @@ lcr3(uint64_t val)
   8004202f57:	75 69                	jne    8004202fc2 <page_init+0x292>
   8004202f59:	48 83 7d e8 00       	cmpq   $0x0,-0x18(%rbp)
   8004202f5e:	74 21                	je     8004202f81 <page_init+0x251>
-  8004202f60:	48 b8 f8 b5 69 04 80 	movabs $0x800469b5f8,%rax
+  8004202f60:	48 b8 f8 c5 69 04 80 	movabs $0x800469c5f8,%rax
   8004202f67:	00 00 00 
   8004202f6a:	48 8b 00             	mov    (%rax),%rax
   8004202f6d:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
@@ -4523,16 +4523,16 @@ lcr3(uint64_t val)
   8004202f78:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
   8004202f7c:	48 89 10             	mov    %rdx,(%rax)
   8004202f7f:	eb 25                	jmp    8004202fa6 <page_init+0x276>
-  8004202f81:	48 b8 f8 b5 69 04 80 	movabs $0x800469b5f8,%rax
+  8004202f81:	48 b8 f8 c5 69 04 80 	movabs $0x800469c5f8,%rax
   8004202f88:	00 00 00 
   8004202f8b:	48 8b 00             	mov    (%rax),%rax
   8004202f8e:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
   8004202f92:	48 c1 e2 04          	shl    $0x4,%rdx
   8004202f96:	48 01 c2             	add    %rax,%rdx
-  8004202f99:	48 b8 38 c2 49 04 80 	movabs $0x800449c238,%rax
+  8004202f99:	48 b8 38 d2 49 04 80 	movabs $0x800449d238,%rax
   8004202fa0:	00 00 00 
   8004202fa3:	48 89 10             	mov    %rdx,(%rax)
-  8004202fa6:	48 b8 f8 b5 69 04 80 	movabs $0x800469b5f8,%rax
+  8004202fa6:	48 b8 f8 c5 69 04 80 	movabs $0x800469c5f8,%rax
   8004202fad:	00 00 00 
   8004202fb0:	48 8b 00             	mov    (%rax),%rax
   8004202fb3:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
@@ -4540,7 +4540,7 @@ lcr3(uint64_t val)
   8004202fbb:	48 01 d0             	add    %rdx,%rax
   8004202fbe:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
   8004202fc2:	48 83 45 f8 01       	addq   $0x1,-0x8(%rbp)
-  8004202fc7:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004202fc7:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004202fce:	00 00 00 
   8004202fd1:	48 8b 00             	mov    (%rax),%rax
   8004202fd4:	48 39 45 f8          	cmp    %rax,-0x8(%rbp)
@@ -4553,17 +4553,17 @@ lcr3(uint64_t val)
   8004202fe1:	48 89 e5             	mov    %rsp,%rbp
   8004202fe4:	48 83 ec 20          	sub    $0x20,%rsp
   8004202fe8:	89 7d ec             	mov    %edi,-0x14(%rbp)
-  8004202feb:	48 b8 38 c2 49 04 80 	movabs $0x800449c238,%rax
+  8004202feb:	48 b8 38 d2 49 04 80 	movabs $0x800449d238,%rax
   8004202ff2:	00 00 00 
   8004202ff5:	48 8b 00             	mov    (%rax),%rax
   8004202ff8:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
   8004202ffc:	48 83 7d f8 00       	cmpq   $0x0,-0x8(%rbp)
   8004203001:	74 5e                	je     8004203061 <page_alloc+0x81>
-  8004203003:	48 b8 38 c2 49 04 80 	movabs $0x800449c238,%rax
+  8004203003:	48 b8 38 d2 49 04 80 	movabs $0x800449d238,%rax
   800420300a:	00 00 00 
   800420300d:	48 8b 00             	mov    (%rax),%rax
   8004203010:	48 8b 10             	mov    (%rax),%rdx
-  8004203013:	48 b8 38 c2 49 04 80 	movabs $0x800449c238,%rax
+  8004203013:	48 b8 38 d2 49 04 80 	movabs $0x800449d238,%rax
   800420301a:	00 00 00 
   800420301d:	48 89 10             	mov    %rdx,(%rax)
   8004203020:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
@@ -4625,12 +4625,12 @@ lcr3(uint64_t val)
   80042030dc:	00 00 00 
   80042030df:	ff d1                	callq  *%rcx
   80042030e1:	eb 2f                	jmp    8004203112 <page_free+0x80>
-  80042030e3:	48 b8 38 c2 49 04 80 	movabs $0x800449c238,%rax
+  80042030e3:	48 b8 38 d2 49 04 80 	movabs $0x800449d238,%rax
   80042030ea:	00 00 00 
   80042030ed:	48 8b 10             	mov    (%rax),%rdx
   80042030f0:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
   80042030f4:	48 89 10             	mov    %rdx,(%rax)
-  80042030f7:	48 b8 38 c2 49 04 80 	movabs $0x800449c238,%rax
+  80042030f7:	48 b8 38 d2 49 04 80 	movabs $0x800449d238,%rax
   80042030fe:	00 00 00 
   8004203101:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
   8004203105:	48 89 10             	mov    %rdx,(%rax)
@@ -4728,7 +4728,7 @@ lcr3(uint64_t val)
   8004203250:	48 c1 e8 0c          	shr    $0xc,%rax
   8004203254:	89 45 d4             	mov    %eax,-0x2c(%rbp)
   8004203257:	8b 55 d4             	mov    -0x2c(%rbp),%edx
-  800420325a:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  800420325a:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004203261:	00 00 00 
   8004203264:	48 8b 00             	mov    (%rax),%rax
   8004203267:	48 39 c2             	cmp    %rax,%rdx
@@ -4788,7 +4788,7 @@ lcr3(uint64_t val)
   8004203348:	48 c1 e8 0c          	shr    $0xc,%rax
   800420334c:	89 45 bc             	mov    %eax,-0x44(%rbp)
   800420334f:	8b 55 bc             	mov    -0x44(%rbp),%edx
-  8004203352:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004203352:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004203359:	00 00 00 
   800420335c:	48 8b 00             	mov    (%rax),%rax
   800420335f:	48 39 c2             	cmp    %rax,%rdx
@@ -4889,7 +4889,7 @@ lcr3(uint64_t val)
   80042034c9:	48 c1 e8 0c          	shr    $0xc,%rax
   80042034cd:	89 45 d4             	mov    %eax,-0x2c(%rbp)
   80042034d0:	8b 55 d4             	mov    -0x2c(%rbp),%edx
-  80042034d3:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  80042034d3:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   80042034da:	00 00 00 
   80042034dd:	48 8b 00             	mov    (%rax),%rax
   80042034e0:	48 39 c2             	cmp    %rax,%rdx
@@ -4949,7 +4949,7 @@ lcr3(uint64_t val)
   80042035c1:	48 c1 e8 0c          	shr    $0xc,%rax
   80042035c5:	89 45 bc             	mov    %eax,-0x44(%rbp)
   80042035c8:	8b 55 bc             	mov    -0x44(%rbp),%edx
-  80042035cb:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  80042035cb:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   80042035d2:	00 00 00 
   80042035d5:	48 8b 00             	mov    (%rax),%rax
   80042035d8:	48 39 c2             	cmp    %rax,%rdx
@@ -5056,7 +5056,7 @@ lcr3(uint64_t val)
   800420375a:	48 c1 e8 0c          	shr    $0xc,%rax
   800420375e:	89 45 d4             	mov    %eax,-0x2c(%rbp)
   8004203761:	8b 55 d4             	mov    -0x2c(%rbp),%edx
-  8004203764:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004203764:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   800420376b:	00 00 00 
   800420376e:	48 8b 00             	mov    (%rax),%rax
   8004203771:	48 39 c2             	cmp    %rax,%rdx
@@ -5096,7 +5096,7 @@ lcr3(uint64_t val)
   8004203802:	48 c1 e8 0c          	shr    $0xc,%rax
   8004203806:	89 45 c4             	mov    %eax,-0x3c(%rbp)
   8004203809:	8b 55 c4             	mov    -0x3c(%rbp),%edx
-  800420380c:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  800420380c:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004203813:	00 00 00 
   8004203816:	48 8b 00             	mov    (%rax),%rax
   8004203819:	48 39 c2             	cmp    %rax,%rdx
@@ -5203,7 +5203,7 @@ lcr3(uint64_t val)
   800420398c:	48 c1 e8 0c          	shr    $0xc,%rax
   8004203990:	89 45 dc             	mov    %eax,-0x24(%rbp)
   8004203993:	8b 55 dc             	mov    -0x24(%rbp),%edx
-  8004203996:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004203996:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   800420399d:	00 00 00 
   80042039a0:	48 8b 00             	mov    (%rax),%rax
   80042039a3:	48 39 c2             	cmp    %rax,%rdx
@@ -5264,7 +5264,7 @@ lcr3(uint64_t val)
   8004203a7d:	48 c1 e8 0c          	shr    $0xc,%rax
   8004203a81:	89 45 c4             	mov    %eax,-0x3c(%rbp)
   8004203a84:	8b 55 c4             	mov    -0x3c(%rbp),%edx
-  8004203a87:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004203a87:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004203a8e:	00 00 00 
   8004203a91:	48 8b 00             	mov    (%rax),%rax
   8004203a94:	48 39 c2             	cmp    %rax,%rdx
@@ -5374,7 +5374,7 @@ lcr3(uint64_t val)
   8004203c25:	48 c1 e8 0c          	shr    $0xc,%rax
   8004203c29:	89 45 ec             	mov    %eax,-0x14(%rbp)
   8004203c2c:	8b 55 ec             	mov    -0x14(%rbp),%edx
-  8004203c2f:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004203c2f:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004203c36:	00 00 00 
   8004203c39:	48 8b 00             	mov    (%rax),%rax
   8004203c3c:	48 39 c2             	cmp    %rax,%rdx
@@ -5429,7 +5429,7 @@ lcr3(uint64_t val)
   8004203d00:	48 c1 e8 0c          	shr    $0xc,%rax
   8004203d04:	89 45 d4             	mov    %eax,-0x2c(%rbp)
   8004203d07:	8b 55 d4             	mov    -0x2c(%rbp),%edx
-  8004203d0a:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004203d0a:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004203d11:	00 00 00 
   8004203d14:	48 8b 00             	mov    (%rax),%rax
   8004203d17:	48 39 c2             	cmp    %rax,%rdx
@@ -5647,7 +5647,7 @@ lcr3(uint64_t val)
   800420400c:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   8004204013:	00 00 00 
   8004204016:	ff d0                	callq  *%rax
-  8004204018:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  8004204018:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420401f:	00 00 00 
   8004204022:	48 98                	cltq   
   8004204024:	48 c1 e0 03          	shl    $0x3,%rax
@@ -5662,7 +5662,7 @@ lcr3(uint64_t val)
   8004204041:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   8004204048:	00 00 00 
   800420404b:	ff d0                	callq  *%rax
-  800420404d:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420404d:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   8004204054:	00 00 00 
   8004204057:	48 98                	cltq   
   8004204059:	48 c1 e0 03          	shl    $0x3,%rax
@@ -5737,7 +5737,7 @@ invlpg(void *addr)
   8004204144:	48 b9 e4 05 20 04 80 	movabs $0x80042005e4,%rcx
   800420414b:	00 00 00 
   800420414e:	ff d1                	callq  *%rcx
-  8004204150:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004204150:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004204157:	00 00 00 
   800420415a:	48 8b 00             	mov    (%rax),%rax
   800420415d:	48 8b 4d d8          	mov    -0x28(%rbp),%rcx
@@ -5773,7 +5773,7 @@ invlpg(void *addr)
   80042041c1:	48 3b 45 f8          	cmp    -0x8(%rbp),%rax
   80042041c5:	76 1b                	jbe    80042041e2 <user_mem_check+0x5e>
   80042041c7:	48 8b 55 d0          	mov    -0x30(%rbp),%rdx
-  80042041cb:	48 b8 40 c2 49 04 80 	movabs $0x800449c240,%rax
+  80042041cb:	48 b8 40 d2 49 04 80 	movabs $0x800449d240,%rax
   80042041d2:	00 00 00 
   80042041d5:	48 89 10             	mov    %rdx,(%rax)
   80042041d8:	b8 fa ff ff ff       	mov    $0xfffffffa,%eax
@@ -5803,7 +5803,7 @@ invlpg(void *addr)
   8004204232:	48 39 c2             	cmp    %rax,%rdx
   8004204235:	74 18                	je     800420424f <user_mem_check+0xcb>
   8004204237:	48 8b 55 d0          	mov    -0x30(%rbp),%rdx
-  800420423b:	48 b8 40 c2 49 04 80 	movabs $0x800449c240,%rax
+  800420423b:	48 b8 40 d2 49 04 80 	movabs $0x800449d240,%rax
   8004204242:	00 00 00 
   8004204245:	48 89 10             	mov    %rdx,(%rax)
   8004204248:	b8 fa ff ff ff       	mov    $0xfffffffa,%eax
@@ -5852,7 +5852,7 @@ invlpg(void *addr)
   80042042dc:	ff d0                	callq  *%rax
   80042042de:	85 c0                	test   %eax,%eax
   80042042e0:	79 47                	jns    8004204329 <user_mem_assert+0x85>
-  80042042e2:	48 b8 40 c2 49 04 80 	movabs $0x800449c240,%rax
+  80042042e2:	48 b8 40 d2 49 04 80 	movabs $0x800449d240,%rax
   80042042e9:	00 00 00 
   80042042ec:	48 8b 10             	mov    (%rax),%rdx
   80042042ef:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
@@ -5888,7 +5888,7 @@ invlpg(void *addr)
   8004204354:	00 
   8004204355:	48 c7 45 e8 00 00 00 	movq   $0x0,-0x18(%rbp)
   800420435c:	00 
-  800420435d:	48 b8 38 c2 49 04 80 	movabs $0x800449c238,%rax
+  800420435d:	48 b8 38 d2 49 04 80 	movabs $0x800449d238,%rax
   8004204364:	00 00 00 
   8004204367:	48 8b 00             	mov    (%rax),%rax
   800420436a:	48 85 c0             	test   %rax,%rax
@@ -5908,7 +5908,7 @@ invlpg(void *addr)
   80042043a7:	48 89 45 b0          	mov    %rax,-0x50(%rbp)
   80042043ab:	48 8d 45 c8          	lea    -0x38(%rbp),%rax
   80042043af:	48 89 45 b8          	mov    %rax,-0x48(%rbp)
-  80042043b3:	48 b8 38 c2 49 04 80 	movabs $0x800449c238,%rax
+  80042043b3:	48 b8 38 d2 49 04 80 	movabs $0x800449d238,%rax
   80042043ba:	00 00 00 
   80042043bd:	48 8b 00             	mov    (%rax),%rax
   80042043c0:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
@@ -5946,10 +5946,10 @@ invlpg(void *addr)
   8004204434:	48 8b 55 c8          	mov    -0x38(%rbp),%rdx
   8004204438:	48 89 10             	mov    %rdx,(%rax)
   800420443b:	48 8b 55 d0          	mov    -0x30(%rbp),%rdx
-  800420443f:	48 b8 38 c2 49 04 80 	movabs $0x800449c238,%rax
+  800420443f:	48 b8 38 d2 49 04 80 	movabs $0x800449d238,%rax
   8004204446:	00 00 00 
   8004204449:	48 89 10             	mov    %rdx,(%rax)
-  800420444c:	48 b8 38 c2 49 04 80 	movabs $0x800449c238,%rax
+  800420444c:	48 b8 38 d2 49 04 80 	movabs $0x800449d238,%rax
   8004204453:	00 00 00 
   8004204456:	48 8b 00             	mov    (%rax),%rax
   8004204459:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
@@ -5986,12 +5986,12 @@ invlpg(void *addr)
   80042044d0:	00 00 00 
   80042044d3:	ff d0                	callq  *%rax
   80042044d5:	48 89 45 d8          	mov    %rax,-0x28(%rbp)
-  80042044d9:	48 b8 38 c2 49 04 80 	movabs $0x800449c238,%rax
+  80042044d9:	48 b8 38 d2 49 04 80 	movabs $0x800449d238,%rax
   80042044e0:	00 00 00 
   80042044e3:	48 8b 00             	mov    (%rax),%rax
   80042044e6:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
   80042044ea:	e9 20 03 00 00       	jmpq   800420480f <check_page_free_list+0x4e4>
-  80042044ef:	48 b8 f8 b5 69 04 80 	movabs $0x800469b5f8,%rax
+  80042044ef:	48 b8 f8 c5 69 04 80 	movabs $0x800469c5f8,%rax
   80042044f6:	00 00 00 
   80042044f9:	48 8b 00             	mov    (%rax),%rax
   80042044fc:	48 39 45 f8          	cmp    %rax,-0x8(%rbp)
@@ -6007,10 +6007,10 @@ invlpg(void *addr)
   800420452a:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004204531:	00 00 00 
   8004204534:	41 ff d0             	callq  *%r8
-  8004204537:	48 b8 f8 b5 69 04 80 	movabs $0x800469b5f8,%rax
+  8004204537:	48 b8 f8 c5 69 04 80 	movabs $0x800469c5f8,%rax
   800420453e:	00 00 00 
   8004204541:	48 8b 10             	mov    (%rax),%rdx
-  8004204544:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004204544:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   800420454b:	00 00 00 
   800420454e:	48 8b 00             	mov    (%rax),%rax
   8004204551:	48 c1 e0 04          	shl    $0x4,%rax
@@ -6029,7 +6029,7 @@ invlpg(void *addr)
   800420458d:	00 00 00 
   8004204590:	41 ff d0             	callq  *%r8
   8004204593:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
-  8004204597:	48 b8 f8 b5 69 04 80 	movabs $0x800469b5f8,%rax
+  8004204597:	48 b8 f8 c5 69 04 80 	movabs $0x800469c5f8,%rax
   800420459e:	00 00 00 
   80042045a1:	48 8b 00             	mov    (%rax),%rax
   80042045a4:	48 29 c2             	sub    %rax,%rdx
@@ -6198,7 +6198,7 @@ invlpg(void *addr)
   8004204858:	55                   	push   %rbp
   8004204859:	48 89 e5             	mov    %rsp,%rbp
   800420485c:	48 83 ec 40          	sub    $0x40,%rsp
-  8004204860:	48 b8 38 c2 49 04 80 	movabs $0x800449c238,%rax
+  8004204860:	48 b8 38 d2 49 04 80 	movabs $0x800449d238,%rax
   8004204867:	00 00 00 
   800420486a:	48 8b 00             	mov    (%rax),%rax
   800420486d:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
@@ -6220,13 +6220,13 @@ invlpg(void *addr)
   80042048ad:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
   80042048b1:	48 83 7d f8 00       	cmpq   $0x0,-0x8(%rbp)
   80042048b6:	75 c2                	jne    800420487a <check_page_alloc+0x22>
-  80042048b8:	48 b8 38 c2 49 04 80 	movabs $0x800449c238,%rax
+  80042048b8:	48 b8 38 d2 49 04 80 	movabs $0x800449d238,%rax
   80042048bf:	00 00 00 
   80042048c2:	48 8b 00             	mov    (%rax),%rax
   80042048c5:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
   80042048c9:	c7 45 f0 00 00 00 00 	movl   $0x0,-0x10(%rbp)
   80042048d0:	e9 ec 01 00 00       	jmpq   8004204ac1 <check_page_alloc+0x269>
-  80042048d5:	48 b8 f8 b5 69 04 80 	movabs $0x800469b5f8,%rax
+  80042048d5:	48 b8 f8 c5 69 04 80 	movabs $0x800469c5f8,%rax
   80042048dc:	00 00 00 
   80042048df:	48 8b 00             	mov    (%rax),%rax
   80042048e2:	48 39 45 f8          	cmp    %rax,-0x8(%rbp)
@@ -6242,10 +6242,10 @@ invlpg(void *addr)
   8004204910:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004204917:	00 00 00 
   800420491a:	41 ff d0             	callq  *%r8
-  800420491d:	48 b8 f8 b5 69 04 80 	movabs $0x800469b5f8,%rax
+  800420491d:	48 b8 f8 c5 69 04 80 	movabs $0x800469c5f8,%rax
   8004204924:	00 00 00 
   8004204927:	48 8b 10             	mov    (%rax),%rdx
-  800420492a:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  800420492a:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004204931:	00 00 00 
   8004204934:	48 8b 00             	mov    (%rax),%rax
   8004204937:	48 c1 e0 04          	shl    $0x4,%rax
@@ -6453,7 +6453,7 @@ invlpg(void *addr)
   8004204cb0:	48 b8 63 1c 20 04 80 	movabs $0x8004201c63,%rax
   8004204cb7:	00 00 00 
   8004204cba:	ff d0                	callq  *%rax
-  8004204cbc:	48 ba f0 b5 69 04 80 	movabs $0x800469b5f0,%rdx
+  8004204cbc:	48 ba f0 c5 69 04 80 	movabs $0x800469c5f0,%rdx
   8004204cc3:	00 00 00 
   8004204cc6:	48 8b 12             	mov    (%rdx),%rdx
   8004204cc9:	48 c1 e2 0c          	shl    $0xc,%rdx
@@ -6475,7 +6475,7 @@ invlpg(void *addr)
   8004204d0e:	48 b8 63 1c 20 04 80 	movabs $0x8004201c63,%rax
   8004204d15:	00 00 00 
   8004204d18:	ff d0                	callq  *%rax
-  8004204d1a:	48 ba f0 b5 69 04 80 	movabs $0x800469b5f0,%rdx
+  8004204d1a:	48 ba f0 c5 69 04 80 	movabs $0x800469c5f0,%rdx
   8004204d21:	00 00 00 
   8004204d24:	48 8b 12             	mov    (%rdx),%rdx
   8004204d27:	48 c1 e2 0c          	shl    $0xc,%rdx
@@ -6497,7 +6497,7 @@ invlpg(void *addr)
   8004204d6c:	48 b8 63 1c 20 04 80 	movabs $0x8004201c63,%rax
   8004204d73:	00 00 00 
   8004204d76:	ff d0                	callq  *%rax
-  8004204d78:	48 ba f0 b5 69 04 80 	movabs $0x800469b5f0,%rdx
+  8004204d78:	48 ba f0 c5 69 04 80 	movabs $0x800469c5f0,%rdx
   8004204d7f:	00 00 00 
   8004204d82:	48 8b 12             	mov    (%rdx),%rdx
   8004204d85:	48 c1 e2 0c          	shl    $0xc,%rdx
@@ -6514,11 +6514,11 @@ invlpg(void *addr)
   8004204db6:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004204dbd:	00 00 00 
   8004204dc0:	41 ff d0             	callq  *%r8
-  8004204dc3:	48 b8 38 c2 49 04 80 	movabs $0x800449c238,%rax
+  8004204dc3:	48 b8 38 d2 49 04 80 	movabs $0x800449d238,%rax
   8004204dca:	00 00 00 
   8004204dcd:	48 8b 00             	mov    (%rax),%rax
   8004204dd0:	48 89 45 d8          	mov    %rax,-0x28(%rbp)
-  8004204dd4:	48 b8 38 c2 49 04 80 	movabs $0x800449c238,%rax
+  8004204dd4:	48 b8 38 d2 49 04 80 	movabs $0x800449d238,%rax
   8004204ddb:	00 00 00 
   8004204dde:	48 c7 00 00 00 00 00 	movq   $0x0,(%rax)
   8004204de5:	bf 00 00 00 00       	mov    $0x0,%edi
@@ -6757,7 +6757,7 @@ invlpg(void *addr)
   80042051d0:	83 45 f4 01          	addl   $0x1,-0xc(%rbp)
   80042051d4:	81 7d f4 ff 0f 00 00 	cmpl   $0xfff,-0xc(%rbp)
   80042051db:	7e aa                	jle    8004205187 <check_page_alloc+0x92f>
-  80042051dd:	48 b8 38 c2 49 04 80 	movabs $0x800449c238,%rax
+  80042051dd:	48 b8 38 d2 49 04 80 	movabs $0x800449d238,%rax
   80042051e4:	00 00 00 
   80042051e7:	48 8b 55 d8          	mov    -0x28(%rbp),%rdx
   80042051eb:	48 89 10             	mov    %rdx,(%rax)
@@ -6790,13 +6790,13 @@ invlpg(void *addr)
   8004205245:	48 89 e5             	mov    %rsp,%rbp
   8004205248:	48 81 ec a0 00 00 00 	sub    $0xa0,%rsp
   800420524f:	48 89 bd 68 ff ff ff 	mov    %rdi,-0x98(%rbp)
-  8004205256:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004205256:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   800420525d:	00 00 00 
   8004205260:	48 8b 00             	mov    (%rax),%rax
   8004205263:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
   8004205267:	48 c7 45 e0 00 10 00 	movq   $0x1000,-0x20(%rbp)
   800420526e:	00 
-  800420526f:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  800420526f:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004205276:	00 00 00 
   8004205279:	48 8b 00             	mov    (%rax),%rax
   800420527c:	48 c1 e0 04          	shl    $0x4,%rax
@@ -6826,7 +6826,7 @@ invlpg(void *addr)
   80042052d8:	48 b8 92 59 20 04 80 	movabs $0x8004205992,%rax
   80042052df:	00 00 00 
   80042052e2:	ff d0                	callq  *%rax
-  80042052e4:	48 ba f8 b5 69 04 80 	movabs $0x800469b5f8,%rdx
+  80042052e4:	48 ba f8 c5 69 04 80 	movabs $0x800469c5f8,%rdx
   80042052eb:	00 00 00 
   80042052ee:	48 8b 12             	mov    (%rdx),%rdx
   80042052f1:	48 89 55 d0          	mov    %rdx,-0x30(%rbp)
@@ -6895,7 +6895,7 @@ invlpg(void *addr)
   80042053fb:	48 b8 92 59 20 04 80 	movabs $0x8004205992,%rax
   8004205402:	00 00 00 
   8004205405:	ff d0                	callq  *%rax
-  8004205407:	48 ba 58 c2 49 04 80 	movabs $0x800449c258,%rdx
+  8004205407:	48 ba 58 d2 49 04 80 	movabs $0x800449d258,%rdx
   800420540e:	00 00 00 
   8004205411:	48 8b 12             	mov    (%rdx),%rdx
   8004205414:	48 89 55 b8          	mov    %rdx,-0x48(%rbp)
@@ -6966,7 +6966,7 @@ invlpg(void *addr)
   800420552b:	41 ff d0             	callq  *%r8
   800420552e:	48 81 45 f8 00 10 00 	addq   $0x1000,-0x8(%rbp)
   8004205535:	00 
-  8004205536:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004205536:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   800420553d:	00 00 00 
   8004205540:	48 8b 00             	mov    (%rax),%rax
   8004205543:	48 c1 e0 0c          	shl    $0xc,%rax
@@ -7002,7 +7002,7 @@ invlpg(void *addr)
   80042055bc:	48 8b 55 f0          	mov    -0x10(%rbp),%rdx
   80042055c0:	48 89 d1             	mov    %rdx,%rcx
   80042055c3:	48 c1 e1 10          	shl    $0x10,%rcx
-  80042055c7:	48 ba 00 e0 69 04 80 	movabs $0x800469e000,%rdx
+  80042055c7:	48 ba 00 f0 69 04 80 	movabs $0x800469f000,%rdx
   80042055ce:	00 00 00 
   80042055d1:	48 01 ca             	add    %rcx,%rdx
   80042055d4:	48 89 55 a8          	mov    %rdx,-0x58(%rbp)
@@ -7078,7 +7078,7 @@ invlpg(void *addr)
   80042056fa:	48 83 45 f0 01       	addq   $0x1,-0x10(%rbp)
   80042056ff:	48 83 7d f0 03       	cmpq   $0x3,-0x10(%rbp)
   8004205704:	0f 86 54 fe ff ff    	jbe    800420555e <check_boot_pml4e+0x31a>
-  800420570a:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  800420570a:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004205711:	00 00 00 
   8004205714:	48 8b 00             	mov    (%rax),%rax
   8004205717:	48 83 c0 08          	add    $0x8,%rax
@@ -7089,7 +7089,7 @@ invlpg(void *addr)
   800420572c:	48 c1 e8 0c          	shr    $0xc,%rax
   8004205730:	89 45 9c             	mov    %eax,-0x64(%rbp)
   8004205733:	8b 55 9c             	mov    -0x64(%rbp),%edx
-  8004205736:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004205736:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   800420573d:	00 00 00 
   8004205740:	48 8b 00             	mov    (%rax),%rax
   8004205743:	48 39 c2             	cmp    %rax,%rdx
@@ -7118,7 +7118,7 @@ invlpg(void *addr)
   80042057a4:	48 c1 e8 0c          	shr    $0xc,%rax
   80042057a8:	89 45 84             	mov    %eax,-0x7c(%rbp)
   80042057ab:	8b 55 84             	mov    -0x7c(%rbp),%edx
-  80042057ae:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  80042057ae:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   80042057b5:	00 00 00 
   80042057b8:	48 8b 00             	mov    (%rax),%rax
   80042057bb:	48 39 c2             	cmp    %rax,%rdx
@@ -7260,7 +7260,7 @@ invlpg(void *addr)
   80042059e7:	48 c1 e8 0c          	shr    $0xc,%rax
   80042059eb:	89 45 f4             	mov    %eax,-0xc(%rbp)
   80042059ee:	8b 55 f4             	mov    -0xc(%rbp),%edx
-  80042059f1:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  80042059f1:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   80042059f8:	00 00 00 
   80042059fb:	48 8b 00             	mov    (%rax),%rax
   80042059fe:	48 39 c2             	cmp    %rax,%rdx
@@ -7308,7 +7308,7 @@ invlpg(void *addr)
   8004205aaa:	48 c1 e8 0c          	shr    $0xc,%rax
   8004205aae:	89 45 dc             	mov    %eax,-0x24(%rbp)
   8004205ab1:	8b 55 dc             	mov    -0x24(%rbp),%edx
-  8004205ab4:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004205ab4:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004205abb:	00 00 00 
   8004205abe:	48 8b 00             	mov    (%rax),%rax
   8004205ac1:	48 39 c2             	cmp    %rax,%rdx
@@ -7349,7 +7349,7 @@ invlpg(void *addr)
   8004205b52:	48 c1 e8 0c          	shr    $0xc,%rax
   8004205b56:	89 45 c4             	mov    %eax,-0x3c(%rbp)
   8004205b59:	8b 55 c4             	mov    -0x3c(%rbp),%edx
-  8004205b5c:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004205b5c:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004205b63:	00 00 00 
   8004205b66:	48 8b 00             	mov    (%rax),%rax
   8004205b69:	48 39 c2             	cmp    %rax,%rdx
@@ -7643,11 +7643,11 @@ invlpg(void *addr)
   800420601f:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004206026:	00 00 00 
   8004206029:	41 ff d0             	callq  *%r8
-  800420602c:	48 b8 38 c2 49 04 80 	movabs $0x800449c238,%rax
+  800420602c:	48 b8 38 d2 49 04 80 	movabs $0x800449d238,%rax
   8004206033:	00 00 00 
   8004206036:	48 8b 00             	mov    (%rax),%rax
   8004206039:	48 89 45 b0          	mov    %rax,-0x50(%rbp)
-  800420603d:	48 b8 38 c2 49 04 80 	movabs $0x800449c238,%rax
+  800420603d:	48 b8 38 d2 49 04 80 	movabs $0x800449d238,%rax
   8004206044:	00 00 00 
   8004206047:	48 c7 00 00 00 00 00 	movq   $0x0,(%rax)
   800420604e:	bf 00 00 00 00       	mov    $0x0,%edi
@@ -7667,7 +7667,7 @@ invlpg(void *addr)
   800420608c:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004206093:	00 00 00 
   8004206096:	41 ff d0             	callq  *%r8
-  8004206099:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004206099:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   80042060a0:	00 00 00 
   80042060a3:	48 8b 00             	mov    (%rax),%rax
   80042060a6:	48 8d 95 e0 fe ff ff 	lea    -0x120(%rbp),%rdx
@@ -7689,7 +7689,7 @@ invlpg(void *addr)
   80042060ee:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   80042060f5:	00 00 00 
   80042060f8:	41 ff d0             	callq  *%r8
-  80042060fb:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  80042060fb:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004206102:	00 00 00 
   8004206105:	48 8b 00             	mov    (%rax),%rax
   8004206108:	48 8b 75 c0          	mov    -0x40(%rbp),%rsi
@@ -7717,7 +7717,7 @@ invlpg(void *addr)
   8004206165:	48 b8 92 30 20 04 80 	movabs $0x8004203092,%rax
   800420616c:	00 00 00 
   800420616f:	ff d0                	callq  *%rax
-  8004206171:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004206171:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004206178:	00 00 00 
   800420617b:	48 8b 00             	mov    (%rax),%rax
   800420617e:	48 8b 75 c0          	mov    -0x40(%rbp),%rsi
@@ -7750,7 +7750,7 @@ invlpg(void *addr)
   80042061ee:	48 b8 92 30 20 04 80 	movabs $0x8004203092,%rax
   80042061f5:	00 00 00 
   80042061f8:	ff d0                	callq  *%rax
-  80042061fa:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  80042061fa:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004206201:	00 00 00 
   8004206204:	48 8b 00             	mov    (%rax),%rax
   8004206207:	48 8b 75 c0          	mov    -0x40(%rbp),%rsi
@@ -7773,7 +7773,7 @@ invlpg(void *addr)
   8004206250:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004206257:	00 00 00 
   800420625a:	41 ff d0             	callq  *%r8
-  800420625d:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  800420625d:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004206264:	00 00 00 
   8004206267:	48 8b 00             	mov    (%rax),%rax
   800420626a:	48 8b 00             	mov    (%rax),%rax
@@ -7786,7 +7786,7 @@ invlpg(void *addr)
   8004206287:	ff d0                	callq  *%rax
   8004206289:	48 39 c3             	cmp    %rax,%rbx
   800420628c:	0f 84 97 00 00 00    	je     8004206329 <page_check+0x71d>
-  8004206292:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004206292:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004206299:	00 00 00 
   800420629c:	48 8b 00             	mov    (%rax),%rax
   800420629f:	48 8b 00             	mov    (%rax),%rax
@@ -7799,7 +7799,7 @@ invlpg(void *addr)
   80042062bc:	ff d0                	callq  *%rax
   80042062be:	48 39 c3             	cmp    %rax,%rbx
   80042062c1:	74 66                	je     8004206329 <page_check+0x71d>
-  80042062c3:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  80042062c3:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   80042062ca:	00 00 00 
   80042062cd:	48 8b 00             	mov    (%rax),%rax
   80042062d0:	48 8b 00             	mov    (%rax),%rax
@@ -7823,7 +7823,7 @@ invlpg(void *addr)
   800420631c:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004206323:	00 00 00 
   8004206326:	41 ff d0             	callq  *%r8
-  8004206329:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004206329:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004206330:	00 00 00 
   8004206333:	48 8b 00             	mov    (%rax),%rax
   8004206336:	be 00 00 00 00       	mov    $0x0,%esi
@@ -7895,7 +7895,7 @@ invlpg(void *addr)
   8004206456:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   800420645d:	00 00 00 
   8004206460:	41 ff d0             	callq  *%r8
-  8004206463:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004206463:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   800420646a:	00 00 00 
   800420646d:	48 8b 00             	mov    (%rax),%rax
   8004206470:	48 8b 75 d0          	mov    -0x30(%rbp),%rsi
@@ -7918,7 +7918,7 @@ invlpg(void *addr)
   80042064b9:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   80042064c0:	00 00 00 
   80042064c3:	41 ff d0             	callq  *%r8
-  80042064c6:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  80042064c6:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   80042064cd:	00 00 00 
   80042064d0:	48 8b 00             	mov    (%rax),%rax
   80042064d3:	be 00 10 00 00       	mov    $0x1000,%esi
@@ -7977,7 +7977,7 @@ invlpg(void *addr)
   80042065b8:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   80042065bf:	00 00 00 
   80042065c2:	41 ff d0             	callq  *%r8
-  80042065c5:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  80042065c5:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   80042065cc:	00 00 00 
   80042065cf:	48 8b 00             	mov    (%rax),%rax
   80042065d2:	48 8b 75 d0          	mov    -0x30(%rbp),%rsi
@@ -8000,7 +8000,7 @@ invlpg(void *addr)
   800420661b:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004206622:	00 00 00 
   8004206625:	41 ff d0             	callq  *%r8
-  8004206628:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004206628:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   800420662f:	00 00 00 
   8004206632:	48 8b 00             	mov    (%rax),%rax
   8004206635:	be 00 10 00 00       	mov    $0x1000,%esi
@@ -8059,7 +8059,7 @@ invlpg(void *addr)
   800420671a:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004206721:	00 00 00 
   8004206724:	41 ff d0             	callq  *%r8
-  8004206727:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004206727:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   800420672e:	00 00 00 
   8004206731:	48 8b 00             	mov    (%rax),%rax
   8004206734:	48 8b 00             	mov    (%rax),%rax
@@ -8069,7 +8069,7 @@ invlpg(void *addr)
   8004206745:	48 c1 e8 0c          	shr    $0xc,%rax
   8004206749:	89 45 a4             	mov    %eax,-0x5c(%rbp)
   800420674c:	8b 55 a4             	mov    -0x5c(%rbp),%edx
-  800420674f:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  800420674f:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004206756:	00 00 00 
   8004206759:	48 8b 00             	mov    (%rax),%rax
   800420675c:	48 39 c2             	cmp    %rax,%rdx
@@ -8098,7 +8098,7 @@ invlpg(void *addr)
   80042067bd:	48 c1 e8 0c          	shr    $0xc,%rax
   80042067c1:	89 45 8c             	mov    %eax,-0x74(%rbp)
   80042067c4:	8b 55 8c             	mov    -0x74(%rbp),%edx
-  80042067c7:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  80042067c7:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   80042067ce:	00 00 00 
   80042067d1:	48 8b 00             	mov    (%rax),%rax
   80042067d4:	48 39 c2             	cmp    %rax,%rdx
@@ -8127,7 +8127,7 @@ invlpg(void *addr)
   800420683b:	48 c1 e8 0c          	shr    $0xc,%rax
   800420683f:	89 85 74 ff ff ff    	mov    %eax,-0x8c(%rbp)
   8004206845:	8b 95 74 ff ff ff    	mov    -0x8c(%rbp),%edx
-  800420684b:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  800420684b:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004206852:	00 00 00 
   8004206855:	48 8b 00             	mov    (%rax),%rax
   8004206858:	48 39 c2             	cmp    %rax,%rdx
@@ -8148,7 +8148,7 @@ invlpg(void *addr)
   800420689c:	48 8b 85 78 ff ff ff 	mov    -0x88(%rbp),%rax
   80042068a3:	48 01 d0             	add    %rdx,%rax
   80042068a6:	48 89 85 e0 fe ff ff 	mov    %rax,-0x120(%rbp)
-  80042068ad:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  80042068ad:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   80042068b4:	00 00 00 
   80042068b7:	48 8b 00             	mov    (%rax),%rax
   80042068ba:	ba 00 00 00 00       	mov    $0x0,%edx
@@ -8172,7 +8172,7 @@ invlpg(void *addr)
   800420690b:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004206912:	00 00 00 
   8004206915:	41 ff d0             	callq  *%r8
-  8004206918:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004206918:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   800420691f:	00 00 00 
   8004206922:	48 8b 00             	mov    (%rax),%rax
   8004206925:	48 8b 75 d0          	mov    -0x30(%rbp),%rsi
@@ -8195,7 +8195,7 @@ invlpg(void *addr)
   800420696e:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004206975:	00 00 00 
   8004206978:	41 ff d0             	callq  *%r8
-  800420697b:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  800420697b:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004206982:	00 00 00 
   8004206985:	48 8b 00             	mov    (%rax),%rax
   8004206988:	be 00 10 00 00       	mov    $0x1000,%esi
@@ -8237,7 +8237,7 @@ invlpg(void *addr)
   8004206a22:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004206a29:	00 00 00 
   8004206a2c:	41 ff d0             	callq  *%r8
-  8004206a2f:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004206a2f:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004206a36:	00 00 00 
   8004206a39:	48 8b 00             	mov    (%rax),%rax
   8004206a3c:	ba 00 00 00 00       	mov    $0x0,%edx
@@ -8261,7 +8261,7 @@ invlpg(void *addr)
   8004206a88:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004206a8f:	00 00 00 
   8004206a92:	41 ff d0             	callq  *%r8
-  8004206a95:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004206a95:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004206a9c:	00 00 00 
   8004206a9f:	48 8b 00             	mov    (%rax),%rax
   8004206aa2:	48 8b 00             	mov    (%rax),%rax
@@ -8279,7 +8279,7 @@ invlpg(void *addr)
   8004206ad5:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004206adc:	00 00 00 
   8004206adf:	41 ff d0             	callq  *%r8
-  8004206ae2:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004206ae2:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004206ae9:	00 00 00 
   8004206aec:	48 8b 00             	mov    (%rax),%rax
   8004206aef:	48 8b 75 b8          	mov    -0x48(%rbp),%rsi
@@ -8302,7 +8302,7 @@ invlpg(void *addr)
   8004206b38:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004206b3f:	00 00 00 
   8004206b42:	41 ff d0             	callq  *%r8
-  8004206b45:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004206b45:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004206b4c:	00 00 00 
   8004206b4f:	48 8b 00             	mov    (%rax),%rax
   8004206b52:	48 8b 75 c0          	mov    -0x40(%rbp),%rsi
@@ -8325,7 +8325,7 @@ invlpg(void *addr)
   8004206b9b:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004206ba2:	00 00 00 
   8004206ba5:	41 ff d0             	callq  *%r8
-  8004206ba8:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004206ba8:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004206baf:	00 00 00 
   8004206bb2:	48 8b 00             	mov    (%rax),%rax
   8004206bb5:	ba 00 00 00 00       	mov    $0x0,%edx
@@ -8349,7 +8349,7 @@ invlpg(void *addr)
   8004206c01:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004206c08:	00 00 00 
   8004206c0b:	41 ff d0             	callq  *%r8
-  8004206c0e:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004206c0e:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004206c15:	00 00 00 
   8004206c18:	48 8b 00             	mov    (%rax),%rax
   8004206c1b:	be 00 00 00 00       	mov    $0x0,%esi
@@ -8376,7 +8376,7 @@ invlpg(void *addr)
   8004206c72:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004206c79:	00 00 00 
   8004206c7c:	41 ff d0             	callq  *%r8
-  8004206c7f:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004206c7f:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004206c86:	00 00 00 
   8004206c89:	48 8b 00             	mov    (%rax),%rax
   8004206c8c:	be 00 10 00 00       	mov    $0x1000,%esi
@@ -8433,7 +8433,7 @@ invlpg(void *addr)
   8004206d69:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004206d70:	00 00 00 
   8004206d73:	41 ff d0             	callq  *%r8
-  8004206d76:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004206d76:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004206d7d:	00 00 00 
   8004206d80:	48 8b 00             	mov    (%rax),%rax
   8004206d83:	be 00 00 00 00       	mov    $0x0,%esi
@@ -8441,7 +8441,7 @@ invlpg(void *addr)
   8004206d8b:	48 b8 4d 3f 20 04 80 	movabs $0x8004203f4d,%rax
   8004206d92:	00 00 00 
   8004206d95:	ff d0                	callq  *%rax
-  8004206d97:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004206d97:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004206d9e:	00 00 00 
   8004206da1:	48 8b 00             	mov    (%rax),%rax
   8004206da4:	be 00 00 00 00       	mov    $0x0,%esi
@@ -8462,7 +8462,7 @@ invlpg(void *addr)
   8004206de6:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004206ded:	00 00 00 
   8004206df0:	41 ff d0             	callq  *%r8
-  8004206df3:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004206df3:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004206dfa:	00 00 00 
   8004206dfd:	48 8b 00             	mov    (%rax),%rax
   8004206e00:	be 00 10 00 00       	mov    $0x1000,%esi
@@ -8519,7 +8519,7 @@ invlpg(void *addr)
   8004206edd:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004206ee4:	00 00 00 
   8004206ee7:	41 ff d0             	callq  *%r8
-  8004206eea:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004206eea:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004206ef1:	00 00 00 
   8004206ef4:	48 8b 00             	mov    (%rax),%rax
   8004206ef7:	48 8b 75 c0          	mov    -0x40(%rbp),%rsi
@@ -8572,7 +8572,7 @@ invlpg(void *addr)
   8004206fc3:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004206fca:	00 00 00 
   8004206fcd:	41 ff d0             	callq  *%r8
-  8004206fd0:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004206fd0:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004206fd7:	00 00 00 
   8004206fda:	48 8b 00             	mov    (%rax),%rax
   8004206fdd:	be 00 10 00 00       	mov    $0x1000,%esi
@@ -8580,7 +8580,7 @@ invlpg(void *addr)
   8004206fe5:	48 b8 4d 3f 20 04 80 	movabs $0x8004203f4d,%rax
   8004206fec:	00 00 00 
   8004206fef:	ff d0                	callq  *%rax
-  8004206ff1:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004206ff1:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004206ff8:	00 00 00 
   8004206ffb:	48 8b 00             	mov    (%rax),%rax
   8004206ffe:	be 00 00 00 00       	mov    $0x0,%esi
@@ -8601,7 +8601,7 @@ invlpg(void *addr)
   8004207040:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004207047:	00 00 00 
   800420704a:	41 ff d0             	callq  *%r8
-  800420704d:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  800420704d:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004207054:	00 00 00 
   8004207057:	48 8b 00             	mov    (%rax),%rax
   800420705a:	be 00 10 00 00       	mov    $0x1000,%esi
@@ -8652,7 +8652,7 @@ invlpg(void *addr)
   8004207121:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004207128:	00 00 00 
   800420712b:	41 ff d0             	callq  *%r8
-  800420712e:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  800420712e:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004207135:	00 00 00 
   8004207138:	48 8b 00             	mov    (%rax),%rax
   800420713b:	48 8b 00             	mov    (%rax),%rax
@@ -8662,7 +8662,7 @@ invlpg(void *addr)
   800420714e:	00 00 00 
   8004207151:	ff d0                	callq  *%rax
   8004207153:	48 89 85 68 ff ff ff 	mov    %rax,-0x98(%rbp)
-  800420715a:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  800420715a:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004207161:	00 00 00 
   8004207164:	48 8b 00             	mov    (%rax),%rax
   8004207167:	48 c7 00 00 00 00 00 	movq   $0x0,(%rax)
@@ -8712,7 +8712,7 @@ invlpg(void *addr)
   8004207225:	ff d0                	callq  *%rax
   8004207227:	48 c7 85 60 ff ff ff 	movq   $0x64000,-0xa0(%rbp)
   800420722e:	00 40 06 00 
-  8004207232:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004207232:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004207239:	00 00 00 
   800420723c:	48 8b 00             	mov    (%rax),%rax
   800420723f:	48 8b 8d 60 ff ff ff 	mov    -0xa0(%rbp),%rcx
@@ -8723,7 +8723,7 @@ invlpg(void *addr)
   8004207258:	00 00 00 
   800420725b:	ff d0                	callq  *%rax
   800420725d:	48 89 85 e0 fe ff ff 	mov    %rax,-0x120(%rbp)
-  8004207264:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004207264:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   800420726b:	00 00 00 
   800420726e:	48 8b 00             	mov    (%rax),%rax
   8004207271:	48 8b 95 60 ff ff ff 	mov    -0xa0(%rbp),%rdx
@@ -8738,7 +8738,7 @@ invlpg(void *addr)
   80042072a0:	48 c1 e8 0c          	shr    $0xc,%rax
   80042072a4:	89 85 54 ff ff ff    	mov    %eax,-0xac(%rbp)
   80042072aa:	8b 95 54 ff ff ff    	mov    -0xac(%rbp),%edx
-  80042072b0:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  80042072b0:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   80042072b7:	00 00 00 
   80042072ba:	48 8b 00             	mov    (%rax),%rax
   80042072bd:	48 39 c2             	cmp    %rax,%rdx
@@ -8773,7 +8773,7 @@ invlpg(void *addr)
   8004207345:	48 c1 e8 0c          	shr    $0xc,%rax
   8004207349:	89 85 44 ff ff ff    	mov    %eax,-0xbc(%rbp)
   800420734f:	8b 95 44 ff ff ff    	mov    -0xbc(%rbp),%edx
-  8004207355:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004207355:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   800420735c:	00 00 00 
   800420735f:	48 8b 00             	mov    (%rax),%rax
   8004207362:	48 39 c2             	cmp    %rax,%rdx
@@ -8808,7 +8808,7 @@ invlpg(void *addr)
   80042073ea:	48 c1 e8 0c          	shr    $0xc,%rax
   80042073ee:	89 85 34 ff ff ff    	mov    %eax,-0xcc(%rbp)
   80042073f4:	8b 95 34 ff ff ff    	mov    -0xcc(%rbp),%edx
-  80042073fa:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  80042073fa:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004207401:	00 00 00 
   8004207404:	48 8b 00             	mov    (%rax),%rax
   8004207407:	48 39 c2             	cmp    %rax,%rdx
@@ -8861,7 +8861,7 @@ invlpg(void *addr)
   80042074df:	48 b8 70 ff 20 04 80 	movabs $0x800420ff70,%rax
   80042074e6:	00 00 00 
   80042074e9:	ff d0                	callq  *%rax
-  80042074eb:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  80042074eb:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   80042074f2:	00 00 00 
   80042074f5:	48 8b 00             	mov    (%rax),%rax
   80042074f8:	ba 01 00 00 00       	mov    $0x1,%edx
@@ -8870,7 +8870,7 @@ invlpg(void *addr)
   8004207505:	48 b8 55 31 20 04 80 	movabs $0x8004203155,%rax
   800420750c:	00 00 00 
   800420750f:	ff d0                	callq  *%rax
-  8004207511:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004207511:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004207518:	00 00 00 
   800420751b:	48 8b 00             	mov    (%rax),%rax
   800420751e:	48 8b 00             	mov    (%rax),%rax
@@ -8880,7 +8880,7 @@ invlpg(void *addr)
   8004207535:	48 c1 e8 0c          	shr    $0xc,%rax
   8004207539:	89 85 1c ff ff ff    	mov    %eax,-0xe4(%rbp)
   800420753f:	8b 95 1c ff ff ff    	mov    -0xe4(%rbp),%edx
-  8004207545:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004207545:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   800420754c:	00 00 00 
   800420754f:	48 8b 00             	mov    (%rax),%rax
   8004207552:	48 39 c2             	cmp    %rax,%rdx
@@ -8909,7 +8909,7 @@ invlpg(void *addr)
   80042075bf:	48 c1 e8 0c          	shr    $0xc,%rax
   80042075c3:	89 85 0c ff ff ff    	mov    %eax,-0xf4(%rbp)
   80042075c9:	8b 95 0c ff ff ff    	mov    -0xf4(%rbp),%edx
-  80042075cf:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  80042075cf:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   80042075d6:	00 00 00 
   80042075d9:	48 8b 00             	mov    (%rax),%rax
   80042075dc:	48 39 c2             	cmp    %rax,%rdx
@@ -8938,7 +8938,7 @@ invlpg(void *addr)
   8004207649:	48 c1 e8 0c          	shr    $0xc,%rax
   800420764d:	89 85 fc fe ff ff    	mov    %eax,-0x104(%rbp)
   8004207653:	8b 95 fc fe ff ff    	mov    -0x104(%rbp),%edx
-  8004207659:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004207659:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004207660:	00 00 00 
   8004207663:	48 8b 00             	mov    (%rax),%rax
   8004207666:	48 39 c2             	cmp    %rax,%rdx
@@ -8984,11 +8984,11 @@ invlpg(void *addr)
   8004207718:	83 45 ec 01          	addl   $0x1,-0x14(%rbp)
   800420771c:	81 7d ec ff 01 00 00 	cmpl   $0x1ff,-0x14(%rbp)
   8004207723:	7e 9f                	jle    80042076c4 <page_check+0x1ab8>
-  8004207725:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004207725:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   800420772c:	00 00 00 
   800420772f:	48 8b 00             	mov    (%rax),%rax
   8004207732:	48 c7 00 00 00 00 00 	movq   $0x0,(%rax)
-  8004207739:	48 b8 38 c2 49 04 80 	movabs $0x800449c238,%rax
+  8004207739:	48 b8 38 d2 49 04 80 	movabs $0x800449d238,%rax
   8004207740:	00 00 00 
   8004207743:	48 8b 55 b0          	mov    -0x50(%rbp),%rdx
   8004207747:	48 89 10             	mov    %rdx,(%rax)
@@ -9185,7 +9185,7 @@ invlpg(void *addr)
   8004207aa8:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004207aaf:	00 00 00 
   8004207ab2:	41 ff d0             	callq  *%r8
-  8004207ab5:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004207ab5:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004207abc:	00 00 00 
   8004207abf:	48 8b 00             	mov    (%rax),%rax
   8004207ac2:	48 8b 95 f0 fe ff ff 	mov    -0x110(%rbp),%rdx
@@ -9209,7 +9209,7 @@ invlpg(void *addr)
   8004207b12:	41 ff d0             	callq  *%r8
   8004207b15:	48 8b 85 f0 fe ff ff 	mov    -0x110(%rbp),%rax
   8004207b1c:	48 8d 90 00 10 00 00 	lea    0x1000(%rax),%rdx
-  8004207b23:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004207b23:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004207b2a:	00 00 00 
   8004207b2d:	48 8b 00             	mov    (%rax),%rax
   8004207b30:	48 89 d6             	mov    %rdx,%rsi
@@ -9230,7 +9230,7 @@ invlpg(void *addr)
   8004207b72:	49 b8 e4 05 20 04 80 	movabs $0x80042005e4,%r8
   8004207b79:	00 00 00 
   8004207b7c:	41 ff d0             	callq  *%r8
-  8004207b7f:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004207b7f:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004207b86:	00 00 00 
   8004207b89:	48 8b 00             	mov    (%rax),%rax
   8004207b8c:	48 8b 95 e8 fe ff ff 	mov    -0x118(%rbp),%rdx
@@ -9254,7 +9254,7 @@ invlpg(void *addr)
   8004207bdc:	41 ff d0             	callq  *%r8
   8004207bdf:	48 8b 85 e8 fe ff ff 	mov    -0x118(%rbp),%rax
   8004207be6:	48 8d 90 00 10 00 00 	lea    0x1000(%rax),%rdx
-  8004207bed:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004207bed:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004207bf4:	00 00 00 
   8004207bf7:	48 8b 00             	mov    (%rax),%rax
   8004207bfa:	48 89 d6             	mov    %rdx,%rsi
@@ -9276,7 +9276,7 @@ invlpg(void *addr)
   8004207c41:	00 00 00 
   8004207c44:	41 ff d0             	callq  *%r8
   8004207c47:	48 8b 8d f0 fe ff ff 	mov    -0x110(%rbp),%rcx
-  8004207c4e:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004207c4e:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004207c55:	00 00 00 
   8004207c58:	48 8b 00             	mov    (%rax),%rax
   8004207c5b:	ba 00 00 00 00       	mov    $0x0,%edx
@@ -9301,7 +9301,7 @@ invlpg(void *addr)
   8004207cac:	00 00 00 
   8004207caf:	41 ff d0             	callq  *%r8
   8004207cb2:	48 8b 8d f0 fe ff ff 	mov    -0x110(%rbp),%rcx
-  8004207cb9:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004207cb9:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004207cc0:	00 00 00 
   8004207cc3:	48 8b 00             	mov    (%rax),%rax
   8004207cc6:	ba 00 00 00 00       	mov    $0x0,%edx
@@ -9326,7 +9326,7 @@ invlpg(void *addr)
   8004207d17:	00 00 00 
   8004207d1a:	41 ff d0             	callq  *%r8
   8004207d1d:	48 8b 8d f0 fe ff ff 	mov    -0x110(%rbp),%rcx
-  8004207d24:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004207d24:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004207d2b:	00 00 00 
   8004207d2e:	48 8b 00             	mov    (%rax),%rax
   8004207d31:	ba 00 00 00 00       	mov    $0x0,%edx
@@ -9339,7 +9339,7 @@ invlpg(void *addr)
   8004207d4f:	48 8b 85 f0 fe ff ff 	mov    -0x110(%rbp),%rax
   8004207d56:	48 05 00 10 00 00    	add    $0x1000,%rax
   8004207d5c:	48 89 c1             	mov    %rax,%rcx
-  8004207d5f:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004207d5f:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004207d66:	00 00 00 
   8004207d69:	48 8b 00             	mov    (%rax),%rax
   8004207d6c:	ba 00 00 00 00       	mov    $0x0,%edx
@@ -9350,7 +9350,7 @@ invlpg(void *addr)
   8004207d81:	ff d0                	callq  *%rax
   8004207d83:	48 c7 00 00 00 00 00 	movq   $0x0,(%rax)
   8004207d8a:	48 8b 8d e8 fe ff ff 	mov    -0x118(%rbp),%rcx
-  8004207d91:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  8004207d91:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004207d98:	00 00 00 
   8004207d9b:	48 8b 00             	mov    (%rax),%rax
   8004207d9e:	ba 00 00 00 00       	mov    $0x0,%edx
@@ -9377,7 +9377,7 @@ invlpg(void *addr)
   8004207de5:	48 83 ec 08          	sub    $0x8,%rsp
   8004207de9:	48 89 7d f8          	mov    %rdi,-0x8(%rbp)
   8004207ded:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
-  8004207df1:	48 b8 f8 b5 69 04 80 	movabs $0x800469b5f8,%rax
+  8004207df1:	48 b8 f8 c5 69 04 80 	movabs $0x800469c5f8,%rax
   8004207df8:	00 00 00 
   8004207dfb:	48 8b 00             	mov    (%rax),%rax
   8004207dfe:	48 29 c2             	sub    %rax,%rdx
@@ -9408,7 +9408,7 @@ invlpg(void *addr)
   8004207e3b:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
   8004207e3f:	48 c1 e8 0c          	shr    $0xc,%rax
   8004207e43:	48 89 c2             	mov    %rax,%rdx
-  8004207e46:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004207e46:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004207e4d:	00 00 00 
   8004207e50:	48 8b 00             	mov    (%rax),%rax
   8004207e53:	48 39 c2             	cmp    %rax,%rdx
@@ -9422,7 +9422,7 @@ invlpg(void *addr)
   8004207e76:	48 b9 e4 05 20 04 80 	movabs $0x80042005e4,%rcx
   8004207e7d:	00 00 00 
   8004207e80:	ff d1                	callq  *%rcx
-  8004207e82:	48 b8 f8 b5 69 04 80 	movabs $0x800469b5f8,%rax
+  8004207e82:	48 b8 f8 c5 69 04 80 	movabs $0x800469c5f8,%rax
   8004207e89:	00 00 00 
   8004207e8c:	48 8b 00             	mov    (%rax),%rax
   8004207e8f:	48 8b 55 f8          	mov    -0x8(%rbp),%rdx
@@ -9447,7 +9447,7 @@ invlpg(void *addr)
   8004207ec7:	48 c1 e8 0c          	shr    $0xc,%rax
   8004207ecb:	89 45 f4             	mov    %eax,-0xc(%rbp)
   8004207ece:	8b 55 f4             	mov    -0xc(%rbp),%edx
-  8004207ed1:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004207ed1:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004207ed8:	00 00 00 
   8004207edb:	48 8b 00             	mov    (%rax),%rax
   8004207ede:	48 39 c2             	cmp    %rax,%rdx
@@ -9503,7 +9503,7 @@ envid2env(envid_t envid, struct Env **env_store, bool checkperm)
 
 	// it should use the ENVX() macro found in inc/env.h, not straight reference
 	e = &envs[envid];
-  8004207f5b:	48 b8 58 c2 49 04 80 	movabs $0x800449c258,%rax
+  8004207f5b:	48 b8 58 d2 49 04 80 	movabs $0x800449d258,%rax
   8004207f62:	00 00 00 
   8004207f65:	48 8b 10             	mov    (%rax),%rdx
   8004207f68:	8b 45 dc             	mov    -0x24(%rbp),%eax
@@ -9537,7 +9537,7 @@ envid2env(envid_t envid, struct Env **env_store, bool checkperm)
   8004207fb7:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   8004207fbe:	00 00 00 
   8004207fc1:	ff d0                	callq  *%rax
-  8004207fc3:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  8004207fc3:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   8004207fca:	00 00 00 
   8004207fcd:	48 98                	cltq   
   8004207fcf:	48 c1 e0 03          	shl    $0x3,%rax
@@ -9555,7 +9555,7 @@ envid2env(envid_t envid, struct Env **env_store, bool checkperm)
   8004207ffa:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   8004208001:	00 00 00 
   8004208004:	ff d0                	callq  *%rax
-  8004208006:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  8004208006:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420800d:	00 00 00 
   8004208010:	48 98                	cltq   
   8004208012:	48 c1 e0 03          	shl    $0x3,%rax
@@ -9605,7 +9605,7 @@ env_init(void)
   8004208062:	c7 45 fc 00 00 00 00 	movl   $0x0,-0x4(%rbp)
   8004208069:	eb 6d                	jmp    80042080d8 <env_init+0x7e>
 		envs[i].env_status = ENV_FREE;
-  800420806b:	48 b8 58 c2 49 04 80 	movabs $0x800449c258,%rax
+  800420806b:	48 b8 58 d2 49 04 80 	movabs $0x800449d258,%rax
   8004208072:	00 00 00 
   8004208075:	48 8b 10             	mov    (%rax),%rdx
   8004208078:	8b 45 fc             	mov    -0x4(%rbp),%eax
@@ -9615,14 +9615,14 @@ env_init(void)
   8004208087:	c7 80 d4 00 00 00 00 	movl   $0x0,0xd4(%rax)
   800420808e:	00 00 00 
 		envs[i].env_link = &envs[i+1];
-  8004208091:	48 b8 58 c2 49 04 80 	movabs $0x800449c258,%rax
+  8004208091:	48 b8 58 d2 49 04 80 	movabs $0x800449d258,%rax
   8004208098:	00 00 00 
   800420809b:	48 8b 10             	mov    (%rax),%rdx
   800420809e:	8b 45 fc             	mov    -0x4(%rbp),%eax
   80042080a1:	48 98                	cltq   
   80042080a3:	48 69 c0 68 01 00 00 	imul   $0x168,%rax,%rax
   80042080aa:	48 01 c2             	add    %rax,%rdx
-  80042080ad:	48 b8 58 c2 49 04 80 	movabs $0x800449c258,%rax
+  80042080ad:	48 b8 58 d2 49 04 80 	movabs $0x800449d258,%rax
   80042080b4:	00 00 00 
   80042080b7:	48 8b 08             	mov    (%rax),%rcx
   80042080ba:	8b 45 fc             	mov    -0x4(%rbp),%eax
@@ -9644,17 +9644,17 @@ env_init(void)
 		envs[i].env_link = &envs[i+1];
 	}
 	envs[NENV-1].env_link = NULL;
-  80042080e1:	48 b8 58 c2 49 04 80 	movabs $0x800449c258,%rax
+  80042080e1:	48 b8 58 d2 49 04 80 	movabs $0x800449d258,%rax
   80042080e8:	00 00 00 
   80042080eb:	48 8b 00             	mov    (%rax),%rax
   80042080ee:	48 05 98 9e 05 00    	add    $0x59e98,%rax
   80042080f4:	48 c7 80 c0 00 00 00 	movq   $0x0,0xc0(%rax)
   80042080fb:	00 00 00 00 
 	env_free_list = &envs[0];
-  80042080ff:	48 b8 58 c2 49 04 80 	movabs $0x800449c258,%rax
+  80042080ff:	48 b8 58 d2 49 04 80 	movabs $0x800449d258,%rax
   8004208106:	00 00 00 
   8004208109:	48 8b 10             	mov    (%rax),%rdx
-  800420810c:	48 b8 60 c2 49 04 80 	movabs $0x800449c260,%rax
+  800420810c:	48 b8 60 d2 49 04 80 	movabs $0x800449d260,%rax
   8004208113:	00 00 00 
   8004208116:	48 89 10             	mov    %rdx,(%rax)
 
@@ -9806,7 +9806,7 @@ env_setup_vm(struct Env *e)
   800420823e:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
   8004208242:	48 8b 80 e0 00 00 00 	mov    0xe0(%rax),%rax
   8004208249:	48 8d 50 08          	lea    0x8(%rax),%rdx
-  800420824d:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  800420824d:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   8004208254:	00 00 00 
   8004208257:	48 8b 00             	mov    (%rax),%rax
   800420825a:	48 8b 40 08          	mov    0x8(%rax),%rax
@@ -9846,7 +9846,7 @@ env_alloc(struct Env **newenv_store, envid_t parent_id)
 	struct Env *e;
 
 	if (!(e = env_free_list))
-  8004208298:	48 b8 60 c2 49 04 80 	movabs $0x800449c260,%rax
+  8004208298:	48 b8 60 d2 49 04 80 	movabs $0x800449d260,%rax
   800420829f:	00 00 00 
   80042082a2:	48 8b 00             	mov    (%rax),%rax
   80042082a5:	48 89 45 f0          	mov    %rax,-0x10(%rbp)
@@ -9884,7 +9884,7 @@ env_alloc(struct Env **newenv_store, envid_t parent_id)
   80042082fb:	c7 45 fc 00 10 00 00 	movl   $0x1000,-0x4(%rbp)
 	e->env_id = generation | (e - envs);
   8004208302:	48 8b 55 f0          	mov    -0x10(%rbp),%rdx
-  8004208306:	48 b8 58 c2 49 04 80 	movabs $0x800449c258,%rax
+  8004208306:	48 b8 58 d2 49 04 80 	movabs $0x800449d258,%rax
   800420830d:	00 00 00 
   8004208310:	48 8b 00             	mov    (%rax),%rax
   8004208313:	48 29 c2             	sub    %rax,%rdx
@@ -9972,7 +9972,7 @@ env_alloc(struct Env **newenv_store, envid_t parent_id)
 	env_free_list = e->env_link;
   80042083ed:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
   80042083f1:	48 8b 90 c0 00 00 00 	mov    0xc0(%rax),%rdx
-  80042083f8:	48 b8 60 c2 49 04 80 	movabs $0x800449c260,%rax
+  80042083f8:	48 b8 60 d2 49 04 80 	movabs $0x800449d260,%rax
   80042083ff:	00 00 00 
   8004208402:	48 89 10             	mov    %rdx,(%rax)
 	*newenv_store = e;
@@ -10377,7 +10377,7 @@ lcr3(uint64_t val)
 			}
 		}
 		lcr3(boot_cr3);
-  8004208890:	48 b8 e0 b5 69 04 80 	movabs $0x800469b5e0,%rax
+  8004208890:	48 b8 e0 c5 69 04 80 	movabs $0x800469c5e0,%rax
   8004208897:	00 00 00 
   800420889a:	48 8b 00             	mov    (%rax),%rax
   800420889d:	48 89 45 98          	mov    %rax,-0x68(%rbp)
@@ -10502,7 +10502,7 @@ env_free(struct Env *e)
   80042089a4:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   80042089ab:	00 00 00 
   80042089ae:	ff d0                	callq  *%rax
-  80042089b0:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  80042089b0:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   80042089b7:	00 00 00 
   80042089ba:	48 98                	cltq   
   80042089bc:	48 c1 e0 03          	shl    $0x3,%rax
@@ -10515,7 +10515,7 @@ env_free(struct Env *e)
   80042089d4:	48 3b 85 78 ff ff ff 	cmp    -0x88(%rbp),%rax
   80042089db:	75 18                	jne    80042089f5 <env_free+0x63>
 		lcr3(boot_cr3);
-  80042089dd:	48 b8 e0 b5 69 04 80 	movabs $0x800469b5e0,%rax
+  80042089dd:	48 b8 e0 c5 69 04 80 	movabs $0x800469c5e0,%rax
   80042089e4:	00 00 00 
   80042089e7:	48 8b 00             	mov    (%rax),%rax
   80042089ea:	48 89 45 88          	mov    %rax,-0x78(%rbp)
@@ -10536,7 +10536,7 @@ env_free(struct Env *e)
   8004208a14:	48 c1 e8 0c          	shr    $0xc,%rax
   8004208a18:	89 45 dc             	mov    %eax,-0x24(%rbp)
   8004208a1b:	8b 55 dc             	mov    -0x24(%rbp),%edx
-  8004208a1e:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004208a1e:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004208a25:	00 00 00 
   8004208a28:	48 8b 00             	mov    (%rax),%rax
   8004208a2b:	48 39 c2             	cmp    %rax,%rdx
@@ -10590,7 +10590,7 @@ env_free(struct Env *e)
   8004208acb:	48 c1 e8 0c          	shr    $0xc,%rax
   8004208acf:	89 45 c4             	mov    %eax,-0x3c(%rbp)
   8004208ad2:	8b 55 c4             	mov    -0x3c(%rbp),%edx
-  8004208ad5:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004208ad5:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004208adc:	00 00 00 
   8004208adf:	48 8b 00             	mov    (%rax),%rax
   8004208ae2:	48 39 c2             	cmp    %rax,%rdx
@@ -10654,7 +10654,7 @@ env_free(struct Env *e)
   8004208ba0:	48 c1 e8 0c          	shr    $0xc,%rax
   8004208ba4:	89 45 9c             	mov    %eax,-0x64(%rbp)
   8004208ba7:	8b 55 9c             	mov    -0x64(%rbp),%edx
-  8004208baa:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004208baa:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004208bb1:	00 00 00 
   8004208bb4:	48 8b 00             	mov    (%rax),%rax
   8004208bb7:	48 39 c2             	cmp    %rax,%rdx
@@ -10844,13 +10844,13 @@ env_free(struct Env *e)
   8004208de3:	c7 80 d4 00 00 00 00 	movl   $0x0,0xd4(%rax)
   8004208dea:	00 00 00 
 	e->env_link = env_free_list;
-  8004208ded:	48 b8 60 c2 49 04 80 	movabs $0x800449c260,%rax
+  8004208ded:	48 b8 60 d2 49 04 80 	movabs $0x800449d260,%rax
   8004208df4:	00 00 00 
   8004208df7:	48 8b 10             	mov    (%rax),%rdx
   8004208dfa:	48 8b 85 78 ff ff ff 	mov    -0x88(%rbp),%rax
   8004208e01:	48 89 90 c0 00 00 00 	mov    %rdx,0xc0(%rax)
 	env_free_list = e;
-  8004208e08:	48 b8 60 c2 49 04 80 	movabs $0x800449c260,%rax
+  8004208e08:	48 b8 60 d2 49 04 80 	movabs $0x800449d260,%rax
   8004208e0f:	00 00 00 
   8004208e12:	48 8b 95 78 ff ff ff 	mov    -0x88(%rbp),%rdx
   8004208e19:	48 89 10             	mov    %rdx,(%rax)
@@ -10880,7 +10880,7 @@ env_destroy(struct Env *e)
   8004208e39:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   8004208e40:	00 00 00 
   8004208e43:	ff d0                	callq  *%rax
-  8004208e45:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  8004208e45:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   8004208e4c:	00 00 00 
   8004208e4f:	48 98                	cltq   
   8004208e51:	48 c1 e0 03          	shl    $0x3,%rax
@@ -10910,7 +10910,7 @@ env_destroy(struct Env *e)
   8004208e95:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   8004208e9c:	00 00 00 
   8004208e9f:	ff d0                	callq  *%rax
-  8004208ea1:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  8004208ea1:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   8004208ea8:	00 00 00 
   8004208eab:	48 98                	cltq   
   8004208ead:	48 c1 e0 03          	shl    $0x3,%rax
@@ -10926,7 +10926,7 @@ env_destroy(struct Env *e)
   8004208ecb:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   8004208ed2:	00 00 00 
   8004208ed5:	ff d0                	callq  *%rax
-  8004208ed7:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  8004208ed7:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   8004208ede:	00 00 00 
   8004208ee1:	48 98                	cltq   
   8004208ee3:	48 c1 e0 03          	shl    $0x3,%rax
@@ -10962,7 +10962,7 @@ env_pop_tf(struct Trapframe *tf)
   8004208f1a:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   8004208f21:	00 00 00 
   8004208f24:	ff d0                	callq  *%rax
-  8004208f26:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  8004208f26:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   8004208f2d:	00 00 00 
   8004208f30:	48 98                	cltq   
   8004208f32:	48 c1 e0 03          	shl    $0x3,%rax
@@ -11031,7 +11031,7 @@ env_run(struct Env *e)
   8004208ff5:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   8004208ffc:	00 00 00 
   8004208fff:	ff d0                	callq  *%rax
-  8004209001:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  8004209001:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   8004209008:	00 00 00 
   800420900b:	48 98                	cltq   
   800420900d:	48 c1 e0 03          	shl    $0x3,%rax
@@ -11047,7 +11047,7 @@ env_run(struct Env *e)
   800420902f:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   8004209036:	00 00 00 
   8004209039:	ff d0                	callq  *%rax
-  800420903b:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420903b:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   8004209042:	00 00 00 
   8004209045:	48 98                	cltq   
   8004209047:	48 c1 e0 03          	shl    $0x3,%rax
@@ -11062,7 +11062,7 @@ env_run(struct Env *e)
   8004209064:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420906b:	00 00 00 
   800420906e:	ff d0                	callq  *%rax
-  8004209070:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  8004209070:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   8004209077:	00 00 00 
   800420907a:	48 98                	cltq   
   800420907c:	48 c1 e0 03          	shl    $0x3,%rax
@@ -11079,7 +11079,7 @@ env_run(struct Env *e)
   800420909f:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   80042090a6:	00 00 00 
   80042090a9:	ff d0                	callq  *%rax
-  80042090ab:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  80042090ab:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   80042090b2:	00 00 00 
   80042090b5:	48 98                	cltq   
   80042090b7:	48 c1 e0 03          	shl    $0x3,%rax
@@ -11100,7 +11100,7 @@ env_run(struct Env *e)
   80042090d9:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   80042090e0:	00 00 00 
   80042090e3:	ff d0                	callq  *%rax
-  80042090e5:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  80042090e5:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   80042090ec:	00 00 00 
   80042090ef:	48 98                	cltq   
   80042090f1:	48 c1 e0 03          	shl    $0x3,%rax
@@ -11232,7 +11232,7 @@ outb(int port, uint8_t data)
   800420921f:	55                   	push   %rbp
   8004209220:	48 89 e5             	mov    %rsp,%rbp
   8004209223:	48 83 ec 70          	sub    $0x70,%rsp
-  8004209227:	48 b8 68 c2 49 04 80 	movabs $0x800449c268,%rax
+  8004209227:	48 b8 68 d2 49 04 80 	movabs $0x800449d268,%rax
   800420922e:	00 00 00 
   8004209231:	c6 00 01             	movb   $0x1,(%rax)
   8004209234:	c7 45 fc 21 00 00 00 	movl   $0x21,-0x4(%rbp)
@@ -11331,7 +11331,7 @@ outb(int port, uint8_t data)
   8004209386:	00 00 00 
   8004209389:	0f b7 55 dc          	movzwl -0x24(%rbp),%edx
   800420938d:	66 89 10             	mov    %dx,(%rax)
-  8004209390:	48 b8 68 c2 49 04 80 	movabs $0x800449c268,%rax
+  8004209390:	48 b8 68 d2 49 04 80 	movabs $0x800449d268,%rax
   8004209397:	00 00 00 
   800420939a:	0f b6 00             	movzbl (%rax),%eax
   800420939d:	83 f0 01             	xor    $0x1,%eax
@@ -11579,21 +11579,21 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   80042096a6:	e9 7d 01 00 00       	jmpq   8004209828 <trap_init+0x191>
   80042096ab:	48 b8 56 d1 20 04 80 	movabs $0x800420d156,%rax
   80042096b2:	00 00 00 
-  80042096b5:	48 ba 80 c2 49 04 80 	movabs $0x800449c280,%rdx
+  80042096b5:	48 ba 80 d2 49 04 80 	movabs $0x800449d280,%rdx
   80042096bc:	00 00 00 
   80042096bf:	8b 4d fc             	mov    -0x4(%rbp),%ecx
   80042096c2:	48 63 c9             	movslq %ecx,%rcx
   80042096c5:	48 c1 e1 04          	shl    $0x4,%rcx
   80042096c9:	48 01 ca             	add    %rcx,%rdx
   80042096cc:	66 89 02             	mov    %ax,(%rdx)
-  80042096cf:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  80042096cf:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   80042096d6:	00 00 00 
   80042096d9:	8b 55 fc             	mov    -0x4(%rbp),%edx
   80042096dc:	48 63 d2             	movslq %edx,%rdx
   80042096df:	48 c1 e2 04          	shl    $0x4,%rdx
   80042096e3:	48 01 d0             	add    %rdx,%rax
   80042096e6:	66 c7 40 02 08 00    	movw   $0x8,0x2(%rax)
-  80042096ec:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  80042096ec:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   80042096f3:	00 00 00 
   80042096f6:	8b 55 fc             	mov    -0x4(%rbp),%edx
   80042096f9:	48 63 d2             	movslq %edx,%rdx
@@ -11602,7 +11602,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   8004209703:	0f b6 50 04          	movzbl 0x4(%rax),%edx
   8004209707:	83 e2 f8             	and    $0xfffffff8,%edx
   800420970a:	88 50 04             	mov    %dl,0x4(%rax)
-  800420970d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420970d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209714:	00 00 00 
   8004209717:	8b 55 fc             	mov    -0x4(%rbp),%edx
   800420971a:	48 63 d2             	movslq %edx,%rdx
@@ -11611,7 +11611,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   8004209724:	0f b6 50 04          	movzbl 0x4(%rax),%edx
   8004209728:	83 e2 07             	and    $0x7,%edx
   800420972b:	88 50 04             	mov    %dl,0x4(%rax)
-  800420972e:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420972e:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209735:	00 00 00 
   8004209738:	8b 55 fc             	mov    -0x4(%rbp),%edx
   800420973b:	48 63 d2             	movslq %edx,%rdx
@@ -11621,7 +11621,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   8004209749:	83 e2 f0             	and    $0xfffffff0,%edx
   800420974c:	83 ca 0e             	or     $0xe,%edx
   800420974f:	88 50 05             	mov    %dl,0x5(%rax)
-  8004209752:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209752:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209759:	00 00 00 
   800420975c:	8b 55 fc             	mov    -0x4(%rbp),%edx
   800420975f:	48 63 d2             	movslq %edx,%rdx
@@ -11630,7 +11630,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   8004209769:	0f b6 50 05          	movzbl 0x5(%rax),%edx
   800420976d:	83 e2 ef             	and    $0xffffffef,%edx
   8004209770:	88 50 05             	mov    %dl,0x5(%rax)
-  8004209773:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209773:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420977a:	00 00 00 
   800420977d:	8b 55 fc             	mov    -0x4(%rbp),%edx
   8004209780:	48 63 d2             	movslq %edx,%rdx
@@ -11639,7 +11639,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420978a:	0f b6 50 05          	movzbl 0x5(%rax),%edx
   800420978e:	83 e2 9f             	and    $0xffffff9f,%edx
   8004209791:	88 50 05             	mov    %dl,0x5(%rax)
-  8004209794:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209794:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420979b:	00 00 00 
   800420979e:	8b 55 fc             	mov    -0x4(%rbp),%edx
   80042097a1:	48 63 d2             	movslq %edx,%rdx
@@ -11651,7 +11651,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   80042097b5:	48 b8 56 d1 20 04 80 	movabs $0x800420d156,%rax
   80042097bc:	00 00 00 
   80042097bf:	48 c1 e8 10          	shr    $0x10,%rax
-  80042097c3:	48 ba 80 c2 49 04 80 	movabs $0x800449c280,%rdx
+  80042097c3:	48 ba 80 d2 49 04 80 	movabs $0x800449d280,%rdx
   80042097ca:	00 00 00 
   80042097cd:	8b 4d fc             	mov    -0x4(%rbp),%ecx
   80042097d0:	48 63 c9             	movslq %ecx,%rcx
@@ -11661,14 +11661,14 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   80042097de:	48 b8 56 d1 20 04 80 	movabs $0x800420d156,%rax
   80042097e5:	00 00 00 
   80042097e8:	48 c1 e8 20          	shr    $0x20,%rax
-  80042097ec:	48 ba 80 c2 49 04 80 	movabs $0x800449c280,%rdx
+  80042097ec:	48 ba 80 d2 49 04 80 	movabs $0x800449d280,%rdx
   80042097f3:	00 00 00 
   80042097f6:	8b 4d fc             	mov    -0x4(%rbp),%ecx
   80042097f9:	48 63 c9             	movslq %ecx,%rcx
   80042097fc:	48 c1 e1 04          	shl    $0x4,%rcx
   8004209800:	48 01 ca             	add    %rcx,%rdx
   8004209803:	89 42 08             	mov    %eax,0x8(%rdx)
-  8004209806:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209806:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420980d:	00 00 00 
   8004209810:	8b 55 fc             	mov    -0x4(%rbp),%edx
   8004209813:	48 63 d2             	movslq %edx,%rdx
@@ -11682,39 +11682,39 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   8004209836:	48 b8 60 d0 20 04 80 	movabs $0x800420d060,%rax
   800420983d:	00 00 00 
   8004209840:	89 c2                	mov    %eax,%edx
-  8004209842:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209842:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209849:	00 00 00 
   800420984c:	66 89 10             	mov    %dx,(%rax)
-  800420984f:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420984f:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209856:	00 00 00 
   8004209859:	66 c7 40 02 08 00    	movw   $0x8,0x2(%rax)
-  800420985f:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420985f:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209866:	00 00 00 
   8004209869:	0f b6 50 04          	movzbl 0x4(%rax),%edx
   800420986d:	83 e2 f8             	and    $0xfffffff8,%edx
   8004209870:	88 50 04             	mov    %dl,0x4(%rax)
-  8004209873:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209873:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420987a:	00 00 00 
   800420987d:	0f b6 50 04          	movzbl 0x4(%rax),%edx
   8004209881:	83 e2 07             	and    $0x7,%edx
   8004209884:	88 50 04             	mov    %dl,0x4(%rax)
-  8004209887:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209887:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420988e:	00 00 00 
   8004209891:	0f b6 50 05          	movzbl 0x5(%rax),%edx
   8004209895:	83 e2 f0             	and    $0xfffffff0,%edx
   8004209898:	83 ca 0e             	or     $0xe,%edx
   800420989b:	88 50 05             	mov    %dl,0x5(%rax)
-  800420989e:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420989e:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   80042098a5:	00 00 00 
   80042098a8:	0f b6 50 05          	movzbl 0x5(%rax),%edx
   80042098ac:	83 e2 ef             	and    $0xffffffef,%edx
   80042098af:	88 50 05             	mov    %dl,0x5(%rax)
-  80042098b2:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  80042098b2:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   80042098b9:	00 00 00 
   80042098bc:	0f b6 50 05          	movzbl 0x5(%rax),%edx
   80042098c0:	83 e2 9f             	and    $0xffffff9f,%edx
   80042098c3:	88 50 05             	mov    %dl,0x5(%rax)
-  80042098c6:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  80042098c6:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   80042098cd:	00 00 00 
   80042098d0:	0f b6 50 05          	movzbl 0x5(%rax),%edx
   80042098d4:	83 ca 80             	or     $0xffffff80,%edx
@@ -11723,55 +11723,55 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   80042098e1:	00 00 00 
   80042098e4:	48 c1 e8 10          	shr    $0x10,%rax
   80042098e8:	89 c2                	mov    %eax,%edx
-  80042098ea:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  80042098ea:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   80042098f1:	00 00 00 
   80042098f4:	66 89 50 06          	mov    %dx,0x6(%rax)
   80042098f8:	48 b8 60 d0 20 04 80 	movabs $0x800420d060,%rax
   80042098ff:	00 00 00 
   8004209902:	48 c1 e8 20          	shr    $0x20,%rax
   8004209906:	89 c2                	mov    %eax,%edx
-  8004209908:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209908:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420990f:	00 00 00 
   8004209912:	89 50 08             	mov    %edx,0x8(%rax)
-  8004209915:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209915:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420991c:	00 00 00 
   800420991f:	c7 40 0c 00 00 00 00 	movl   $0x0,0xc(%rax)
   8004209926:	48 b8 6a d0 20 04 80 	movabs $0x800420d06a,%rax
   800420992d:	00 00 00 
   8004209930:	89 c2                	mov    %eax,%edx
-  8004209932:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209932:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209939:	00 00 00 
   800420993c:	66 89 50 10          	mov    %dx,0x10(%rax)
-  8004209940:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209940:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209947:	00 00 00 
   800420994a:	66 c7 40 12 08 00    	movw   $0x8,0x12(%rax)
-  8004209950:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209950:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209957:	00 00 00 
   800420995a:	0f b6 50 14          	movzbl 0x14(%rax),%edx
   800420995e:	83 e2 f8             	and    $0xfffffff8,%edx
   8004209961:	88 50 14             	mov    %dl,0x14(%rax)
-  8004209964:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209964:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420996b:	00 00 00 
   800420996e:	0f b6 50 14          	movzbl 0x14(%rax),%edx
   8004209972:	83 e2 07             	and    $0x7,%edx
   8004209975:	88 50 14             	mov    %dl,0x14(%rax)
-  8004209978:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209978:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420997f:	00 00 00 
   8004209982:	0f b6 50 15          	movzbl 0x15(%rax),%edx
   8004209986:	83 e2 f0             	and    $0xfffffff0,%edx
   8004209989:	83 ca 0e             	or     $0xe,%edx
   800420998c:	88 50 15             	mov    %dl,0x15(%rax)
-  800420998f:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420998f:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209996:	00 00 00 
   8004209999:	0f b6 50 15          	movzbl 0x15(%rax),%edx
   800420999d:	83 e2 ef             	and    $0xffffffef,%edx
   80042099a0:	88 50 15             	mov    %dl,0x15(%rax)
-  80042099a3:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  80042099a3:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   80042099aa:	00 00 00 
   80042099ad:	0f b6 50 15          	movzbl 0x15(%rax),%edx
   80042099b1:	83 e2 9f             	and    $0xffffff9f,%edx
   80042099b4:	88 50 15             	mov    %dl,0x15(%rax)
-  80042099b7:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  80042099b7:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   80042099be:	00 00 00 
   80042099c1:	0f b6 50 15          	movzbl 0x15(%rax),%edx
   80042099c5:	83 ca 80             	or     $0xffffff80,%edx
@@ -11780,55 +11780,55 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   80042099d2:	00 00 00 
   80042099d5:	48 c1 e8 10          	shr    $0x10,%rax
   80042099d9:	89 c2                	mov    %eax,%edx
-  80042099db:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  80042099db:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   80042099e2:	00 00 00 
   80042099e5:	66 89 50 16          	mov    %dx,0x16(%rax)
   80042099e9:	48 b8 6a d0 20 04 80 	movabs $0x800420d06a,%rax
   80042099f0:	00 00 00 
   80042099f3:	48 c1 e8 20          	shr    $0x20,%rax
   80042099f7:	89 c2                	mov    %eax,%edx
-  80042099f9:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  80042099f9:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209a00:	00 00 00 
   8004209a03:	89 50 18             	mov    %edx,0x18(%rax)
-  8004209a06:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209a06:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209a0d:	00 00 00 
   8004209a10:	c7 40 1c 00 00 00 00 	movl   $0x0,0x1c(%rax)
   8004209a17:	48 b8 74 d0 20 04 80 	movabs $0x800420d074,%rax
   8004209a1e:	00 00 00 
   8004209a21:	89 c2                	mov    %eax,%edx
-  8004209a23:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209a23:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209a2a:	00 00 00 
   8004209a2d:	66 89 50 20          	mov    %dx,0x20(%rax)
-  8004209a31:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209a31:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209a38:	00 00 00 
   8004209a3b:	66 c7 40 22 08 00    	movw   $0x8,0x22(%rax)
-  8004209a41:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209a41:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209a48:	00 00 00 
   8004209a4b:	0f b6 50 24          	movzbl 0x24(%rax),%edx
   8004209a4f:	83 e2 f8             	and    $0xfffffff8,%edx
   8004209a52:	88 50 24             	mov    %dl,0x24(%rax)
-  8004209a55:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209a55:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209a5c:	00 00 00 
   8004209a5f:	0f b6 50 24          	movzbl 0x24(%rax),%edx
   8004209a63:	83 e2 07             	and    $0x7,%edx
   8004209a66:	88 50 24             	mov    %dl,0x24(%rax)
-  8004209a69:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209a69:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209a70:	00 00 00 
   8004209a73:	0f b6 50 25          	movzbl 0x25(%rax),%edx
   8004209a77:	83 e2 f0             	and    $0xfffffff0,%edx
   8004209a7a:	83 ca 0e             	or     $0xe,%edx
   8004209a7d:	88 50 25             	mov    %dl,0x25(%rax)
-  8004209a80:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209a80:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209a87:	00 00 00 
   8004209a8a:	0f b6 50 25          	movzbl 0x25(%rax),%edx
   8004209a8e:	83 e2 ef             	and    $0xffffffef,%edx
   8004209a91:	88 50 25             	mov    %dl,0x25(%rax)
-  8004209a94:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209a94:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209a9b:	00 00 00 
   8004209a9e:	0f b6 50 25          	movzbl 0x25(%rax),%edx
   8004209aa2:	83 e2 9f             	and    $0xffffff9f,%edx
   8004209aa5:	88 50 25             	mov    %dl,0x25(%rax)
-  8004209aa8:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209aa8:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209aaf:	00 00 00 
   8004209ab2:	0f b6 50 25          	movzbl 0x25(%rax),%edx
   8004209ab6:	83 ca 80             	or     $0xffffff80,%edx
@@ -11837,55 +11837,55 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   8004209ac3:	00 00 00 
   8004209ac6:	48 c1 e8 10          	shr    $0x10,%rax
   8004209aca:	89 c2                	mov    %eax,%edx
-  8004209acc:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209acc:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209ad3:	00 00 00 
   8004209ad6:	66 89 50 26          	mov    %dx,0x26(%rax)
   8004209ada:	48 b8 74 d0 20 04 80 	movabs $0x800420d074,%rax
   8004209ae1:	00 00 00 
   8004209ae4:	48 c1 e8 20          	shr    $0x20,%rax
   8004209ae8:	89 c2                	mov    %eax,%edx
-  8004209aea:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209aea:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209af1:	00 00 00 
   8004209af4:	89 50 28             	mov    %edx,0x28(%rax)
-  8004209af7:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209af7:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209afe:	00 00 00 
   8004209b01:	c7 40 2c 00 00 00 00 	movl   $0x0,0x2c(%rax)
   8004209b08:	48 b8 7e d0 20 04 80 	movabs $0x800420d07e,%rax
   8004209b0f:	00 00 00 
   8004209b12:	89 c2                	mov    %eax,%edx
-  8004209b14:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209b14:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209b1b:	00 00 00 
   8004209b1e:	66 89 50 30          	mov    %dx,0x30(%rax)
-  8004209b22:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209b22:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209b29:	00 00 00 
   8004209b2c:	66 c7 40 32 08 00    	movw   $0x8,0x32(%rax)
-  8004209b32:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209b32:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209b39:	00 00 00 
   8004209b3c:	0f b6 50 34          	movzbl 0x34(%rax),%edx
   8004209b40:	83 e2 f8             	and    $0xfffffff8,%edx
   8004209b43:	88 50 34             	mov    %dl,0x34(%rax)
-  8004209b46:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209b46:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209b4d:	00 00 00 
   8004209b50:	0f b6 50 34          	movzbl 0x34(%rax),%edx
   8004209b54:	83 e2 07             	and    $0x7,%edx
   8004209b57:	88 50 34             	mov    %dl,0x34(%rax)
-  8004209b5a:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209b5a:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209b61:	00 00 00 
   8004209b64:	0f b6 50 35          	movzbl 0x35(%rax),%edx
   8004209b68:	83 e2 f0             	and    $0xfffffff0,%edx
   8004209b6b:	83 ca 0e             	or     $0xe,%edx
   8004209b6e:	88 50 35             	mov    %dl,0x35(%rax)
-  8004209b71:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209b71:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209b78:	00 00 00 
   8004209b7b:	0f b6 50 35          	movzbl 0x35(%rax),%edx
   8004209b7f:	83 e2 ef             	and    $0xffffffef,%edx
   8004209b82:	88 50 35             	mov    %dl,0x35(%rax)
-  8004209b85:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209b85:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209b8c:	00 00 00 
   8004209b8f:	0f b6 50 35          	movzbl 0x35(%rax),%edx
   8004209b93:	83 ca 60             	or     $0x60,%edx
   8004209b96:	88 50 35             	mov    %dl,0x35(%rax)
-  8004209b99:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209b99:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209ba0:	00 00 00 
   8004209ba3:	0f b6 50 35          	movzbl 0x35(%rax),%edx
   8004209ba7:	83 ca 80             	or     $0xffffff80,%edx
@@ -11894,55 +11894,55 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   8004209bb4:	00 00 00 
   8004209bb7:	48 c1 e8 10          	shr    $0x10,%rax
   8004209bbb:	89 c2                	mov    %eax,%edx
-  8004209bbd:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209bbd:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209bc4:	00 00 00 
   8004209bc7:	66 89 50 36          	mov    %dx,0x36(%rax)
   8004209bcb:	48 b8 7e d0 20 04 80 	movabs $0x800420d07e,%rax
   8004209bd2:	00 00 00 
   8004209bd5:	48 c1 e8 20          	shr    $0x20,%rax
   8004209bd9:	89 c2                	mov    %eax,%edx
-  8004209bdb:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209bdb:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209be2:	00 00 00 
   8004209be5:	89 50 38             	mov    %edx,0x38(%rax)
-  8004209be8:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209be8:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209bef:	00 00 00 
   8004209bf2:	c7 40 3c 00 00 00 00 	movl   $0x0,0x3c(%rax)
   8004209bf9:	48 b8 88 d0 20 04 80 	movabs $0x800420d088,%rax
   8004209c00:	00 00 00 
   8004209c03:	89 c2                	mov    %eax,%edx
-  8004209c05:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209c05:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209c0c:	00 00 00 
   8004209c0f:	66 89 50 40          	mov    %dx,0x40(%rax)
-  8004209c13:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209c13:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209c1a:	00 00 00 
   8004209c1d:	66 c7 40 42 08 00    	movw   $0x8,0x42(%rax)
-  8004209c23:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209c23:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209c2a:	00 00 00 
   8004209c2d:	0f b6 50 44          	movzbl 0x44(%rax),%edx
   8004209c31:	83 e2 f8             	and    $0xfffffff8,%edx
   8004209c34:	88 50 44             	mov    %dl,0x44(%rax)
-  8004209c37:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209c37:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209c3e:	00 00 00 
   8004209c41:	0f b6 50 44          	movzbl 0x44(%rax),%edx
   8004209c45:	83 e2 07             	and    $0x7,%edx
   8004209c48:	88 50 44             	mov    %dl,0x44(%rax)
-  8004209c4b:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209c4b:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209c52:	00 00 00 
   8004209c55:	0f b6 50 45          	movzbl 0x45(%rax),%edx
   8004209c59:	83 e2 f0             	and    $0xfffffff0,%edx
   8004209c5c:	83 ca 0e             	or     $0xe,%edx
   8004209c5f:	88 50 45             	mov    %dl,0x45(%rax)
-  8004209c62:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209c62:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209c69:	00 00 00 
   8004209c6c:	0f b6 50 45          	movzbl 0x45(%rax),%edx
   8004209c70:	83 e2 ef             	and    $0xffffffef,%edx
   8004209c73:	88 50 45             	mov    %dl,0x45(%rax)
-  8004209c76:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209c76:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209c7d:	00 00 00 
   8004209c80:	0f b6 50 45          	movzbl 0x45(%rax),%edx
   8004209c84:	83 e2 9f             	and    $0xffffff9f,%edx
   8004209c87:	88 50 45             	mov    %dl,0x45(%rax)
-  8004209c8a:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209c8a:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209c91:	00 00 00 
   8004209c94:	0f b6 50 45          	movzbl 0x45(%rax),%edx
   8004209c98:	83 ca 80             	or     $0xffffff80,%edx
@@ -11951,55 +11951,55 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   8004209ca5:	00 00 00 
   8004209ca8:	48 c1 e8 10          	shr    $0x10,%rax
   8004209cac:	89 c2                	mov    %eax,%edx
-  8004209cae:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209cae:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209cb5:	00 00 00 
   8004209cb8:	66 89 50 46          	mov    %dx,0x46(%rax)
   8004209cbc:	48 b8 88 d0 20 04 80 	movabs $0x800420d088,%rax
   8004209cc3:	00 00 00 
   8004209cc6:	48 c1 e8 20          	shr    $0x20,%rax
   8004209cca:	89 c2                	mov    %eax,%edx
-  8004209ccc:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209ccc:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209cd3:	00 00 00 
   8004209cd6:	89 50 48             	mov    %edx,0x48(%rax)
-  8004209cd9:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209cd9:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209ce0:	00 00 00 
   8004209ce3:	c7 40 4c 00 00 00 00 	movl   $0x0,0x4c(%rax)
   8004209cea:	48 b8 92 d0 20 04 80 	movabs $0x800420d092,%rax
   8004209cf1:	00 00 00 
   8004209cf4:	89 c2                	mov    %eax,%edx
-  8004209cf6:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209cf6:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209cfd:	00 00 00 
   8004209d00:	66 89 50 50          	mov    %dx,0x50(%rax)
-  8004209d04:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209d04:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209d0b:	00 00 00 
   8004209d0e:	66 c7 40 52 08 00    	movw   $0x8,0x52(%rax)
-  8004209d14:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209d14:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209d1b:	00 00 00 
   8004209d1e:	0f b6 50 54          	movzbl 0x54(%rax),%edx
   8004209d22:	83 e2 f8             	and    $0xfffffff8,%edx
   8004209d25:	88 50 54             	mov    %dl,0x54(%rax)
-  8004209d28:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209d28:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209d2f:	00 00 00 
   8004209d32:	0f b6 50 54          	movzbl 0x54(%rax),%edx
   8004209d36:	83 e2 07             	and    $0x7,%edx
   8004209d39:	88 50 54             	mov    %dl,0x54(%rax)
-  8004209d3c:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209d3c:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209d43:	00 00 00 
   8004209d46:	0f b6 50 55          	movzbl 0x55(%rax),%edx
   8004209d4a:	83 e2 f0             	and    $0xfffffff0,%edx
   8004209d4d:	83 ca 0e             	or     $0xe,%edx
   8004209d50:	88 50 55             	mov    %dl,0x55(%rax)
-  8004209d53:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209d53:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209d5a:	00 00 00 
   8004209d5d:	0f b6 50 55          	movzbl 0x55(%rax),%edx
   8004209d61:	83 e2 ef             	and    $0xffffffef,%edx
   8004209d64:	88 50 55             	mov    %dl,0x55(%rax)
-  8004209d67:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209d67:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209d6e:	00 00 00 
   8004209d71:	0f b6 50 55          	movzbl 0x55(%rax),%edx
   8004209d75:	83 e2 9f             	and    $0xffffff9f,%edx
   8004209d78:	88 50 55             	mov    %dl,0x55(%rax)
-  8004209d7b:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209d7b:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209d82:	00 00 00 
   8004209d85:	0f b6 50 55          	movzbl 0x55(%rax),%edx
   8004209d89:	83 ca 80             	or     $0xffffff80,%edx
@@ -12008,55 +12008,55 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   8004209d96:	00 00 00 
   8004209d99:	48 c1 e8 10          	shr    $0x10,%rax
   8004209d9d:	89 c2                	mov    %eax,%edx
-  8004209d9f:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209d9f:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209da6:	00 00 00 
   8004209da9:	66 89 50 56          	mov    %dx,0x56(%rax)
   8004209dad:	48 b8 92 d0 20 04 80 	movabs $0x800420d092,%rax
   8004209db4:	00 00 00 
   8004209db7:	48 c1 e8 20          	shr    $0x20,%rax
   8004209dbb:	89 c2                	mov    %eax,%edx
-  8004209dbd:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209dbd:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209dc4:	00 00 00 
   8004209dc7:	89 50 58             	mov    %edx,0x58(%rax)
-  8004209dca:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209dca:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209dd1:	00 00 00 
   8004209dd4:	c7 40 5c 00 00 00 00 	movl   $0x0,0x5c(%rax)
   8004209ddb:	48 b8 9c d0 20 04 80 	movabs $0x800420d09c,%rax
   8004209de2:	00 00 00 
   8004209de5:	89 c2                	mov    %eax,%edx
-  8004209de7:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209de7:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209dee:	00 00 00 
   8004209df1:	66 89 50 60          	mov    %dx,0x60(%rax)
-  8004209df5:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209df5:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209dfc:	00 00 00 
   8004209dff:	66 c7 40 62 08 00    	movw   $0x8,0x62(%rax)
-  8004209e05:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209e05:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209e0c:	00 00 00 
   8004209e0f:	0f b6 50 64          	movzbl 0x64(%rax),%edx
   8004209e13:	83 e2 f8             	and    $0xfffffff8,%edx
   8004209e16:	88 50 64             	mov    %dl,0x64(%rax)
-  8004209e19:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209e19:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209e20:	00 00 00 
   8004209e23:	0f b6 50 64          	movzbl 0x64(%rax),%edx
   8004209e27:	83 e2 07             	and    $0x7,%edx
   8004209e2a:	88 50 64             	mov    %dl,0x64(%rax)
-  8004209e2d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209e2d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209e34:	00 00 00 
   8004209e37:	0f b6 50 65          	movzbl 0x65(%rax),%edx
   8004209e3b:	83 e2 f0             	and    $0xfffffff0,%edx
   8004209e3e:	83 ca 0e             	or     $0xe,%edx
   8004209e41:	88 50 65             	mov    %dl,0x65(%rax)
-  8004209e44:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209e44:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209e4b:	00 00 00 
   8004209e4e:	0f b6 50 65          	movzbl 0x65(%rax),%edx
   8004209e52:	83 e2 ef             	and    $0xffffffef,%edx
   8004209e55:	88 50 65             	mov    %dl,0x65(%rax)
-  8004209e58:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209e58:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209e5f:	00 00 00 
   8004209e62:	0f b6 50 65          	movzbl 0x65(%rax),%edx
   8004209e66:	83 e2 9f             	and    $0xffffff9f,%edx
   8004209e69:	88 50 65             	mov    %dl,0x65(%rax)
-  8004209e6c:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209e6c:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209e73:	00 00 00 
   8004209e76:	0f b6 50 65          	movzbl 0x65(%rax),%edx
   8004209e7a:	83 ca 80             	or     $0xffffff80,%edx
@@ -12065,55 +12065,55 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   8004209e87:	00 00 00 
   8004209e8a:	48 c1 e8 10          	shr    $0x10,%rax
   8004209e8e:	89 c2                	mov    %eax,%edx
-  8004209e90:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209e90:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209e97:	00 00 00 
   8004209e9a:	66 89 50 66          	mov    %dx,0x66(%rax)
   8004209e9e:	48 b8 9c d0 20 04 80 	movabs $0x800420d09c,%rax
   8004209ea5:	00 00 00 
   8004209ea8:	48 c1 e8 20          	shr    $0x20,%rax
   8004209eac:	89 c2                	mov    %eax,%edx
-  8004209eae:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209eae:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209eb5:	00 00 00 
   8004209eb8:	89 50 68             	mov    %edx,0x68(%rax)
-  8004209ebb:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209ebb:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209ec2:	00 00 00 
   8004209ec5:	c7 40 6c 00 00 00 00 	movl   $0x0,0x6c(%rax)
   8004209ecc:	48 b8 a6 d0 20 04 80 	movabs $0x800420d0a6,%rax
   8004209ed3:	00 00 00 
   8004209ed6:	89 c2                	mov    %eax,%edx
-  8004209ed8:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209ed8:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209edf:	00 00 00 
   8004209ee2:	66 89 50 70          	mov    %dx,0x70(%rax)
-  8004209ee6:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209ee6:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209eed:	00 00 00 
   8004209ef0:	66 c7 40 72 08 00    	movw   $0x8,0x72(%rax)
-  8004209ef6:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209ef6:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209efd:	00 00 00 
   8004209f00:	0f b6 50 74          	movzbl 0x74(%rax),%edx
   8004209f04:	83 e2 f8             	and    $0xfffffff8,%edx
   8004209f07:	88 50 74             	mov    %dl,0x74(%rax)
-  8004209f0a:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209f0a:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209f11:	00 00 00 
   8004209f14:	0f b6 50 74          	movzbl 0x74(%rax),%edx
   8004209f18:	83 e2 07             	and    $0x7,%edx
   8004209f1b:	88 50 74             	mov    %dl,0x74(%rax)
-  8004209f1e:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209f1e:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209f25:	00 00 00 
   8004209f28:	0f b6 50 75          	movzbl 0x75(%rax),%edx
   8004209f2c:	83 e2 f0             	and    $0xfffffff0,%edx
   8004209f2f:	83 ca 0e             	or     $0xe,%edx
   8004209f32:	88 50 75             	mov    %dl,0x75(%rax)
-  8004209f35:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209f35:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209f3c:	00 00 00 
   8004209f3f:	0f b6 50 75          	movzbl 0x75(%rax),%edx
   8004209f43:	83 e2 ef             	and    $0xffffffef,%edx
   8004209f46:	88 50 75             	mov    %dl,0x75(%rax)
-  8004209f49:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209f49:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209f50:	00 00 00 
   8004209f53:	0f b6 50 75          	movzbl 0x75(%rax),%edx
   8004209f57:	83 e2 9f             	and    $0xffffff9f,%edx
   8004209f5a:	88 50 75             	mov    %dl,0x75(%rax)
-  8004209f5d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209f5d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209f64:	00 00 00 
   8004209f67:	0f b6 50 75          	movzbl 0x75(%rax),%edx
   8004209f6b:	83 ca 80             	or     $0xffffff80,%edx
@@ -12122,56 +12122,56 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   8004209f78:	00 00 00 
   8004209f7b:	48 c1 e8 10          	shr    $0x10,%rax
   8004209f7f:	89 c2                	mov    %eax,%edx
-  8004209f81:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209f81:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209f88:	00 00 00 
   8004209f8b:	66 89 50 76          	mov    %dx,0x76(%rax)
   8004209f8f:	48 b8 a6 d0 20 04 80 	movabs $0x800420d0a6,%rax
   8004209f96:	00 00 00 
   8004209f99:	48 c1 e8 20          	shr    $0x20,%rax
   8004209f9d:	89 c2                	mov    %eax,%edx
-  8004209f9f:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209f9f:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209fa6:	00 00 00 
   8004209fa9:	89 50 78             	mov    %edx,0x78(%rax)
-  8004209fac:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209fac:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209fb3:	00 00 00 
   8004209fb6:	c7 40 7c 00 00 00 00 	movl   $0x0,0x7c(%rax)
   8004209fbd:	48 b8 b0 d0 20 04 80 	movabs $0x800420d0b0,%rax
   8004209fc4:	00 00 00 
   8004209fc7:	89 c2                	mov    %eax,%edx
-  8004209fc9:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209fc9:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209fd0:	00 00 00 
   8004209fd3:	66 89 90 80 00 00 00 	mov    %dx,0x80(%rax)
-  8004209fda:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209fda:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209fe1:	00 00 00 
   8004209fe4:	66 c7 80 82 00 00 00 	movw   $0x8,0x82(%rax)
   8004209feb:	08 00 
-  8004209fed:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  8004209fed:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   8004209ff4:	00 00 00 
   8004209ff7:	0f b6 90 84 00 00 00 	movzbl 0x84(%rax),%edx
   8004209ffe:	83 e2 f8             	and    $0xfffffff8,%edx
   800420a001:	88 90 84 00 00 00    	mov    %dl,0x84(%rax)
-  800420a007:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a007:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a00e:	00 00 00 
   800420a011:	0f b6 90 84 00 00 00 	movzbl 0x84(%rax),%edx
   800420a018:	83 e2 07             	and    $0x7,%edx
   800420a01b:	88 90 84 00 00 00    	mov    %dl,0x84(%rax)
-  800420a021:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a021:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a028:	00 00 00 
   800420a02b:	0f b6 90 85 00 00 00 	movzbl 0x85(%rax),%edx
   800420a032:	83 e2 f0             	and    $0xfffffff0,%edx
   800420a035:	83 ca 0e             	or     $0xe,%edx
   800420a038:	88 90 85 00 00 00    	mov    %dl,0x85(%rax)
-  800420a03e:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a03e:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a045:	00 00 00 
   800420a048:	0f b6 90 85 00 00 00 	movzbl 0x85(%rax),%edx
   800420a04f:	83 e2 ef             	and    $0xffffffef,%edx
   800420a052:	88 90 85 00 00 00    	mov    %dl,0x85(%rax)
-  800420a058:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a058:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a05f:	00 00 00 
   800420a062:	0f b6 90 85 00 00 00 	movzbl 0x85(%rax),%edx
   800420a069:	83 e2 9f             	and    $0xffffff9f,%edx
   800420a06c:	88 90 85 00 00 00    	mov    %dl,0x85(%rax)
-  800420a072:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a072:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a079:	00 00 00 
   800420a07c:	0f b6 90 85 00 00 00 	movzbl 0x85(%rax),%edx
   800420a083:	83 ca 80             	or     $0xffffff80,%edx
@@ -12180,57 +12180,57 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420a093:	00 00 00 
   800420a096:	48 c1 e8 10          	shr    $0x10,%rax
   800420a09a:	89 c2                	mov    %eax,%edx
-  800420a09c:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a09c:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a0a3:	00 00 00 
   800420a0a6:	66 89 90 86 00 00 00 	mov    %dx,0x86(%rax)
   800420a0ad:	48 b8 b0 d0 20 04 80 	movabs $0x800420d0b0,%rax
   800420a0b4:	00 00 00 
   800420a0b7:	48 c1 e8 20          	shr    $0x20,%rax
   800420a0bb:	89 c2                	mov    %eax,%edx
-  800420a0bd:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a0bd:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a0c4:	00 00 00 
   800420a0c7:	89 90 88 00 00 00    	mov    %edx,0x88(%rax)
-  800420a0cd:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a0cd:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a0d4:	00 00 00 
   800420a0d7:	c7 80 8c 00 00 00 00 	movl   $0x0,0x8c(%rax)
   800420a0de:	00 00 00 
   800420a0e1:	48 b8 b8 d0 20 04 80 	movabs $0x800420d0b8,%rax
   800420a0e8:	00 00 00 
   800420a0eb:	89 c2                	mov    %eax,%edx
-  800420a0ed:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a0ed:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a0f4:	00 00 00 
   800420a0f7:	66 89 90 a0 00 00 00 	mov    %dx,0xa0(%rax)
-  800420a0fe:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a0fe:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a105:	00 00 00 
   800420a108:	66 c7 80 a2 00 00 00 	movw   $0x8,0xa2(%rax)
   800420a10f:	08 00 
-  800420a111:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a111:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a118:	00 00 00 
   800420a11b:	0f b6 90 a4 00 00 00 	movzbl 0xa4(%rax),%edx
   800420a122:	83 e2 f8             	and    $0xfffffff8,%edx
   800420a125:	88 90 a4 00 00 00    	mov    %dl,0xa4(%rax)
-  800420a12b:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a12b:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a132:	00 00 00 
   800420a135:	0f b6 90 a4 00 00 00 	movzbl 0xa4(%rax),%edx
   800420a13c:	83 e2 07             	and    $0x7,%edx
   800420a13f:	88 90 a4 00 00 00    	mov    %dl,0xa4(%rax)
-  800420a145:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a145:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a14c:	00 00 00 
   800420a14f:	0f b6 90 a5 00 00 00 	movzbl 0xa5(%rax),%edx
   800420a156:	83 e2 f0             	and    $0xfffffff0,%edx
   800420a159:	83 ca 0e             	or     $0xe,%edx
   800420a15c:	88 90 a5 00 00 00    	mov    %dl,0xa5(%rax)
-  800420a162:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a162:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a169:	00 00 00 
   800420a16c:	0f b6 90 a5 00 00 00 	movzbl 0xa5(%rax),%edx
   800420a173:	83 e2 ef             	and    $0xffffffef,%edx
   800420a176:	88 90 a5 00 00 00    	mov    %dl,0xa5(%rax)
-  800420a17c:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a17c:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a183:	00 00 00 
   800420a186:	0f b6 90 a5 00 00 00 	movzbl 0xa5(%rax),%edx
   800420a18d:	83 e2 9f             	and    $0xffffff9f,%edx
   800420a190:	88 90 a5 00 00 00    	mov    %dl,0xa5(%rax)
-  800420a196:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a196:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a19d:	00 00 00 
   800420a1a0:	0f b6 90 a5 00 00 00 	movzbl 0xa5(%rax),%edx
   800420a1a7:	83 ca 80             	or     $0xffffff80,%edx
@@ -12239,57 +12239,57 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420a1b7:	00 00 00 
   800420a1ba:	48 c1 e8 10          	shr    $0x10,%rax
   800420a1be:	89 c2                	mov    %eax,%edx
-  800420a1c0:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a1c0:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a1c7:	00 00 00 
   800420a1ca:	66 89 90 a6 00 00 00 	mov    %dx,0xa6(%rax)
   800420a1d1:	48 b8 b8 d0 20 04 80 	movabs $0x800420d0b8,%rax
   800420a1d8:	00 00 00 
   800420a1db:	48 c1 e8 20          	shr    $0x20,%rax
   800420a1df:	89 c2                	mov    %eax,%edx
-  800420a1e1:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a1e1:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a1e8:	00 00 00 
   800420a1eb:	89 90 a8 00 00 00    	mov    %edx,0xa8(%rax)
-  800420a1f1:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a1f1:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a1f8:	00 00 00 
   800420a1fb:	c7 80 ac 00 00 00 00 	movl   $0x0,0xac(%rax)
   800420a202:	00 00 00 
   800420a205:	48 b8 c0 d0 20 04 80 	movabs $0x800420d0c0,%rax
   800420a20c:	00 00 00 
   800420a20f:	89 c2                	mov    %eax,%edx
-  800420a211:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a211:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a218:	00 00 00 
   800420a21b:	66 89 90 b0 00 00 00 	mov    %dx,0xb0(%rax)
-  800420a222:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a222:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a229:	00 00 00 
   800420a22c:	66 c7 80 b2 00 00 00 	movw   $0x8,0xb2(%rax)
   800420a233:	08 00 
-  800420a235:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a235:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a23c:	00 00 00 
   800420a23f:	0f b6 90 b4 00 00 00 	movzbl 0xb4(%rax),%edx
   800420a246:	83 e2 f8             	and    $0xfffffff8,%edx
   800420a249:	88 90 b4 00 00 00    	mov    %dl,0xb4(%rax)
-  800420a24f:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a24f:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a256:	00 00 00 
   800420a259:	0f b6 90 b4 00 00 00 	movzbl 0xb4(%rax),%edx
   800420a260:	83 e2 07             	and    $0x7,%edx
   800420a263:	88 90 b4 00 00 00    	mov    %dl,0xb4(%rax)
-  800420a269:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a269:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a270:	00 00 00 
   800420a273:	0f b6 90 b5 00 00 00 	movzbl 0xb5(%rax),%edx
   800420a27a:	83 e2 f0             	and    $0xfffffff0,%edx
   800420a27d:	83 ca 0e             	or     $0xe,%edx
   800420a280:	88 90 b5 00 00 00    	mov    %dl,0xb5(%rax)
-  800420a286:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a286:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a28d:	00 00 00 
   800420a290:	0f b6 90 b5 00 00 00 	movzbl 0xb5(%rax),%edx
   800420a297:	83 e2 ef             	and    $0xffffffef,%edx
   800420a29a:	88 90 b5 00 00 00    	mov    %dl,0xb5(%rax)
-  800420a2a0:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a2a0:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a2a7:	00 00 00 
   800420a2aa:	0f b6 90 b5 00 00 00 	movzbl 0xb5(%rax),%edx
   800420a2b1:	83 e2 9f             	and    $0xffffff9f,%edx
   800420a2b4:	88 90 b5 00 00 00    	mov    %dl,0xb5(%rax)
-  800420a2ba:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a2ba:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a2c1:	00 00 00 
   800420a2c4:	0f b6 90 b5 00 00 00 	movzbl 0xb5(%rax),%edx
   800420a2cb:	83 ca 80             	or     $0xffffff80,%edx
@@ -12298,57 +12298,57 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420a2db:	00 00 00 
   800420a2de:	48 c1 e8 10          	shr    $0x10,%rax
   800420a2e2:	89 c2                	mov    %eax,%edx
-  800420a2e4:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a2e4:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a2eb:	00 00 00 
   800420a2ee:	66 89 90 b6 00 00 00 	mov    %dx,0xb6(%rax)
   800420a2f5:	48 b8 c0 d0 20 04 80 	movabs $0x800420d0c0,%rax
   800420a2fc:	00 00 00 
   800420a2ff:	48 c1 e8 20          	shr    $0x20,%rax
   800420a303:	89 c2                	mov    %eax,%edx
-  800420a305:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a305:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a30c:	00 00 00 
   800420a30f:	89 90 b8 00 00 00    	mov    %edx,0xb8(%rax)
-  800420a315:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a315:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a31c:	00 00 00 
   800420a31f:	c7 80 bc 00 00 00 00 	movl   $0x0,0xbc(%rax)
   800420a326:	00 00 00 
   800420a329:	48 b8 c8 d0 20 04 80 	movabs $0x800420d0c8,%rax
   800420a330:	00 00 00 
   800420a333:	89 c2                	mov    %eax,%edx
-  800420a335:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a335:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a33c:	00 00 00 
   800420a33f:	66 89 90 c0 00 00 00 	mov    %dx,0xc0(%rax)
-  800420a346:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a346:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a34d:	00 00 00 
   800420a350:	66 c7 80 c2 00 00 00 	movw   $0x8,0xc2(%rax)
   800420a357:	08 00 
-  800420a359:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a359:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a360:	00 00 00 
   800420a363:	0f b6 90 c4 00 00 00 	movzbl 0xc4(%rax),%edx
   800420a36a:	83 e2 f8             	and    $0xfffffff8,%edx
   800420a36d:	88 90 c4 00 00 00    	mov    %dl,0xc4(%rax)
-  800420a373:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a373:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a37a:	00 00 00 
   800420a37d:	0f b6 90 c4 00 00 00 	movzbl 0xc4(%rax),%edx
   800420a384:	83 e2 07             	and    $0x7,%edx
   800420a387:	88 90 c4 00 00 00    	mov    %dl,0xc4(%rax)
-  800420a38d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a38d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a394:	00 00 00 
   800420a397:	0f b6 90 c5 00 00 00 	movzbl 0xc5(%rax),%edx
   800420a39e:	83 e2 f0             	and    $0xfffffff0,%edx
   800420a3a1:	83 ca 0e             	or     $0xe,%edx
   800420a3a4:	88 90 c5 00 00 00    	mov    %dl,0xc5(%rax)
-  800420a3aa:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a3aa:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a3b1:	00 00 00 
   800420a3b4:	0f b6 90 c5 00 00 00 	movzbl 0xc5(%rax),%edx
   800420a3bb:	83 e2 ef             	and    $0xffffffef,%edx
   800420a3be:	88 90 c5 00 00 00    	mov    %dl,0xc5(%rax)
-  800420a3c4:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a3c4:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a3cb:	00 00 00 
   800420a3ce:	0f b6 90 c5 00 00 00 	movzbl 0xc5(%rax),%edx
   800420a3d5:	83 e2 9f             	and    $0xffffff9f,%edx
   800420a3d8:	88 90 c5 00 00 00    	mov    %dl,0xc5(%rax)
-  800420a3de:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a3de:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a3e5:	00 00 00 
   800420a3e8:	0f b6 90 c5 00 00 00 	movzbl 0xc5(%rax),%edx
   800420a3ef:	83 ca 80             	or     $0xffffff80,%edx
@@ -12357,57 +12357,57 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420a3ff:	00 00 00 
   800420a402:	48 c1 e8 10          	shr    $0x10,%rax
   800420a406:	89 c2                	mov    %eax,%edx
-  800420a408:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a408:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a40f:	00 00 00 
   800420a412:	66 89 90 c6 00 00 00 	mov    %dx,0xc6(%rax)
   800420a419:	48 b8 c8 d0 20 04 80 	movabs $0x800420d0c8,%rax
   800420a420:	00 00 00 
   800420a423:	48 c1 e8 20          	shr    $0x20,%rax
   800420a427:	89 c2                	mov    %eax,%edx
-  800420a429:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a429:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a430:	00 00 00 
   800420a433:	89 90 c8 00 00 00    	mov    %edx,0xc8(%rax)
-  800420a439:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a439:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a440:	00 00 00 
   800420a443:	c7 80 cc 00 00 00 00 	movl   $0x0,0xcc(%rax)
   800420a44a:	00 00 00 
   800420a44d:	48 b8 d0 d0 20 04 80 	movabs $0x800420d0d0,%rax
   800420a454:	00 00 00 
   800420a457:	89 c2                	mov    %eax,%edx
-  800420a459:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a459:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a460:	00 00 00 
   800420a463:	66 89 90 d0 00 00 00 	mov    %dx,0xd0(%rax)
-  800420a46a:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a46a:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a471:	00 00 00 
   800420a474:	66 c7 80 d2 00 00 00 	movw   $0x8,0xd2(%rax)
   800420a47b:	08 00 
-  800420a47d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a47d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a484:	00 00 00 
   800420a487:	0f b6 90 d4 00 00 00 	movzbl 0xd4(%rax),%edx
   800420a48e:	83 e2 f8             	and    $0xfffffff8,%edx
   800420a491:	88 90 d4 00 00 00    	mov    %dl,0xd4(%rax)
-  800420a497:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a497:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a49e:	00 00 00 
   800420a4a1:	0f b6 90 d4 00 00 00 	movzbl 0xd4(%rax),%edx
   800420a4a8:	83 e2 07             	and    $0x7,%edx
   800420a4ab:	88 90 d4 00 00 00    	mov    %dl,0xd4(%rax)
-  800420a4b1:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a4b1:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a4b8:	00 00 00 
   800420a4bb:	0f b6 90 d5 00 00 00 	movzbl 0xd5(%rax),%edx
   800420a4c2:	83 e2 f0             	and    $0xfffffff0,%edx
   800420a4c5:	83 ca 0e             	or     $0xe,%edx
   800420a4c8:	88 90 d5 00 00 00    	mov    %dl,0xd5(%rax)
-  800420a4ce:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a4ce:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a4d5:	00 00 00 
   800420a4d8:	0f b6 90 d5 00 00 00 	movzbl 0xd5(%rax),%edx
   800420a4df:	83 e2 ef             	and    $0xffffffef,%edx
   800420a4e2:	88 90 d5 00 00 00    	mov    %dl,0xd5(%rax)
-  800420a4e8:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a4e8:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a4ef:	00 00 00 
   800420a4f2:	0f b6 90 d5 00 00 00 	movzbl 0xd5(%rax),%edx
   800420a4f9:	83 e2 9f             	and    $0xffffff9f,%edx
   800420a4fc:	88 90 d5 00 00 00    	mov    %dl,0xd5(%rax)
-  800420a502:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a502:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a509:	00 00 00 
   800420a50c:	0f b6 90 d5 00 00 00 	movzbl 0xd5(%rax),%edx
   800420a513:	83 ca 80             	or     $0xffffff80,%edx
@@ -12416,57 +12416,57 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420a523:	00 00 00 
   800420a526:	48 c1 e8 10          	shr    $0x10,%rax
   800420a52a:	89 c2                	mov    %eax,%edx
-  800420a52c:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a52c:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a533:	00 00 00 
   800420a536:	66 89 90 d6 00 00 00 	mov    %dx,0xd6(%rax)
   800420a53d:	48 b8 d0 d0 20 04 80 	movabs $0x800420d0d0,%rax
   800420a544:	00 00 00 
   800420a547:	48 c1 e8 20          	shr    $0x20,%rax
   800420a54b:	89 c2                	mov    %eax,%edx
-  800420a54d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a54d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a554:	00 00 00 
   800420a557:	89 90 d8 00 00 00    	mov    %edx,0xd8(%rax)
-  800420a55d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a55d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a564:	00 00 00 
   800420a567:	c7 80 dc 00 00 00 00 	movl   $0x0,0xdc(%rax)
   800420a56e:	00 00 00 
   800420a571:	48 b8 d8 d0 20 04 80 	movabs $0x800420d0d8,%rax
   800420a578:	00 00 00 
   800420a57b:	89 c2                	mov    %eax,%edx
-  800420a57d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a57d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a584:	00 00 00 
   800420a587:	66 89 90 e0 00 00 00 	mov    %dx,0xe0(%rax)
-  800420a58e:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a58e:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a595:	00 00 00 
   800420a598:	66 c7 80 e2 00 00 00 	movw   $0x8,0xe2(%rax)
   800420a59f:	08 00 
-  800420a5a1:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a5a1:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a5a8:	00 00 00 
   800420a5ab:	0f b6 90 e4 00 00 00 	movzbl 0xe4(%rax),%edx
   800420a5b2:	83 e2 f8             	and    $0xfffffff8,%edx
   800420a5b5:	88 90 e4 00 00 00    	mov    %dl,0xe4(%rax)
-  800420a5bb:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a5bb:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a5c2:	00 00 00 
   800420a5c5:	0f b6 90 e4 00 00 00 	movzbl 0xe4(%rax),%edx
   800420a5cc:	83 e2 07             	and    $0x7,%edx
   800420a5cf:	88 90 e4 00 00 00    	mov    %dl,0xe4(%rax)
-  800420a5d5:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a5d5:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a5dc:	00 00 00 
   800420a5df:	0f b6 90 e5 00 00 00 	movzbl 0xe5(%rax),%edx
   800420a5e6:	83 e2 f0             	and    $0xfffffff0,%edx
   800420a5e9:	83 ca 0e             	or     $0xe,%edx
   800420a5ec:	88 90 e5 00 00 00    	mov    %dl,0xe5(%rax)
-  800420a5f2:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a5f2:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a5f9:	00 00 00 
   800420a5fc:	0f b6 90 e5 00 00 00 	movzbl 0xe5(%rax),%edx
   800420a603:	83 e2 ef             	and    $0xffffffef,%edx
   800420a606:	88 90 e5 00 00 00    	mov    %dl,0xe5(%rax)
-  800420a60c:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a60c:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a613:	00 00 00 
   800420a616:	0f b6 90 e5 00 00 00 	movzbl 0xe5(%rax),%edx
   800420a61d:	83 e2 9f             	and    $0xffffff9f,%edx
   800420a620:	88 90 e5 00 00 00    	mov    %dl,0xe5(%rax)
-  800420a626:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a626:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a62d:	00 00 00 
   800420a630:	0f b6 90 e5 00 00 00 	movzbl 0xe5(%rax),%edx
   800420a637:	83 ca 80             	or     $0xffffff80,%edx
@@ -12475,57 +12475,57 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420a647:	00 00 00 
   800420a64a:	48 c1 e8 10          	shr    $0x10,%rax
   800420a64e:	89 c2                	mov    %eax,%edx
-  800420a650:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a650:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a657:	00 00 00 
   800420a65a:	66 89 90 e6 00 00 00 	mov    %dx,0xe6(%rax)
   800420a661:	48 b8 d8 d0 20 04 80 	movabs $0x800420d0d8,%rax
   800420a668:	00 00 00 
   800420a66b:	48 c1 e8 20          	shr    $0x20,%rax
   800420a66f:	89 c2                	mov    %eax,%edx
-  800420a671:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a671:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a678:	00 00 00 
   800420a67b:	89 90 e8 00 00 00    	mov    %edx,0xe8(%rax)
-  800420a681:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a681:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a688:	00 00 00 
   800420a68b:	c7 80 ec 00 00 00 00 	movl   $0x0,0xec(%rax)
   800420a692:	00 00 00 
   800420a695:	48 b8 e0 d0 20 04 80 	movabs $0x800420d0e0,%rax
   800420a69c:	00 00 00 
   800420a69f:	89 c2                	mov    %eax,%edx
-  800420a6a1:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a6a1:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a6a8:	00 00 00 
   800420a6ab:	66 89 90 00 01 00 00 	mov    %dx,0x100(%rax)
-  800420a6b2:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a6b2:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a6b9:	00 00 00 
   800420a6bc:	66 c7 80 02 01 00 00 	movw   $0x8,0x102(%rax)
   800420a6c3:	08 00 
-  800420a6c5:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a6c5:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a6cc:	00 00 00 
   800420a6cf:	0f b6 90 04 01 00 00 	movzbl 0x104(%rax),%edx
   800420a6d6:	83 e2 f8             	and    $0xfffffff8,%edx
   800420a6d9:	88 90 04 01 00 00    	mov    %dl,0x104(%rax)
-  800420a6df:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a6df:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a6e6:	00 00 00 
   800420a6e9:	0f b6 90 04 01 00 00 	movzbl 0x104(%rax),%edx
   800420a6f0:	83 e2 07             	and    $0x7,%edx
   800420a6f3:	88 90 04 01 00 00    	mov    %dl,0x104(%rax)
-  800420a6f9:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a6f9:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a700:	00 00 00 
   800420a703:	0f b6 90 05 01 00 00 	movzbl 0x105(%rax),%edx
   800420a70a:	83 e2 f0             	and    $0xfffffff0,%edx
   800420a70d:	83 ca 0e             	or     $0xe,%edx
   800420a710:	88 90 05 01 00 00    	mov    %dl,0x105(%rax)
-  800420a716:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a716:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a71d:	00 00 00 
   800420a720:	0f b6 90 05 01 00 00 	movzbl 0x105(%rax),%edx
   800420a727:	83 e2 ef             	and    $0xffffffef,%edx
   800420a72a:	88 90 05 01 00 00    	mov    %dl,0x105(%rax)
-  800420a730:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a730:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a737:	00 00 00 
   800420a73a:	0f b6 90 05 01 00 00 	movzbl 0x105(%rax),%edx
   800420a741:	83 e2 9f             	and    $0xffffff9f,%edx
   800420a744:	88 90 05 01 00 00    	mov    %dl,0x105(%rax)
-  800420a74a:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a74a:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a751:	00 00 00 
   800420a754:	0f b6 90 05 01 00 00 	movzbl 0x105(%rax),%edx
   800420a75b:	83 ca 80             	or     $0xffffff80,%edx
@@ -12534,57 +12534,57 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420a76b:	00 00 00 
   800420a76e:	48 c1 e8 10          	shr    $0x10,%rax
   800420a772:	89 c2                	mov    %eax,%edx
-  800420a774:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a774:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a77b:	00 00 00 
   800420a77e:	66 89 90 06 01 00 00 	mov    %dx,0x106(%rax)
   800420a785:	48 b8 e0 d0 20 04 80 	movabs $0x800420d0e0,%rax
   800420a78c:	00 00 00 
   800420a78f:	48 c1 e8 20          	shr    $0x20,%rax
   800420a793:	89 c2                	mov    %eax,%edx
-  800420a795:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a795:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a79c:	00 00 00 
   800420a79f:	89 90 08 01 00 00    	mov    %edx,0x108(%rax)
-  800420a7a5:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a7a5:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a7ac:	00 00 00 
   800420a7af:	c7 80 0c 01 00 00 00 	movl   $0x0,0x10c(%rax)
   800420a7b6:	00 00 00 
   800420a7b9:	48 b8 e6 d0 20 04 80 	movabs $0x800420d0e6,%rax
   800420a7c0:	00 00 00 
   800420a7c3:	89 c2                	mov    %eax,%edx
-  800420a7c5:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a7c5:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a7cc:	00 00 00 
   800420a7cf:	66 89 90 10 01 00 00 	mov    %dx,0x110(%rax)
-  800420a7d6:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a7d6:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a7dd:	00 00 00 
   800420a7e0:	66 c7 80 12 01 00 00 	movw   $0x8,0x112(%rax)
   800420a7e7:	08 00 
-  800420a7e9:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a7e9:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a7f0:	00 00 00 
   800420a7f3:	0f b6 90 14 01 00 00 	movzbl 0x114(%rax),%edx
   800420a7fa:	83 e2 f8             	and    $0xfffffff8,%edx
   800420a7fd:	88 90 14 01 00 00    	mov    %dl,0x114(%rax)
-  800420a803:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a803:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a80a:	00 00 00 
   800420a80d:	0f b6 90 14 01 00 00 	movzbl 0x114(%rax),%edx
   800420a814:	83 e2 07             	and    $0x7,%edx
   800420a817:	88 90 14 01 00 00    	mov    %dl,0x114(%rax)
-  800420a81d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a81d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a824:	00 00 00 
   800420a827:	0f b6 90 15 01 00 00 	movzbl 0x115(%rax),%edx
   800420a82e:	83 e2 f0             	and    $0xfffffff0,%edx
   800420a831:	83 ca 0e             	or     $0xe,%edx
   800420a834:	88 90 15 01 00 00    	mov    %dl,0x115(%rax)
-  800420a83a:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a83a:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a841:	00 00 00 
   800420a844:	0f b6 90 15 01 00 00 	movzbl 0x115(%rax),%edx
   800420a84b:	83 e2 ef             	and    $0xffffffef,%edx
   800420a84e:	88 90 15 01 00 00    	mov    %dl,0x115(%rax)
-  800420a854:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a854:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a85b:	00 00 00 
   800420a85e:	0f b6 90 15 01 00 00 	movzbl 0x115(%rax),%edx
   800420a865:	83 e2 9f             	and    $0xffffff9f,%edx
   800420a868:	88 90 15 01 00 00    	mov    %dl,0x115(%rax)
-  800420a86e:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a86e:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a875:	00 00 00 
   800420a878:	0f b6 90 15 01 00 00 	movzbl 0x115(%rax),%edx
   800420a87f:	83 ca 80             	or     $0xffffff80,%edx
@@ -12593,57 +12593,57 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420a88f:	00 00 00 
   800420a892:	48 c1 e8 10          	shr    $0x10,%rax
   800420a896:	89 c2                	mov    %eax,%edx
-  800420a898:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a898:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a89f:	00 00 00 
   800420a8a2:	66 89 90 16 01 00 00 	mov    %dx,0x116(%rax)
   800420a8a9:	48 b8 e6 d0 20 04 80 	movabs $0x800420d0e6,%rax
   800420a8b0:	00 00 00 
   800420a8b3:	48 c1 e8 20          	shr    $0x20,%rax
   800420a8b7:	89 c2                	mov    %eax,%edx
-  800420a8b9:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a8b9:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a8c0:	00 00 00 
   800420a8c3:	89 90 18 01 00 00    	mov    %edx,0x118(%rax)
-  800420a8c9:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a8c9:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a8d0:	00 00 00 
   800420a8d3:	c7 80 1c 01 00 00 00 	movl   $0x0,0x11c(%rax)
   800420a8da:	00 00 00 
   800420a8dd:	48 b8 ea d0 20 04 80 	movabs $0x800420d0ea,%rax
   800420a8e4:	00 00 00 
   800420a8e7:	89 c2                	mov    %eax,%edx
-  800420a8e9:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a8e9:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a8f0:	00 00 00 
   800420a8f3:	66 89 90 20 01 00 00 	mov    %dx,0x120(%rax)
-  800420a8fa:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a8fa:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a901:	00 00 00 
   800420a904:	66 c7 80 22 01 00 00 	movw   $0x8,0x122(%rax)
   800420a90b:	08 00 
-  800420a90d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a90d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a914:	00 00 00 
   800420a917:	0f b6 90 24 01 00 00 	movzbl 0x124(%rax),%edx
   800420a91e:	83 e2 f8             	and    $0xfffffff8,%edx
   800420a921:	88 90 24 01 00 00    	mov    %dl,0x124(%rax)
-  800420a927:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a927:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a92e:	00 00 00 
   800420a931:	0f b6 90 24 01 00 00 	movzbl 0x124(%rax),%edx
   800420a938:	83 e2 07             	and    $0x7,%edx
   800420a93b:	88 90 24 01 00 00    	mov    %dl,0x124(%rax)
-  800420a941:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a941:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a948:	00 00 00 
   800420a94b:	0f b6 90 25 01 00 00 	movzbl 0x125(%rax),%edx
   800420a952:	83 e2 f0             	and    $0xfffffff0,%edx
   800420a955:	83 ca 0e             	or     $0xe,%edx
   800420a958:	88 90 25 01 00 00    	mov    %dl,0x125(%rax)
-  800420a95e:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a95e:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a965:	00 00 00 
   800420a968:	0f b6 90 25 01 00 00 	movzbl 0x125(%rax),%edx
   800420a96f:	83 e2 ef             	and    $0xffffffef,%edx
   800420a972:	88 90 25 01 00 00    	mov    %dl,0x125(%rax)
-  800420a978:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a978:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a97f:	00 00 00 
   800420a982:	0f b6 90 25 01 00 00 	movzbl 0x125(%rax),%edx
   800420a989:	83 e2 9f             	and    $0xffffff9f,%edx
   800420a98c:	88 90 25 01 00 00    	mov    %dl,0x125(%rax)
-  800420a992:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a992:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a999:	00 00 00 
   800420a99c:	0f b6 90 25 01 00 00 	movzbl 0x125(%rax),%edx
   800420a9a3:	83 ca 80             	or     $0xffffff80,%edx
@@ -12652,57 +12652,57 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420a9b3:	00 00 00 
   800420a9b6:	48 c1 e8 10          	shr    $0x10,%rax
   800420a9ba:	89 c2                	mov    %eax,%edx
-  800420a9bc:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a9bc:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a9c3:	00 00 00 
   800420a9c6:	66 89 90 26 01 00 00 	mov    %dx,0x126(%rax)
   800420a9cd:	48 b8 ea d0 20 04 80 	movabs $0x800420d0ea,%rax
   800420a9d4:	00 00 00 
   800420a9d7:	48 c1 e8 20          	shr    $0x20,%rax
   800420a9db:	89 c2                	mov    %eax,%edx
-  800420a9dd:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a9dd:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a9e4:	00 00 00 
   800420a9e7:	89 90 28 01 00 00    	mov    %edx,0x128(%rax)
-  800420a9ed:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420a9ed:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420a9f4:	00 00 00 
   800420a9f7:	c7 80 2c 01 00 00 00 	movl   $0x0,0x12c(%rax)
   800420a9fe:	00 00 00 
   800420aa01:	48 b8 f0 d0 20 04 80 	movabs $0x800420d0f0,%rax
   800420aa08:	00 00 00 
   800420aa0b:	89 c2                	mov    %eax,%edx
-  800420aa0d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420aa0d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420aa14:	00 00 00 
   800420aa17:	66 89 90 00 02 00 00 	mov    %dx,0x200(%rax)
-  800420aa1e:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420aa1e:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420aa25:	00 00 00 
   800420aa28:	66 c7 80 02 02 00 00 	movw   $0x8,0x202(%rax)
   800420aa2f:	08 00 
-  800420aa31:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420aa31:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420aa38:	00 00 00 
   800420aa3b:	0f b6 90 04 02 00 00 	movzbl 0x204(%rax),%edx
   800420aa42:	83 e2 f8             	and    $0xfffffff8,%edx
   800420aa45:	88 90 04 02 00 00    	mov    %dl,0x204(%rax)
-  800420aa4b:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420aa4b:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420aa52:	00 00 00 
   800420aa55:	0f b6 90 04 02 00 00 	movzbl 0x204(%rax),%edx
   800420aa5c:	83 e2 07             	and    $0x7,%edx
   800420aa5f:	88 90 04 02 00 00    	mov    %dl,0x204(%rax)
-  800420aa65:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420aa65:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420aa6c:	00 00 00 
   800420aa6f:	0f b6 90 05 02 00 00 	movzbl 0x205(%rax),%edx
   800420aa76:	83 e2 f0             	and    $0xfffffff0,%edx
   800420aa79:	83 ca 0e             	or     $0xe,%edx
   800420aa7c:	88 90 05 02 00 00    	mov    %dl,0x205(%rax)
-  800420aa82:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420aa82:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420aa89:	00 00 00 
   800420aa8c:	0f b6 90 05 02 00 00 	movzbl 0x205(%rax),%edx
   800420aa93:	83 e2 ef             	and    $0xffffffef,%edx
   800420aa96:	88 90 05 02 00 00    	mov    %dl,0x205(%rax)
-  800420aa9c:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420aa9c:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420aaa3:	00 00 00 
   800420aaa6:	0f b6 90 05 02 00 00 	movzbl 0x205(%rax),%edx
   800420aaad:	83 e2 9f             	and    $0xffffff9f,%edx
   800420aab0:	88 90 05 02 00 00    	mov    %dl,0x205(%rax)
-  800420aab6:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420aab6:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420aabd:	00 00 00 
   800420aac0:	0f b6 90 05 02 00 00 	movzbl 0x205(%rax),%edx
   800420aac7:	83 ca 80             	or     $0xffffff80,%edx
@@ -12711,57 +12711,57 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420aad7:	00 00 00 
   800420aada:	48 c1 e8 10          	shr    $0x10,%rax
   800420aade:	89 c2                	mov    %eax,%edx
-  800420aae0:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420aae0:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420aae7:	00 00 00 
   800420aaea:	66 89 90 06 02 00 00 	mov    %dx,0x206(%rax)
   800420aaf1:	48 b8 f0 d0 20 04 80 	movabs $0x800420d0f0,%rax
   800420aaf8:	00 00 00 
   800420aafb:	48 c1 e8 20          	shr    $0x20,%rax
   800420aaff:	89 c2                	mov    %eax,%edx
-  800420ab01:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ab01:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ab08:	00 00 00 
   800420ab0b:	89 90 08 02 00 00    	mov    %edx,0x208(%rax)
-  800420ab11:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ab11:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ab18:	00 00 00 
   800420ab1b:	c7 80 0c 02 00 00 00 	movl   $0x0,0x20c(%rax)
   800420ab22:	00 00 00 
   800420ab25:	48 b8 f6 d0 20 04 80 	movabs $0x800420d0f6,%rax
   800420ab2c:	00 00 00 
   800420ab2f:	89 c2                	mov    %eax,%edx
-  800420ab31:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ab31:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ab38:	00 00 00 
   800420ab3b:	66 89 90 10 02 00 00 	mov    %dx,0x210(%rax)
-  800420ab42:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ab42:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ab49:	00 00 00 
   800420ab4c:	66 c7 80 12 02 00 00 	movw   $0x8,0x212(%rax)
   800420ab53:	08 00 
-  800420ab55:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ab55:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ab5c:	00 00 00 
   800420ab5f:	0f b6 90 14 02 00 00 	movzbl 0x214(%rax),%edx
   800420ab66:	83 e2 f8             	and    $0xfffffff8,%edx
   800420ab69:	88 90 14 02 00 00    	mov    %dl,0x214(%rax)
-  800420ab6f:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ab6f:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ab76:	00 00 00 
   800420ab79:	0f b6 90 14 02 00 00 	movzbl 0x214(%rax),%edx
   800420ab80:	83 e2 07             	and    $0x7,%edx
   800420ab83:	88 90 14 02 00 00    	mov    %dl,0x214(%rax)
-  800420ab89:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ab89:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ab90:	00 00 00 
   800420ab93:	0f b6 90 15 02 00 00 	movzbl 0x215(%rax),%edx
   800420ab9a:	83 e2 f0             	and    $0xfffffff0,%edx
   800420ab9d:	83 ca 0e             	or     $0xe,%edx
   800420aba0:	88 90 15 02 00 00    	mov    %dl,0x215(%rax)
-  800420aba6:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420aba6:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420abad:	00 00 00 
   800420abb0:	0f b6 90 15 02 00 00 	movzbl 0x215(%rax),%edx
   800420abb7:	83 e2 ef             	and    $0xffffffef,%edx
   800420abba:	88 90 15 02 00 00    	mov    %dl,0x215(%rax)
-  800420abc0:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420abc0:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420abc7:	00 00 00 
   800420abca:	0f b6 90 15 02 00 00 	movzbl 0x215(%rax),%edx
   800420abd1:	83 e2 9f             	and    $0xffffff9f,%edx
   800420abd4:	88 90 15 02 00 00    	mov    %dl,0x215(%rax)
-  800420abda:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420abda:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420abe1:	00 00 00 
   800420abe4:	0f b6 90 15 02 00 00 	movzbl 0x215(%rax),%edx
   800420abeb:	83 ca 80             	or     $0xffffff80,%edx
@@ -12770,57 +12770,57 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420abfb:	00 00 00 
   800420abfe:	48 c1 e8 10          	shr    $0x10,%rax
   800420ac02:	89 c2                	mov    %eax,%edx
-  800420ac04:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ac04:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ac0b:	00 00 00 
   800420ac0e:	66 89 90 16 02 00 00 	mov    %dx,0x216(%rax)
   800420ac15:	48 b8 f6 d0 20 04 80 	movabs $0x800420d0f6,%rax
   800420ac1c:	00 00 00 
   800420ac1f:	48 c1 e8 20          	shr    $0x20,%rax
   800420ac23:	89 c2                	mov    %eax,%edx
-  800420ac25:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ac25:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ac2c:	00 00 00 
   800420ac2f:	89 90 18 02 00 00    	mov    %edx,0x218(%rax)
-  800420ac35:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ac35:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ac3c:	00 00 00 
   800420ac3f:	c7 80 1c 02 00 00 00 	movl   $0x0,0x21c(%rax)
   800420ac46:	00 00 00 
   800420ac49:	48 b8 fc d0 20 04 80 	movabs $0x800420d0fc,%rax
   800420ac50:	00 00 00 
   800420ac53:	89 c2                	mov    %eax,%edx
-  800420ac55:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ac55:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ac5c:	00 00 00 
   800420ac5f:	66 89 90 20 02 00 00 	mov    %dx,0x220(%rax)
-  800420ac66:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ac66:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ac6d:	00 00 00 
   800420ac70:	66 c7 80 22 02 00 00 	movw   $0x8,0x222(%rax)
   800420ac77:	08 00 
-  800420ac79:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ac79:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ac80:	00 00 00 
   800420ac83:	0f b6 90 24 02 00 00 	movzbl 0x224(%rax),%edx
   800420ac8a:	83 e2 f8             	and    $0xfffffff8,%edx
   800420ac8d:	88 90 24 02 00 00    	mov    %dl,0x224(%rax)
-  800420ac93:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ac93:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ac9a:	00 00 00 
   800420ac9d:	0f b6 90 24 02 00 00 	movzbl 0x224(%rax),%edx
   800420aca4:	83 e2 07             	and    $0x7,%edx
   800420aca7:	88 90 24 02 00 00    	mov    %dl,0x224(%rax)
-  800420acad:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420acad:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420acb4:	00 00 00 
   800420acb7:	0f b6 90 25 02 00 00 	movzbl 0x225(%rax),%edx
   800420acbe:	83 e2 f0             	and    $0xfffffff0,%edx
   800420acc1:	83 ca 0e             	or     $0xe,%edx
   800420acc4:	88 90 25 02 00 00    	mov    %dl,0x225(%rax)
-  800420acca:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420acca:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420acd1:	00 00 00 
   800420acd4:	0f b6 90 25 02 00 00 	movzbl 0x225(%rax),%edx
   800420acdb:	83 e2 ef             	and    $0xffffffef,%edx
   800420acde:	88 90 25 02 00 00    	mov    %dl,0x225(%rax)
-  800420ace4:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ace4:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420aceb:	00 00 00 
   800420acee:	0f b6 90 25 02 00 00 	movzbl 0x225(%rax),%edx
   800420acf5:	83 e2 9f             	and    $0xffffff9f,%edx
   800420acf8:	88 90 25 02 00 00    	mov    %dl,0x225(%rax)
-  800420acfe:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420acfe:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ad05:	00 00 00 
   800420ad08:	0f b6 90 25 02 00 00 	movzbl 0x225(%rax),%edx
   800420ad0f:	83 ca 80             	or     $0xffffff80,%edx
@@ -12829,57 +12829,57 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420ad1f:	00 00 00 
   800420ad22:	48 c1 e8 10          	shr    $0x10,%rax
   800420ad26:	89 c2                	mov    %eax,%edx
-  800420ad28:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ad28:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ad2f:	00 00 00 
   800420ad32:	66 89 90 26 02 00 00 	mov    %dx,0x226(%rax)
   800420ad39:	48 b8 fc d0 20 04 80 	movabs $0x800420d0fc,%rax
   800420ad40:	00 00 00 
   800420ad43:	48 c1 e8 20          	shr    $0x20,%rax
   800420ad47:	89 c2                	mov    %eax,%edx
-  800420ad49:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ad49:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ad50:	00 00 00 
   800420ad53:	89 90 28 02 00 00    	mov    %edx,0x228(%rax)
-  800420ad59:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ad59:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ad60:	00 00 00 
   800420ad63:	c7 80 2c 02 00 00 00 	movl   $0x0,0x22c(%rax)
   800420ad6a:	00 00 00 
   800420ad6d:	48 b8 02 d1 20 04 80 	movabs $0x800420d102,%rax
   800420ad74:	00 00 00 
   800420ad77:	89 c2                	mov    %eax,%edx
-  800420ad79:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ad79:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ad80:	00 00 00 
   800420ad83:	66 89 90 30 02 00 00 	mov    %dx,0x230(%rax)
-  800420ad8a:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ad8a:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ad91:	00 00 00 
   800420ad94:	66 c7 80 32 02 00 00 	movw   $0x8,0x232(%rax)
   800420ad9b:	08 00 
-  800420ad9d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ad9d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ada4:	00 00 00 
   800420ada7:	0f b6 90 34 02 00 00 	movzbl 0x234(%rax),%edx
   800420adae:	83 e2 f8             	and    $0xfffffff8,%edx
   800420adb1:	88 90 34 02 00 00    	mov    %dl,0x234(%rax)
-  800420adb7:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420adb7:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420adbe:	00 00 00 
   800420adc1:	0f b6 90 34 02 00 00 	movzbl 0x234(%rax),%edx
   800420adc8:	83 e2 07             	and    $0x7,%edx
   800420adcb:	88 90 34 02 00 00    	mov    %dl,0x234(%rax)
-  800420add1:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420add1:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420add8:	00 00 00 
   800420addb:	0f b6 90 35 02 00 00 	movzbl 0x235(%rax),%edx
   800420ade2:	83 e2 f0             	and    $0xfffffff0,%edx
   800420ade5:	83 ca 0e             	or     $0xe,%edx
   800420ade8:	88 90 35 02 00 00    	mov    %dl,0x235(%rax)
-  800420adee:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420adee:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420adf5:	00 00 00 
   800420adf8:	0f b6 90 35 02 00 00 	movzbl 0x235(%rax),%edx
   800420adff:	83 e2 ef             	and    $0xffffffef,%edx
   800420ae02:	88 90 35 02 00 00    	mov    %dl,0x235(%rax)
-  800420ae08:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ae08:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ae0f:	00 00 00 
   800420ae12:	0f b6 90 35 02 00 00 	movzbl 0x235(%rax),%edx
   800420ae19:	83 e2 9f             	and    $0xffffff9f,%edx
   800420ae1c:	88 90 35 02 00 00    	mov    %dl,0x235(%rax)
-  800420ae22:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ae22:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ae29:	00 00 00 
   800420ae2c:	0f b6 90 35 02 00 00 	movzbl 0x235(%rax),%edx
   800420ae33:	83 ca 80             	or     $0xffffff80,%edx
@@ -12888,57 +12888,57 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420ae43:	00 00 00 
   800420ae46:	48 c1 e8 10          	shr    $0x10,%rax
   800420ae4a:	89 c2                	mov    %eax,%edx
-  800420ae4c:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ae4c:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ae53:	00 00 00 
   800420ae56:	66 89 90 36 02 00 00 	mov    %dx,0x236(%rax)
   800420ae5d:	48 b8 02 d1 20 04 80 	movabs $0x800420d102,%rax
   800420ae64:	00 00 00 
   800420ae67:	48 c1 e8 20          	shr    $0x20,%rax
   800420ae6b:	89 c2                	mov    %eax,%edx
-  800420ae6d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ae6d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ae74:	00 00 00 
   800420ae77:	89 90 38 02 00 00    	mov    %edx,0x238(%rax)
-  800420ae7d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ae7d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ae84:	00 00 00 
   800420ae87:	c7 80 3c 02 00 00 00 	movl   $0x0,0x23c(%rax)
   800420ae8e:	00 00 00 
   800420ae91:	48 b8 08 d1 20 04 80 	movabs $0x800420d108,%rax
   800420ae98:	00 00 00 
   800420ae9b:	89 c2                	mov    %eax,%edx
-  800420ae9d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ae9d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420aea4:	00 00 00 
   800420aea7:	66 89 90 40 02 00 00 	mov    %dx,0x240(%rax)
-  800420aeae:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420aeae:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420aeb5:	00 00 00 
   800420aeb8:	66 c7 80 42 02 00 00 	movw   $0x8,0x242(%rax)
   800420aebf:	08 00 
-  800420aec1:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420aec1:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420aec8:	00 00 00 
   800420aecb:	0f b6 90 44 02 00 00 	movzbl 0x244(%rax),%edx
   800420aed2:	83 e2 f8             	and    $0xfffffff8,%edx
   800420aed5:	88 90 44 02 00 00    	mov    %dl,0x244(%rax)
-  800420aedb:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420aedb:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420aee2:	00 00 00 
   800420aee5:	0f b6 90 44 02 00 00 	movzbl 0x244(%rax),%edx
   800420aeec:	83 e2 07             	and    $0x7,%edx
   800420aeef:	88 90 44 02 00 00    	mov    %dl,0x244(%rax)
-  800420aef5:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420aef5:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420aefc:	00 00 00 
   800420aeff:	0f b6 90 45 02 00 00 	movzbl 0x245(%rax),%edx
   800420af06:	83 e2 f0             	and    $0xfffffff0,%edx
   800420af09:	83 ca 0e             	or     $0xe,%edx
   800420af0c:	88 90 45 02 00 00    	mov    %dl,0x245(%rax)
-  800420af12:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420af12:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420af19:	00 00 00 
   800420af1c:	0f b6 90 45 02 00 00 	movzbl 0x245(%rax),%edx
   800420af23:	83 e2 ef             	and    $0xffffffef,%edx
   800420af26:	88 90 45 02 00 00    	mov    %dl,0x245(%rax)
-  800420af2c:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420af2c:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420af33:	00 00 00 
   800420af36:	0f b6 90 45 02 00 00 	movzbl 0x245(%rax),%edx
   800420af3d:	83 e2 9f             	and    $0xffffff9f,%edx
   800420af40:	88 90 45 02 00 00    	mov    %dl,0x245(%rax)
-  800420af46:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420af46:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420af4d:	00 00 00 
   800420af50:	0f b6 90 45 02 00 00 	movzbl 0x245(%rax),%edx
   800420af57:	83 ca 80             	or     $0xffffff80,%edx
@@ -12947,57 +12947,57 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420af67:	00 00 00 
   800420af6a:	48 c1 e8 10          	shr    $0x10,%rax
   800420af6e:	89 c2                	mov    %eax,%edx
-  800420af70:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420af70:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420af77:	00 00 00 
   800420af7a:	66 89 90 46 02 00 00 	mov    %dx,0x246(%rax)
   800420af81:	48 b8 08 d1 20 04 80 	movabs $0x800420d108,%rax
   800420af88:	00 00 00 
   800420af8b:	48 c1 e8 20          	shr    $0x20,%rax
   800420af8f:	89 c2                	mov    %eax,%edx
-  800420af91:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420af91:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420af98:	00 00 00 
   800420af9b:	89 90 48 02 00 00    	mov    %edx,0x248(%rax)
-  800420afa1:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420afa1:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420afa8:	00 00 00 
   800420afab:	c7 80 4c 02 00 00 00 	movl   $0x0,0x24c(%rax)
   800420afb2:	00 00 00 
   800420afb5:	48 b8 0e d1 20 04 80 	movabs $0x800420d10e,%rax
   800420afbc:	00 00 00 
   800420afbf:	89 c2                	mov    %eax,%edx
-  800420afc1:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420afc1:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420afc8:	00 00 00 
   800420afcb:	66 89 90 50 02 00 00 	mov    %dx,0x250(%rax)
-  800420afd2:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420afd2:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420afd9:	00 00 00 
   800420afdc:	66 c7 80 52 02 00 00 	movw   $0x8,0x252(%rax)
   800420afe3:	08 00 
-  800420afe5:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420afe5:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420afec:	00 00 00 
   800420afef:	0f b6 90 54 02 00 00 	movzbl 0x254(%rax),%edx
   800420aff6:	83 e2 f8             	and    $0xfffffff8,%edx
   800420aff9:	88 90 54 02 00 00    	mov    %dl,0x254(%rax)
-  800420afff:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420afff:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b006:	00 00 00 
   800420b009:	0f b6 90 54 02 00 00 	movzbl 0x254(%rax),%edx
   800420b010:	83 e2 07             	and    $0x7,%edx
   800420b013:	88 90 54 02 00 00    	mov    %dl,0x254(%rax)
-  800420b019:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b019:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b020:	00 00 00 
   800420b023:	0f b6 90 55 02 00 00 	movzbl 0x255(%rax),%edx
   800420b02a:	83 e2 f0             	and    $0xfffffff0,%edx
   800420b02d:	83 ca 0e             	or     $0xe,%edx
   800420b030:	88 90 55 02 00 00    	mov    %dl,0x255(%rax)
-  800420b036:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b036:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b03d:	00 00 00 
   800420b040:	0f b6 90 55 02 00 00 	movzbl 0x255(%rax),%edx
   800420b047:	83 e2 ef             	and    $0xffffffef,%edx
   800420b04a:	88 90 55 02 00 00    	mov    %dl,0x255(%rax)
-  800420b050:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b050:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b057:	00 00 00 
   800420b05a:	0f b6 90 55 02 00 00 	movzbl 0x255(%rax),%edx
   800420b061:	83 e2 9f             	and    $0xffffff9f,%edx
   800420b064:	88 90 55 02 00 00    	mov    %dl,0x255(%rax)
-  800420b06a:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b06a:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b071:	00 00 00 
   800420b074:	0f b6 90 55 02 00 00 	movzbl 0x255(%rax),%edx
   800420b07b:	83 ca 80             	or     $0xffffff80,%edx
@@ -13006,57 +13006,57 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420b08b:	00 00 00 
   800420b08e:	48 c1 e8 10          	shr    $0x10,%rax
   800420b092:	89 c2                	mov    %eax,%edx
-  800420b094:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b094:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b09b:	00 00 00 
   800420b09e:	66 89 90 56 02 00 00 	mov    %dx,0x256(%rax)
   800420b0a5:	48 b8 0e d1 20 04 80 	movabs $0x800420d10e,%rax
   800420b0ac:	00 00 00 
   800420b0af:	48 c1 e8 20          	shr    $0x20,%rax
   800420b0b3:	89 c2                	mov    %eax,%edx
-  800420b0b5:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b0b5:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b0bc:	00 00 00 
   800420b0bf:	89 90 58 02 00 00    	mov    %edx,0x258(%rax)
-  800420b0c5:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b0c5:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b0cc:	00 00 00 
   800420b0cf:	c7 80 5c 02 00 00 00 	movl   $0x0,0x25c(%rax)
   800420b0d6:	00 00 00 
   800420b0d9:	48 b8 14 d1 20 04 80 	movabs $0x800420d114,%rax
   800420b0e0:	00 00 00 
   800420b0e3:	89 c2                	mov    %eax,%edx
-  800420b0e5:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b0e5:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b0ec:	00 00 00 
   800420b0ef:	66 89 90 60 02 00 00 	mov    %dx,0x260(%rax)
-  800420b0f6:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b0f6:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b0fd:	00 00 00 
   800420b100:	66 c7 80 62 02 00 00 	movw   $0x8,0x262(%rax)
   800420b107:	08 00 
-  800420b109:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b109:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b110:	00 00 00 
   800420b113:	0f b6 90 64 02 00 00 	movzbl 0x264(%rax),%edx
   800420b11a:	83 e2 f8             	and    $0xfffffff8,%edx
   800420b11d:	88 90 64 02 00 00    	mov    %dl,0x264(%rax)
-  800420b123:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b123:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b12a:	00 00 00 
   800420b12d:	0f b6 90 64 02 00 00 	movzbl 0x264(%rax),%edx
   800420b134:	83 e2 07             	and    $0x7,%edx
   800420b137:	88 90 64 02 00 00    	mov    %dl,0x264(%rax)
-  800420b13d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b13d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b144:	00 00 00 
   800420b147:	0f b6 90 65 02 00 00 	movzbl 0x265(%rax),%edx
   800420b14e:	83 e2 f0             	and    $0xfffffff0,%edx
   800420b151:	83 ca 0e             	or     $0xe,%edx
   800420b154:	88 90 65 02 00 00    	mov    %dl,0x265(%rax)
-  800420b15a:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b15a:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b161:	00 00 00 
   800420b164:	0f b6 90 65 02 00 00 	movzbl 0x265(%rax),%edx
   800420b16b:	83 e2 ef             	and    $0xffffffef,%edx
   800420b16e:	88 90 65 02 00 00    	mov    %dl,0x265(%rax)
-  800420b174:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b174:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b17b:	00 00 00 
   800420b17e:	0f b6 90 65 02 00 00 	movzbl 0x265(%rax),%edx
   800420b185:	83 e2 9f             	and    $0xffffff9f,%edx
   800420b188:	88 90 65 02 00 00    	mov    %dl,0x265(%rax)
-  800420b18e:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b18e:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b195:	00 00 00 
   800420b198:	0f b6 90 65 02 00 00 	movzbl 0x265(%rax),%edx
   800420b19f:	83 ca 80             	or     $0xffffff80,%edx
@@ -13065,57 +13065,57 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420b1af:	00 00 00 
   800420b1b2:	48 c1 e8 10          	shr    $0x10,%rax
   800420b1b6:	89 c2                	mov    %eax,%edx
-  800420b1b8:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b1b8:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b1bf:	00 00 00 
   800420b1c2:	66 89 90 66 02 00 00 	mov    %dx,0x266(%rax)
   800420b1c9:	48 b8 14 d1 20 04 80 	movabs $0x800420d114,%rax
   800420b1d0:	00 00 00 
   800420b1d3:	48 c1 e8 20          	shr    $0x20,%rax
   800420b1d7:	89 c2                	mov    %eax,%edx
-  800420b1d9:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b1d9:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b1e0:	00 00 00 
   800420b1e3:	89 90 68 02 00 00    	mov    %edx,0x268(%rax)
-  800420b1e9:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b1e9:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b1f0:	00 00 00 
   800420b1f3:	c7 80 6c 02 00 00 00 	movl   $0x0,0x26c(%rax)
   800420b1fa:	00 00 00 
   800420b1fd:	48 b8 1a d1 20 04 80 	movabs $0x800420d11a,%rax
   800420b204:	00 00 00 
   800420b207:	89 c2                	mov    %eax,%edx
-  800420b209:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b209:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b210:	00 00 00 
   800420b213:	66 89 90 70 02 00 00 	mov    %dx,0x270(%rax)
-  800420b21a:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b21a:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b221:	00 00 00 
   800420b224:	66 c7 80 72 02 00 00 	movw   $0x8,0x272(%rax)
   800420b22b:	08 00 
-  800420b22d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b22d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b234:	00 00 00 
   800420b237:	0f b6 90 74 02 00 00 	movzbl 0x274(%rax),%edx
   800420b23e:	83 e2 f8             	and    $0xfffffff8,%edx
   800420b241:	88 90 74 02 00 00    	mov    %dl,0x274(%rax)
-  800420b247:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b247:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b24e:	00 00 00 
   800420b251:	0f b6 90 74 02 00 00 	movzbl 0x274(%rax),%edx
   800420b258:	83 e2 07             	and    $0x7,%edx
   800420b25b:	88 90 74 02 00 00    	mov    %dl,0x274(%rax)
-  800420b261:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b261:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b268:	00 00 00 
   800420b26b:	0f b6 90 75 02 00 00 	movzbl 0x275(%rax),%edx
   800420b272:	83 e2 f0             	and    $0xfffffff0,%edx
   800420b275:	83 ca 0e             	or     $0xe,%edx
   800420b278:	88 90 75 02 00 00    	mov    %dl,0x275(%rax)
-  800420b27e:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b27e:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b285:	00 00 00 
   800420b288:	0f b6 90 75 02 00 00 	movzbl 0x275(%rax),%edx
   800420b28f:	83 e2 ef             	and    $0xffffffef,%edx
   800420b292:	88 90 75 02 00 00    	mov    %dl,0x275(%rax)
-  800420b298:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b298:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b29f:	00 00 00 
   800420b2a2:	0f b6 90 75 02 00 00 	movzbl 0x275(%rax),%edx
   800420b2a9:	83 e2 9f             	and    $0xffffff9f,%edx
   800420b2ac:	88 90 75 02 00 00    	mov    %dl,0x275(%rax)
-  800420b2b2:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b2b2:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b2b9:	00 00 00 
   800420b2bc:	0f b6 90 75 02 00 00 	movzbl 0x275(%rax),%edx
   800420b2c3:	83 ca 80             	or     $0xffffff80,%edx
@@ -13124,57 +13124,57 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420b2d3:	00 00 00 
   800420b2d6:	48 c1 e8 10          	shr    $0x10,%rax
   800420b2da:	89 c2                	mov    %eax,%edx
-  800420b2dc:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b2dc:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b2e3:	00 00 00 
   800420b2e6:	66 89 90 76 02 00 00 	mov    %dx,0x276(%rax)
   800420b2ed:	48 b8 1a d1 20 04 80 	movabs $0x800420d11a,%rax
   800420b2f4:	00 00 00 
   800420b2f7:	48 c1 e8 20          	shr    $0x20,%rax
   800420b2fb:	89 c2                	mov    %eax,%edx
-  800420b2fd:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b2fd:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b304:	00 00 00 
   800420b307:	89 90 78 02 00 00    	mov    %edx,0x278(%rax)
-  800420b30d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b30d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b314:	00 00 00 
   800420b317:	c7 80 7c 02 00 00 00 	movl   $0x0,0x27c(%rax)
   800420b31e:	00 00 00 
   800420b321:	48 b8 20 d1 20 04 80 	movabs $0x800420d120,%rax
   800420b328:	00 00 00 
   800420b32b:	89 c2                	mov    %eax,%edx
-  800420b32d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b32d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b334:	00 00 00 
   800420b337:	66 89 90 80 02 00 00 	mov    %dx,0x280(%rax)
-  800420b33e:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b33e:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b345:	00 00 00 
   800420b348:	66 c7 80 82 02 00 00 	movw   $0x8,0x282(%rax)
   800420b34f:	08 00 
-  800420b351:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b351:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b358:	00 00 00 
   800420b35b:	0f b6 90 84 02 00 00 	movzbl 0x284(%rax),%edx
   800420b362:	83 e2 f8             	and    $0xfffffff8,%edx
   800420b365:	88 90 84 02 00 00    	mov    %dl,0x284(%rax)
-  800420b36b:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b36b:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b372:	00 00 00 
   800420b375:	0f b6 90 84 02 00 00 	movzbl 0x284(%rax),%edx
   800420b37c:	83 e2 07             	and    $0x7,%edx
   800420b37f:	88 90 84 02 00 00    	mov    %dl,0x284(%rax)
-  800420b385:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b385:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b38c:	00 00 00 
   800420b38f:	0f b6 90 85 02 00 00 	movzbl 0x285(%rax),%edx
   800420b396:	83 e2 f0             	and    $0xfffffff0,%edx
   800420b399:	83 ca 0e             	or     $0xe,%edx
   800420b39c:	88 90 85 02 00 00    	mov    %dl,0x285(%rax)
-  800420b3a2:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b3a2:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b3a9:	00 00 00 
   800420b3ac:	0f b6 90 85 02 00 00 	movzbl 0x285(%rax),%edx
   800420b3b3:	83 e2 ef             	and    $0xffffffef,%edx
   800420b3b6:	88 90 85 02 00 00    	mov    %dl,0x285(%rax)
-  800420b3bc:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b3bc:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b3c3:	00 00 00 
   800420b3c6:	0f b6 90 85 02 00 00 	movzbl 0x285(%rax),%edx
   800420b3cd:	83 e2 9f             	and    $0xffffff9f,%edx
   800420b3d0:	88 90 85 02 00 00    	mov    %dl,0x285(%rax)
-  800420b3d6:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b3d6:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b3dd:	00 00 00 
   800420b3e0:	0f b6 90 85 02 00 00 	movzbl 0x285(%rax),%edx
   800420b3e7:	83 ca 80             	or     $0xffffff80,%edx
@@ -13183,57 +13183,57 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420b3f7:	00 00 00 
   800420b3fa:	48 c1 e8 10          	shr    $0x10,%rax
   800420b3fe:	89 c2                	mov    %eax,%edx
-  800420b400:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b400:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b407:	00 00 00 
   800420b40a:	66 89 90 86 02 00 00 	mov    %dx,0x286(%rax)
   800420b411:	48 b8 20 d1 20 04 80 	movabs $0x800420d120,%rax
   800420b418:	00 00 00 
   800420b41b:	48 c1 e8 20          	shr    $0x20,%rax
   800420b41f:	89 c2                	mov    %eax,%edx
-  800420b421:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b421:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b428:	00 00 00 
   800420b42b:	89 90 88 02 00 00    	mov    %edx,0x288(%rax)
-  800420b431:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b431:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b438:	00 00 00 
   800420b43b:	c7 80 8c 02 00 00 00 	movl   $0x0,0x28c(%rax)
   800420b442:	00 00 00 
   800420b445:	48 b8 26 d1 20 04 80 	movabs $0x800420d126,%rax
   800420b44c:	00 00 00 
   800420b44f:	89 c2                	mov    %eax,%edx
-  800420b451:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b451:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b458:	00 00 00 
   800420b45b:	66 89 90 90 02 00 00 	mov    %dx,0x290(%rax)
-  800420b462:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b462:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b469:	00 00 00 
   800420b46c:	66 c7 80 92 02 00 00 	movw   $0x8,0x292(%rax)
   800420b473:	08 00 
-  800420b475:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b475:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b47c:	00 00 00 
   800420b47f:	0f b6 90 94 02 00 00 	movzbl 0x294(%rax),%edx
   800420b486:	83 e2 f8             	and    $0xfffffff8,%edx
   800420b489:	88 90 94 02 00 00    	mov    %dl,0x294(%rax)
-  800420b48f:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b48f:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b496:	00 00 00 
   800420b499:	0f b6 90 94 02 00 00 	movzbl 0x294(%rax),%edx
   800420b4a0:	83 e2 07             	and    $0x7,%edx
   800420b4a3:	88 90 94 02 00 00    	mov    %dl,0x294(%rax)
-  800420b4a9:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b4a9:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b4b0:	00 00 00 
   800420b4b3:	0f b6 90 95 02 00 00 	movzbl 0x295(%rax),%edx
   800420b4ba:	83 e2 f0             	and    $0xfffffff0,%edx
   800420b4bd:	83 ca 0e             	or     $0xe,%edx
   800420b4c0:	88 90 95 02 00 00    	mov    %dl,0x295(%rax)
-  800420b4c6:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b4c6:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b4cd:	00 00 00 
   800420b4d0:	0f b6 90 95 02 00 00 	movzbl 0x295(%rax),%edx
   800420b4d7:	83 e2 ef             	and    $0xffffffef,%edx
   800420b4da:	88 90 95 02 00 00    	mov    %dl,0x295(%rax)
-  800420b4e0:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b4e0:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b4e7:	00 00 00 
   800420b4ea:	0f b6 90 95 02 00 00 	movzbl 0x295(%rax),%edx
   800420b4f1:	83 e2 9f             	and    $0xffffff9f,%edx
   800420b4f4:	88 90 95 02 00 00    	mov    %dl,0x295(%rax)
-  800420b4fa:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b4fa:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b501:	00 00 00 
   800420b504:	0f b6 90 95 02 00 00 	movzbl 0x295(%rax),%edx
   800420b50b:	83 ca 80             	or     $0xffffff80,%edx
@@ -13242,57 +13242,57 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420b51b:	00 00 00 
   800420b51e:	48 c1 e8 10          	shr    $0x10,%rax
   800420b522:	89 c2                	mov    %eax,%edx
-  800420b524:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b524:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b52b:	00 00 00 
   800420b52e:	66 89 90 96 02 00 00 	mov    %dx,0x296(%rax)
   800420b535:	48 b8 26 d1 20 04 80 	movabs $0x800420d126,%rax
   800420b53c:	00 00 00 
   800420b53f:	48 c1 e8 20          	shr    $0x20,%rax
   800420b543:	89 c2                	mov    %eax,%edx
-  800420b545:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b545:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b54c:	00 00 00 
   800420b54f:	89 90 98 02 00 00    	mov    %edx,0x298(%rax)
-  800420b555:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b555:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b55c:	00 00 00 
   800420b55f:	c7 80 9c 02 00 00 00 	movl   $0x0,0x29c(%rax)
   800420b566:	00 00 00 
   800420b569:	48 b8 2c d1 20 04 80 	movabs $0x800420d12c,%rax
   800420b570:	00 00 00 
   800420b573:	89 c2                	mov    %eax,%edx
-  800420b575:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b575:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b57c:	00 00 00 
   800420b57f:	66 89 90 a0 02 00 00 	mov    %dx,0x2a0(%rax)
-  800420b586:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b586:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b58d:	00 00 00 
   800420b590:	66 c7 80 a2 02 00 00 	movw   $0x8,0x2a2(%rax)
   800420b597:	08 00 
-  800420b599:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b599:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b5a0:	00 00 00 
   800420b5a3:	0f b6 90 a4 02 00 00 	movzbl 0x2a4(%rax),%edx
   800420b5aa:	83 e2 f8             	and    $0xfffffff8,%edx
   800420b5ad:	88 90 a4 02 00 00    	mov    %dl,0x2a4(%rax)
-  800420b5b3:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b5b3:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b5ba:	00 00 00 
   800420b5bd:	0f b6 90 a4 02 00 00 	movzbl 0x2a4(%rax),%edx
   800420b5c4:	83 e2 07             	and    $0x7,%edx
   800420b5c7:	88 90 a4 02 00 00    	mov    %dl,0x2a4(%rax)
-  800420b5cd:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b5cd:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b5d4:	00 00 00 
   800420b5d7:	0f b6 90 a5 02 00 00 	movzbl 0x2a5(%rax),%edx
   800420b5de:	83 e2 f0             	and    $0xfffffff0,%edx
   800420b5e1:	83 ca 0e             	or     $0xe,%edx
   800420b5e4:	88 90 a5 02 00 00    	mov    %dl,0x2a5(%rax)
-  800420b5ea:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b5ea:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b5f1:	00 00 00 
   800420b5f4:	0f b6 90 a5 02 00 00 	movzbl 0x2a5(%rax),%edx
   800420b5fb:	83 e2 ef             	and    $0xffffffef,%edx
   800420b5fe:	88 90 a5 02 00 00    	mov    %dl,0x2a5(%rax)
-  800420b604:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b604:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b60b:	00 00 00 
   800420b60e:	0f b6 90 a5 02 00 00 	movzbl 0x2a5(%rax),%edx
   800420b615:	83 e2 9f             	and    $0xffffff9f,%edx
   800420b618:	88 90 a5 02 00 00    	mov    %dl,0x2a5(%rax)
-  800420b61e:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b61e:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b625:	00 00 00 
   800420b628:	0f b6 90 a5 02 00 00 	movzbl 0x2a5(%rax),%edx
   800420b62f:	83 ca 80             	or     $0xffffff80,%edx
@@ -13301,57 +13301,57 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420b63f:	00 00 00 
   800420b642:	48 c1 e8 10          	shr    $0x10,%rax
   800420b646:	89 c2                	mov    %eax,%edx
-  800420b648:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b648:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b64f:	00 00 00 
   800420b652:	66 89 90 a6 02 00 00 	mov    %dx,0x2a6(%rax)
   800420b659:	48 b8 2c d1 20 04 80 	movabs $0x800420d12c,%rax
   800420b660:	00 00 00 
   800420b663:	48 c1 e8 20          	shr    $0x20,%rax
   800420b667:	89 c2                	mov    %eax,%edx
-  800420b669:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b669:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b670:	00 00 00 
   800420b673:	89 90 a8 02 00 00    	mov    %edx,0x2a8(%rax)
-  800420b679:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b679:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b680:	00 00 00 
   800420b683:	c7 80 ac 02 00 00 00 	movl   $0x0,0x2ac(%rax)
   800420b68a:	00 00 00 
   800420b68d:	48 b8 32 d1 20 04 80 	movabs $0x800420d132,%rax
   800420b694:	00 00 00 
   800420b697:	89 c2                	mov    %eax,%edx
-  800420b699:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b699:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b6a0:	00 00 00 
   800420b6a3:	66 89 90 b0 02 00 00 	mov    %dx,0x2b0(%rax)
-  800420b6aa:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b6aa:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b6b1:	00 00 00 
   800420b6b4:	66 c7 80 b2 02 00 00 	movw   $0x8,0x2b2(%rax)
   800420b6bb:	08 00 
-  800420b6bd:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b6bd:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b6c4:	00 00 00 
   800420b6c7:	0f b6 90 b4 02 00 00 	movzbl 0x2b4(%rax),%edx
   800420b6ce:	83 e2 f8             	and    $0xfffffff8,%edx
   800420b6d1:	88 90 b4 02 00 00    	mov    %dl,0x2b4(%rax)
-  800420b6d7:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b6d7:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b6de:	00 00 00 
   800420b6e1:	0f b6 90 b4 02 00 00 	movzbl 0x2b4(%rax),%edx
   800420b6e8:	83 e2 07             	and    $0x7,%edx
   800420b6eb:	88 90 b4 02 00 00    	mov    %dl,0x2b4(%rax)
-  800420b6f1:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b6f1:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b6f8:	00 00 00 
   800420b6fb:	0f b6 90 b5 02 00 00 	movzbl 0x2b5(%rax),%edx
   800420b702:	83 e2 f0             	and    $0xfffffff0,%edx
   800420b705:	83 ca 0e             	or     $0xe,%edx
   800420b708:	88 90 b5 02 00 00    	mov    %dl,0x2b5(%rax)
-  800420b70e:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b70e:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b715:	00 00 00 
   800420b718:	0f b6 90 b5 02 00 00 	movzbl 0x2b5(%rax),%edx
   800420b71f:	83 e2 ef             	and    $0xffffffef,%edx
   800420b722:	88 90 b5 02 00 00    	mov    %dl,0x2b5(%rax)
-  800420b728:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b728:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b72f:	00 00 00 
   800420b732:	0f b6 90 b5 02 00 00 	movzbl 0x2b5(%rax),%edx
   800420b739:	83 e2 9f             	and    $0xffffff9f,%edx
   800420b73c:	88 90 b5 02 00 00    	mov    %dl,0x2b5(%rax)
-  800420b742:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b742:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b749:	00 00 00 
   800420b74c:	0f b6 90 b5 02 00 00 	movzbl 0x2b5(%rax),%edx
   800420b753:	83 ca 80             	or     $0xffffff80,%edx
@@ -13360,57 +13360,57 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420b763:	00 00 00 
   800420b766:	48 c1 e8 10          	shr    $0x10,%rax
   800420b76a:	89 c2                	mov    %eax,%edx
-  800420b76c:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b76c:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b773:	00 00 00 
   800420b776:	66 89 90 b6 02 00 00 	mov    %dx,0x2b6(%rax)
   800420b77d:	48 b8 32 d1 20 04 80 	movabs $0x800420d132,%rax
   800420b784:	00 00 00 
   800420b787:	48 c1 e8 20          	shr    $0x20,%rax
   800420b78b:	89 c2                	mov    %eax,%edx
-  800420b78d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b78d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b794:	00 00 00 
   800420b797:	89 90 b8 02 00 00    	mov    %edx,0x2b8(%rax)
-  800420b79d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b79d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b7a4:	00 00 00 
   800420b7a7:	c7 80 bc 02 00 00 00 	movl   $0x0,0x2bc(%rax)
   800420b7ae:	00 00 00 
   800420b7b1:	48 b8 38 d1 20 04 80 	movabs $0x800420d138,%rax
   800420b7b8:	00 00 00 
   800420b7bb:	89 c2                	mov    %eax,%edx
-  800420b7bd:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b7bd:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b7c4:	00 00 00 
   800420b7c7:	66 89 90 c0 02 00 00 	mov    %dx,0x2c0(%rax)
-  800420b7ce:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b7ce:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b7d5:	00 00 00 
   800420b7d8:	66 c7 80 c2 02 00 00 	movw   $0x8,0x2c2(%rax)
   800420b7df:	08 00 
-  800420b7e1:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b7e1:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b7e8:	00 00 00 
   800420b7eb:	0f b6 90 c4 02 00 00 	movzbl 0x2c4(%rax),%edx
   800420b7f2:	83 e2 f8             	and    $0xfffffff8,%edx
   800420b7f5:	88 90 c4 02 00 00    	mov    %dl,0x2c4(%rax)
-  800420b7fb:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b7fb:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b802:	00 00 00 
   800420b805:	0f b6 90 c4 02 00 00 	movzbl 0x2c4(%rax),%edx
   800420b80c:	83 e2 07             	and    $0x7,%edx
   800420b80f:	88 90 c4 02 00 00    	mov    %dl,0x2c4(%rax)
-  800420b815:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b815:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b81c:	00 00 00 
   800420b81f:	0f b6 90 c5 02 00 00 	movzbl 0x2c5(%rax),%edx
   800420b826:	83 e2 f0             	and    $0xfffffff0,%edx
   800420b829:	83 ca 0e             	or     $0xe,%edx
   800420b82c:	88 90 c5 02 00 00    	mov    %dl,0x2c5(%rax)
-  800420b832:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b832:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b839:	00 00 00 
   800420b83c:	0f b6 90 c5 02 00 00 	movzbl 0x2c5(%rax),%edx
   800420b843:	83 e2 ef             	and    $0xffffffef,%edx
   800420b846:	88 90 c5 02 00 00    	mov    %dl,0x2c5(%rax)
-  800420b84c:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b84c:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b853:	00 00 00 
   800420b856:	0f b6 90 c5 02 00 00 	movzbl 0x2c5(%rax),%edx
   800420b85d:	83 e2 9f             	and    $0xffffff9f,%edx
   800420b860:	88 90 c5 02 00 00    	mov    %dl,0x2c5(%rax)
-  800420b866:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b866:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b86d:	00 00 00 
   800420b870:	0f b6 90 c5 02 00 00 	movzbl 0x2c5(%rax),%edx
   800420b877:	83 ca 80             	or     $0xffffff80,%edx
@@ -13419,57 +13419,57 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420b887:	00 00 00 
   800420b88a:	48 c1 e8 10          	shr    $0x10,%rax
   800420b88e:	89 c2                	mov    %eax,%edx
-  800420b890:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b890:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b897:	00 00 00 
   800420b89a:	66 89 90 c6 02 00 00 	mov    %dx,0x2c6(%rax)
   800420b8a1:	48 b8 38 d1 20 04 80 	movabs $0x800420d138,%rax
   800420b8a8:	00 00 00 
   800420b8ab:	48 c1 e8 20          	shr    $0x20,%rax
   800420b8af:	89 c2                	mov    %eax,%edx
-  800420b8b1:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b8b1:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b8b8:	00 00 00 
   800420b8bb:	89 90 c8 02 00 00    	mov    %edx,0x2c8(%rax)
-  800420b8c1:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b8c1:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b8c8:	00 00 00 
   800420b8cb:	c7 80 cc 02 00 00 00 	movl   $0x0,0x2cc(%rax)
   800420b8d2:	00 00 00 
   800420b8d5:	48 b8 3e d1 20 04 80 	movabs $0x800420d13e,%rax
   800420b8dc:	00 00 00 
   800420b8df:	89 c2                	mov    %eax,%edx
-  800420b8e1:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b8e1:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b8e8:	00 00 00 
   800420b8eb:	66 89 90 d0 02 00 00 	mov    %dx,0x2d0(%rax)
-  800420b8f2:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b8f2:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b8f9:	00 00 00 
   800420b8fc:	66 c7 80 d2 02 00 00 	movw   $0x8,0x2d2(%rax)
   800420b903:	08 00 
-  800420b905:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b905:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b90c:	00 00 00 
   800420b90f:	0f b6 90 d4 02 00 00 	movzbl 0x2d4(%rax),%edx
   800420b916:	83 e2 f8             	and    $0xfffffff8,%edx
   800420b919:	88 90 d4 02 00 00    	mov    %dl,0x2d4(%rax)
-  800420b91f:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b91f:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b926:	00 00 00 
   800420b929:	0f b6 90 d4 02 00 00 	movzbl 0x2d4(%rax),%edx
   800420b930:	83 e2 07             	and    $0x7,%edx
   800420b933:	88 90 d4 02 00 00    	mov    %dl,0x2d4(%rax)
-  800420b939:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b939:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b940:	00 00 00 
   800420b943:	0f b6 90 d5 02 00 00 	movzbl 0x2d5(%rax),%edx
   800420b94a:	83 e2 f0             	and    $0xfffffff0,%edx
   800420b94d:	83 ca 0e             	or     $0xe,%edx
   800420b950:	88 90 d5 02 00 00    	mov    %dl,0x2d5(%rax)
-  800420b956:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b956:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b95d:	00 00 00 
   800420b960:	0f b6 90 d5 02 00 00 	movzbl 0x2d5(%rax),%edx
   800420b967:	83 e2 ef             	and    $0xffffffef,%edx
   800420b96a:	88 90 d5 02 00 00    	mov    %dl,0x2d5(%rax)
-  800420b970:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b970:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b977:	00 00 00 
   800420b97a:	0f b6 90 d5 02 00 00 	movzbl 0x2d5(%rax),%edx
   800420b981:	83 e2 9f             	and    $0xffffff9f,%edx
   800420b984:	88 90 d5 02 00 00    	mov    %dl,0x2d5(%rax)
-  800420b98a:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b98a:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b991:	00 00 00 
   800420b994:	0f b6 90 d5 02 00 00 	movzbl 0x2d5(%rax),%edx
   800420b99b:	83 ca 80             	or     $0xffffff80,%edx
@@ -13478,57 +13478,57 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420b9ab:	00 00 00 
   800420b9ae:	48 c1 e8 10          	shr    $0x10,%rax
   800420b9b2:	89 c2                	mov    %eax,%edx
-  800420b9b4:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b9b4:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b9bb:	00 00 00 
   800420b9be:	66 89 90 d6 02 00 00 	mov    %dx,0x2d6(%rax)
   800420b9c5:	48 b8 3e d1 20 04 80 	movabs $0x800420d13e,%rax
   800420b9cc:	00 00 00 
   800420b9cf:	48 c1 e8 20          	shr    $0x20,%rax
   800420b9d3:	89 c2                	mov    %eax,%edx
-  800420b9d5:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b9d5:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b9dc:	00 00 00 
   800420b9df:	89 90 d8 02 00 00    	mov    %edx,0x2d8(%rax)
-  800420b9e5:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420b9e5:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420b9ec:	00 00 00 
   800420b9ef:	c7 80 dc 02 00 00 00 	movl   $0x0,0x2dc(%rax)
   800420b9f6:	00 00 00 
   800420b9f9:	48 b8 44 d1 20 04 80 	movabs $0x800420d144,%rax
   800420ba00:	00 00 00 
   800420ba03:	89 c2                	mov    %eax,%edx
-  800420ba05:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ba05:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ba0c:	00 00 00 
   800420ba0f:	66 89 90 e0 02 00 00 	mov    %dx,0x2e0(%rax)
-  800420ba16:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ba16:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ba1d:	00 00 00 
   800420ba20:	66 c7 80 e2 02 00 00 	movw   $0x8,0x2e2(%rax)
   800420ba27:	08 00 
-  800420ba29:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ba29:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ba30:	00 00 00 
   800420ba33:	0f b6 90 e4 02 00 00 	movzbl 0x2e4(%rax),%edx
   800420ba3a:	83 e2 f8             	and    $0xfffffff8,%edx
   800420ba3d:	88 90 e4 02 00 00    	mov    %dl,0x2e4(%rax)
-  800420ba43:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ba43:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ba4a:	00 00 00 
   800420ba4d:	0f b6 90 e4 02 00 00 	movzbl 0x2e4(%rax),%edx
   800420ba54:	83 e2 07             	and    $0x7,%edx
   800420ba57:	88 90 e4 02 00 00    	mov    %dl,0x2e4(%rax)
-  800420ba5d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ba5d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ba64:	00 00 00 
   800420ba67:	0f b6 90 e5 02 00 00 	movzbl 0x2e5(%rax),%edx
   800420ba6e:	83 e2 f0             	and    $0xfffffff0,%edx
   800420ba71:	83 ca 0e             	or     $0xe,%edx
   800420ba74:	88 90 e5 02 00 00    	mov    %dl,0x2e5(%rax)
-  800420ba7a:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ba7a:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ba81:	00 00 00 
   800420ba84:	0f b6 90 e5 02 00 00 	movzbl 0x2e5(%rax),%edx
   800420ba8b:	83 e2 ef             	and    $0xffffffef,%edx
   800420ba8e:	88 90 e5 02 00 00    	mov    %dl,0x2e5(%rax)
-  800420ba94:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420ba94:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420ba9b:	00 00 00 
   800420ba9e:	0f b6 90 e5 02 00 00 	movzbl 0x2e5(%rax),%edx
   800420baa5:	83 e2 9f             	and    $0xffffff9f,%edx
   800420baa8:	88 90 e5 02 00 00    	mov    %dl,0x2e5(%rax)
-  800420baae:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420baae:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420bab5:	00 00 00 
   800420bab8:	0f b6 90 e5 02 00 00 	movzbl 0x2e5(%rax),%edx
   800420babf:	83 ca 80             	or     $0xffffff80,%edx
@@ -13537,57 +13537,57 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420bacf:	00 00 00 
   800420bad2:	48 c1 e8 10          	shr    $0x10,%rax
   800420bad6:	89 c2                	mov    %eax,%edx
-  800420bad8:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420bad8:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420badf:	00 00 00 
   800420bae2:	66 89 90 e6 02 00 00 	mov    %dx,0x2e6(%rax)
   800420bae9:	48 b8 44 d1 20 04 80 	movabs $0x800420d144,%rax
   800420baf0:	00 00 00 
   800420baf3:	48 c1 e8 20          	shr    $0x20,%rax
   800420baf7:	89 c2                	mov    %eax,%edx
-  800420baf9:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420baf9:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420bb00:	00 00 00 
   800420bb03:	89 90 e8 02 00 00    	mov    %edx,0x2e8(%rax)
-  800420bb09:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420bb09:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420bb10:	00 00 00 
   800420bb13:	c7 80 ec 02 00 00 00 	movl   $0x0,0x2ec(%rax)
   800420bb1a:	00 00 00 
   800420bb1d:	48 b8 4a d1 20 04 80 	movabs $0x800420d14a,%rax
   800420bb24:	00 00 00 
   800420bb27:	89 c2                	mov    %eax,%edx
-  800420bb29:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420bb29:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420bb30:	00 00 00 
   800420bb33:	66 89 90 f0 02 00 00 	mov    %dx,0x2f0(%rax)
-  800420bb3a:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420bb3a:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420bb41:	00 00 00 
   800420bb44:	66 c7 80 f2 02 00 00 	movw   $0x8,0x2f2(%rax)
   800420bb4b:	08 00 
-  800420bb4d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420bb4d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420bb54:	00 00 00 
   800420bb57:	0f b6 90 f4 02 00 00 	movzbl 0x2f4(%rax),%edx
   800420bb5e:	83 e2 f8             	and    $0xfffffff8,%edx
   800420bb61:	88 90 f4 02 00 00    	mov    %dl,0x2f4(%rax)
-  800420bb67:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420bb67:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420bb6e:	00 00 00 
   800420bb71:	0f b6 90 f4 02 00 00 	movzbl 0x2f4(%rax),%edx
   800420bb78:	83 e2 07             	and    $0x7,%edx
   800420bb7b:	88 90 f4 02 00 00    	mov    %dl,0x2f4(%rax)
-  800420bb81:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420bb81:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420bb88:	00 00 00 
   800420bb8b:	0f b6 90 f5 02 00 00 	movzbl 0x2f5(%rax),%edx
   800420bb92:	83 e2 f0             	and    $0xfffffff0,%edx
   800420bb95:	83 ca 0e             	or     $0xe,%edx
   800420bb98:	88 90 f5 02 00 00    	mov    %dl,0x2f5(%rax)
-  800420bb9e:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420bb9e:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420bba5:	00 00 00 
   800420bba8:	0f b6 90 f5 02 00 00 	movzbl 0x2f5(%rax),%edx
   800420bbaf:	83 e2 ef             	and    $0xffffffef,%edx
   800420bbb2:	88 90 f5 02 00 00    	mov    %dl,0x2f5(%rax)
-  800420bbb8:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420bbb8:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420bbbf:	00 00 00 
   800420bbc2:	0f b6 90 f5 02 00 00 	movzbl 0x2f5(%rax),%edx
   800420bbc9:	83 e2 9f             	and    $0xffffff9f,%edx
   800420bbcc:	88 90 f5 02 00 00    	mov    %dl,0x2f5(%rax)
-  800420bbd2:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420bbd2:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420bbd9:	00 00 00 
   800420bbdc:	0f b6 90 f5 02 00 00 	movzbl 0x2f5(%rax),%edx
   800420bbe3:	83 ca 80             	or     $0xffffff80,%edx
@@ -13596,57 +13596,57 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420bbf3:	00 00 00 
   800420bbf6:	48 c1 e8 10          	shr    $0x10,%rax
   800420bbfa:	89 c2                	mov    %eax,%edx
-  800420bbfc:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420bbfc:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420bc03:	00 00 00 
   800420bc06:	66 89 90 f6 02 00 00 	mov    %dx,0x2f6(%rax)
   800420bc0d:	48 b8 4a d1 20 04 80 	movabs $0x800420d14a,%rax
   800420bc14:	00 00 00 
   800420bc17:	48 c1 e8 20          	shr    $0x20,%rax
   800420bc1b:	89 c2                	mov    %eax,%edx
-  800420bc1d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420bc1d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420bc24:	00 00 00 
   800420bc27:	89 90 f8 02 00 00    	mov    %edx,0x2f8(%rax)
-  800420bc2d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420bc2d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420bc34:	00 00 00 
   800420bc37:	c7 80 fc 02 00 00 00 	movl   $0x0,0x2fc(%rax)
   800420bc3e:	00 00 00 
   800420bc41:	48 b8 50 d1 20 04 80 	movabs $0x800420d150,%rax
   800420bc48:	00 00 00 
   800420bc4b:	89 c2                	mov    %eax,%edx
-  800420bc4d:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420bc4d:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420bc54:	00 00 00 
   800420bc57:	66 89 90 00 03 00 00 	mov    %dx,0x300(%rax)
-  800420bc5e:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420bc5e:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420bc65:	00 00 00 
   800420bc68:	66 c7 80 02 03 00 00 	movw   $0x8,0x302(%rax)
   800420bc6f:	08 00 
-  800420bc71:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420bc71:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420bc78:	00 00 00 
   800420bc7b:	0f b6 90 04 03 00 00 	movzbl 0x304(%rax),%edx
   800420bc82:	83 e2 f8             	and    $0xfffffff8,%edx
   800420bc85:	88 90 04 03 00 00    	mov    %dl,0x304(%rax)
-  800420bc8b:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420bc8b:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420bc92:	00 00 00 
   800420bc95:	0f b6 90 04 03 00 00 	movzbl 0x304(%rax),%edx
   800420bc9c:	83 e2 07             	and    $0x7,%edx
   800420bc9f:	88 90 04 03 00 00    	mov    %dl,0x304(%rax)
-  800420bca5:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420bca5:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420bcac:	00 00 00 
   800420bcaf:	0f b6 90 05 03 00 00 	movzbl 0x305(%rax),%edx
   800420bcb6:	83 e2 f0             	and    $0xfffffff0,%edx
   800420bcb9:	83 ca 0e             	or     $0xe,%edx
   800420bcbc:	88 90 05 03 00 00    	mov    %dl,0x305(%rax)
-  800420bcc2:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420bcc2:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420bcc9:	00 00 00 
   800420bccc:	0f b6 90 05 03 00 00 	movzbl 0x305(%rax),%edx
   800420bcd3:	83 e2 ef             	and    $0xffffffef,%edx
   800420bcd6:	88 90 05 03 00 00    	mov    %dl,0x305(%rax)
-  800420bcdc:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420bcdc:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420bce3:	00 00 00 
   800420bce6:	0f b6 90 05 03 00 00 	movzbl 0x305(%rax),%edx
   800420bced:	83 ca 60             	or     $0x60,%edx
   800420bcf0:	88 90 05 03 00 00    	mov    %dl,0x305(%rax)
-  800420bcf6:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420bcf6:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420bcfd:	00 00 00 
   800420bd00:	0f b6 90 05 03 00 00 	movzbl 0x305(%rax),%edx
   800420bd07:	83 ca 80             	or     $0xffffff80,%edx
@@ -13655,26 +13655,26 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420bd17:	00 00 00 
   800420bd1a:	48 c1 e8 10          	shr    $0x10,%rax
   800420bd1e:	89 c2                	mov    %eax,%edx
-  800420bd20:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420bd20:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420bd27:	00 00 00 
   800420bd2a:	66 89 90 06 03 00 00 	mov    %dx,0x306(%rax)
   800420bd31:	48 b8 50 d1 20 04 80 	movabs $0x800420d150,%rax
   800420bd38:	00 00 00 
   800420bd3b:	48 c1 e8 20          	shr    $0x20,%rax
   800420bd3f:	89 c2                	mov    %eax,%edx
-  800420bd41:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420bd41:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420bd48:	00 00 00 
   800420bd4b:	89 90 08 03 00 00    	mov    %edx,0x308(%rax)
-  800420bd51:	48 b8 80 c2 49 04 80 	movabs $0x800449c280,%rax
+  800420bd51:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
   800420bd58:	00 00 00 
   800420bd5b:	c7 80 0c 03 00 00 00 	movl   $0x0,0x30c(%rax)
   800420bd62:	00 00 00 
-  800420bd65:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
+  800420bd65:	48 b8 80 e2 49 04 80 	movabs $0x800449e280,%rax
   800420bd6c:	00 00 00 
   800420bd6f:	66 c7 00 ff 0f       	movw   $0xfff,(%rax)
-  800420bd74:	48 ba 80 c2 49 04 80 	movabs $0x800449c280,%rdx
+  800420bd74:	48 ba 80 d2 49 04 80 	movabs $0x800449d280,%rdx
   800420bd7b:	00 00 00 
-  800420bd7e:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
+  800420bd7e:	48 b8 80 e2 49 04 80 	movabs $0x800449e280,%rax
   800420bd85:	00 00 00 
   800420bd88:	48 89 50 02          	mov    %rdx,0x2(%rax)
   800420bd8c:	48 b8 9a bd 20 04 80 	movabs $0x800420bd9a,%rax
@@ -13712,7 +13712,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420bde8:	48 29 c2             	sub    %rax,%rdx
   800420bdeb:	48 89 d0             	mov    %rdx,%rax
   800420bdee:	48 89 c2             	mov    %rax,%rdx
-  800420bdf1:	48 b9 20 d0 69 04 80 	movabs $0x800469d020,%rcx
+  800420bdf1:	48 b9 20 e0 69 04 80 	movabs $0x800469e020,%rcx
   800420bdf8:	00 00 00 
   800420bdfb:	48 63 c3             	movslq %ebx,%rax
   800420bdfe:	48 c1 e0 03          	shl    $0x3,%rax
@@ -13755,7 +13755,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420be86:	48 c1 e2 04          	shl    $0x4,%rdx
   800420be8a:	48 01 d0             	add    %rdx,%rax
   800420be8d:	48 8d 50 10          	lea    0x10(%rax),%rdx
-  800420be91:	48 b8 20 d0 69 04 80 	movabs $0x800469d020,%rax
+  800420be91:	48 b8 20 e0 69 04 80 	movabs $0x800469e020,%rax
   800420be98:	00 00 00 
   800420be9b:	48 01 d0             	add    %rdx,%rax
   800420be9e:	66 89 43 02          	mov    %ax,0x2(%rbx)
@@ -13780,7 +13780,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420bee3:	48 c1 e2 04          	shl    $0x4,%rdx
   800420bee7:	48 01 d0             	add    %rdx,%rax
   800420beea:	48 8d 50 10          	lea    0x10(%rax),%rdx
-  800420beee:	48 b8 20 d0 69 04 80 	movabs $0x800469d020,%rax
+  800420beee:	48 b8 20 e0 69 04 80 	movabs $0x800469e020,%rax
   800420bef5:	00 00 00 
   800420bef8:	48 01 d0             	add    %rdx,%rax
   800420befb:	48 c1 e8 10          	shr    $0x10,%rax
@@ -13919,7 +13919,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420c0de:	48 c1 e2 04          	shl    $0x4,%rdx
   800420c0e2:	48 01 d0             	add    %rdx,%rax
   800420c0e5:	48 8d 50 10          	lea    0x10(%rax),%rdx
-  800420c0e9:	48 b8 20 d0 69 04 80 	movabs $0x800469d020,%rax
+  800420c0e9:	48 b8 20 e0 69 04 80 	movabs $0x800469e020,%rax
   800420c0f0:	00 00 00 
   800420c0f3:	48 01 d0             	add    %rdx,%rax
   800420c0f6:	48 c1 e8 18          	shr    $0x18,%rax
@@ -13945,7 +13945,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420c13e:	48 c1 e2 04          	shl    $0x4,%rdx
   800420c142:	48 01 d0             	add    %rdx,%rax
   800420c145:	48 8d 50 10          	lea    0x10(%rax),%rdx
-  800420c149:	48 b8 20 d0 69 04 80 	movabs $0x800469d020,%rax
+  800420c149:	48 b8 20 e0 69 04 80 	movabs $0x800469e020,%rax
   800420c150:	00 00 00 
   800420c153:	48 01 d0             	add    %rdx,%rax
   800420c156:	48 c1 e8 20          	shr    $0x20,%rax
@@ -13998,7 +13998,7 @@ ltr(uint16_t sel)
 	__asm __volatile("ltr %0" : : "r" (sel));
   800420c1f3:	0f b7 45 ea          	movzwl -0x16(%rbp),%eax
   800420c1f7:	0f 00 d8             	ltr    %ax
-  800420c1fa:	48 b8 80 d2 49 04 80 	movabs $0x800449d280,%rax
+  800420c1fa:	48 b8 80 e2 49 04 80 	movabs $0x800449e280,%rax
   800420c201:	00 00 00 
   800420c204:	48 89 45 e0          	mov    %rax,-0x20(%rbp)
 }  
@@ -14072,7 +14072,7 @@ lidt(void *p)
   800420c2f1:	48 b9 1f 95 20 04 80 	movabs $0x800420951f,%rcx
   800420c2f8:	00 00 00 
   800420c2fb:	ff d1                	callq  *%rcx
-  800420c2fd:	48 b8 90 d2 49 04 80 	movabs $0x800449d290,%rax
+  800420c2fd:	48 b8 90 e2 49 04 80 	movabs $0x800449e290,%rax
   800420c304:	00 00 00 
   800420c307:	48 8b 00             	mov    (%rax),%rax
   800420c30a:	48 39 45 e8          	cmp    %rax,-0x18(%rbp)
@@ -14476,7 +14476,7 @@ rcr2(void)
   800420c94c:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420c953:	00 00 00 
   800420c956:	ff d0                	callq  *%rax
-  800420c958:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420c958:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420c95f:	00 00 00 
   800420c962:	48 98                	cltq   
   800420c964:	48 c1 e0 03          	shl    $0x3,%rax
@@ -14500,7 +14500,7 @@ rcr2(void)
   800420c992:	48 83 ec 20          	sub    $0x20,%rsp
   800420c996:	48 89 7d e8          	mov    %rdi,-0x18(%rbp)
   800420c99a:	fc                   	cld    
-  800420c99b:	48 b8 d0 b5 69 04 80 	movabs $0x800469b5d0,%rax
+  800420c99b:	48 b8 d0 c5 69 04 80 	movabs $0x800469c5d0,%rax
   800420c9a2:	00 00 00 
   800420c9a5:	48 8b 00             	mov    (%rax),%rax
   800420c9a8:	48 85 c0             	test   %rax,%rax
@@ -14514,7 +14514,7 @@ rcr2(void)
   800420c9c0:	48 89 c2             	mov    %rax,%rdx
   800420c9c3:	48 c1 e2 04          	shl    $0x4,%rdx
   800420c9c7:	48 01 d0             	add    %rdx,%rax
-  800420c9ca:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420c9ca:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420c9d1:	00 00 00 
   800420c9d4:	48 01 d0             	add    %rdx,%rax
   800420c9d7:	48 83 c0 04          	add    $0x4,%rax
@@ -14565,7 +14565,7 @@ read_eflags(void)
   800420ca6f:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420ca76:	00 00 00 
   800420ca79:	ff d0                	callq  *%rax
-  800420ca7b:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420ca7b:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420ca82:	00 00 00 
   800420ca85:	48 98                	cltq   
   800420ca87:	48 c1 e0 03          	shl    $0x3,%rax
@@ -14591,7 +14591,7 @@ read_eflags(void)
   800420cad9:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420cae0:	00 00 00 
   800420cae3:	ff d0                	callq  *%rax
-  800420cae5:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420cae5:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420caec:	00 00 00 
   800420caef:	48 98                	cltq   
   800420caf1:	48 c1 e0 03          	shl    $0x3,%rax
@@ -14607,7 +14607,7 @@ read_eflags(void)
   800420cb14:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420cb1b:	00 00 00 
   800420cb1e:	ff d0                	callq  *%rax
-  800420cb20:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420cb20:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420cb27:	00 00 00 
   800420cb2a:	48 98                	cltq   
   800420cb2c:	48 c1 e0 03          	shl    $0x3,%rax
@@ -14624,7 +14624,7 @@ read_eflags(void)
   800420cb53:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420cb5a:	00 00 00 
   800420cb5d:	ff d0                	callq  *%rax
-  800420cb5f:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420cb5f:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420cb66:	00 00 00 
   800420cb69:	48 98                	cltq   
   800420cb6b:	48 c1 e0 03          	shl    $0x3,%rax
@@ -14640,7 +14640,7 @@ read_eflags(void)
   800420cb93:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420cb9a:	00 00 00 
   800420cb9d:	ff d0                	callq  *%rax
-  800420cb9f:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420cb9f:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420cba6:	00 00 00 
   800420cba9:	48 98                	cltq   
   800420cbab:	48 c1 e0 03          	shl    $0x3,%rax
@@ -14659,7 +14659,7 @@ read_eflags(void)
   800420cbd8:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420cbdf:	00 00 00 
   800420cbe2:	ff d0                	callq  *%rax
-  800420cbe4:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420cbe4:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420cbeb:	00 00 00 
   800420cbee:	48 98                	cltq   
   800420cbf0:	48 c1 e0 03          	shl    $0x3,%rax
@@ -14670,7 +14670,7 @@ read_eflags(void)
   800420cc01:	48 83 c0 08          	add    $0x8,%rax
   800420cc05:	48 8b 00             	mov    (%rax),%rax
   800420cc08:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
-  800420cc0c:	48 b8 90 d2 49 04 80 	movabs $0x800449d290,%rax
+  800420cc0c:	48 b8 90 e2 49 04 80 	movabs $0x800449e290,%rax
   800420cc13:	00 00 00 
   800420cc16:	48 8b 55 e8          	mov    -0x18(%rbp),%rdx
   800420cc1a:	48 89 10             	mov    %rdx,(%rax)
@@ -14682,7 +14682,7 @@ read_eflags(void)
   800420cc30:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420cc37:	00 00 00 
   800420cc3a:	ff d0                	callq  *%rax
-  800420cc3c:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420cc3c:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420cc43:	00 00 00 
   800420cc46:	48 98                	cltq   
   800420cc48:	48 c1 e0 03          	shl    $0x3,%rax
@@ -14697,7 +14697,7 @@ read_eflags(void)
   800420cc65:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420cc6c:	00 00 00 
   800420cc6f:	ff d0                	callq  *%rax
-  800420cc71:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420cc71:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420cc78:	00 00 00 
   800420cc7b:	48 98                	cltq   
   800420cc7d:	48 c1 e0 03          	shl    $0x3,%rax
@@ -14713,7 +14713,7 @@ read_eflags(void)
   800420cca0:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420cca7:	00 00 00 
   800420ccaa:	ff d0                	callq  *%rax
-  800420ccac:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420ccac:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420ccb3:	00 00 00 
   800420ccb6:	48 98                	cltq   
   800420ccb8:	48 c1 e0 03          	shl    $0x3,%rax
@@ -14771,7 +14771,7 @@ rcr2(void)
   800420cd59:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420cd60:	00 00 00 
   800420cd63:	ff d0                	callq  *%rax
-  800420cd65:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420cd65:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420cd6c:	00 00 00 
   800420cd6f:	48 98                	cltq   
   800420cd71:	48 c1 e0 03          	shl    $0x3,%rax
@@ -14789,7 +14789,7 @@ rcr2(void)
   800420cda4:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420cdab:	00 00 00 
   800420cdae:	ff d0                	callq  *%rax
-  800420cdb0:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420cdb0:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420cdb7:	00 00 00 
   800420cdba:	48 98                	cltq   
   800420cdbc:	48 c1 e0 03          	shl    $0x3,%rax
@@ -14817,7 +14817,7 @@ rcr2(void)
   800420ce12:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420ce19:	00 00 00 
   800420ce1c:	ff d0                	callq  *%rax
-  800420ce1e:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420ce1e:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420ce25:	00 00 00 
   800420ce28:	48 98                	cltq   
   800420ce2a:	48 c1 e0 03          	shl    $0x3,%rax
@@ -14851,7 +14851,7 @@ rcr2(void)
   800420ce9b:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420cea2:	00 00 00 
   800420cea5:	ff d0                	callq  *%rax
-  800420cea7:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420cea7:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420ceae:	00 00 00 
   800420ceb1:	48 98                	cltq   
   800420ceb3:	48 c1 e0 03          	shl    $0x3,%rax
@@ -14925,7 +14925,7 @@ rcr2(void)
   800420cfd9:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420cfe0:	00 00 00 
   800420cfe3:	ff d0                	callq  *%rax
-  800420cfe5:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420cfe5:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420cfec:	00 00 00 
   800420cfef:	48 98                	cltq   
   800420cff1:	48 c1 e0 03          	shl    $0x3,%rax
@@ -14942,7 +14942,7 @@ rcr2(void)
   800420d01e:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420d025:	00 00 00 
   800420d028:	ff d0                	callq  *%rax
-  800420d02a:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420d02a:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420d031:	00 00 00 
   800420d034:	48 98                	cltq   
   800420d036:	48 c1 e0 03          	shl    $0x3,%rax
@@ -15283,7 +15283,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420d21d:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420d224:	00 00 00 
   800420d227:	ff d0                	callq  *%rax
-  800420d229:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420d229:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420d230:	00 00 00 
   800420d233:	48 98                	cltq   
   800420d235:	48 c1 e0 03          	shl    $0x3,%rax
@@ -15298,7 +15298,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420d252:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420d259:	00 00 00 
   800420d25c:	ff d0                	callq  *%rax
-  800420d25e:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420d25e:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420d265:	00 00 00 
   800420d268:	48 98                	cltq   
   800420d26a:	48 c1 e0 03          	shl    $0x3,%rax
@@ -15309,7 +15309,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420d27b:	48 83 c0 08          	add    $0x8,%rax
   800420d27f:	48 8b 00             	mov    (%rax),%rax
   800420d282:	48 89 c2             	mov    %rax,%rdx
-  800420d285:	48 b8 58 c2 49 04 80 	movabs $0x800449c258,%rax
+  800420d285:	48 b8 58 d2 49 04 80 	movabs $0x800449d258,%rax
   800420d28c:	00 00 00 
   800420d28f:	48 8b 00             	mov    (%rax),%rax
   800420d292:	48 29 c2             	sub    %rax,%rdx
@@ -15335,7 +15335,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420d2da:	29 c2                	sub    %eax,%edx
   800420d2dc:	89 d0                	mov    %edx,%eax
   800420d2de:	89 45 f4             	mov    %eax,-0xc(%rbp)
-  800420d2e1:	48 b8 58 c2 49 04 80 	movabs $0x800449c258,%rax
+  800420d2e1:	48 b8 58 d2 49 04 80 	movabs $0x800449d258,%rax
   800420d2e8:	00 00 00 
   800420d2eb:	48 8b 10             	mov    (%rax),%rdx
   800420d2ee:	8b 45 f4             	mov    -0xc(%rbp),%eax
@@ -15345,7 +15345,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420d2fd:	8b 80 d4 00 00 00    	mov    0xd4(%rax),%eax
   800420d303:	83 f8 02             	cmp    $0x2,%eax
   800420d306:	75 2b                	jne    800420d333 <sched_yield+0x11e>
-  800420d308:	48 b8 58 c2 49 04 80 	movabs $0x800449c258,%rax
+  800420d308:	48 b8 58 d2 49 04 80 	movabs $0x800449d258,%rax
   800420d30f:	00 00 00 
   800420d312:	48 8b 10             	mov    (%rax),%rdx
   800420d315:	8b 45 f4             	mov    -0xc(%rbp),%eax
@@ -15362,7 +15362,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420d340:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420d347:	00 00 00 
   800420d34a:	ff d0                	callq  *%rax
-  800420d34c:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420d34c:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420d353:	00 00 00 
   800420d356:	48 98                	cltq   
   800420d358:	48 c1 e0 03          	shl    $0x3,%rax
@@ -15377,7 +15377,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420d375:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420d37c:	00 00 00 
   800420d37f:	ff d0                	callq  *%rax
-  800420d381:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420d381:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420d388:	00 00 00 
   800420d38b:	48 98                	cltq   
   800420d38d:	48 c1 e0 03          	shl    $0x3,%rax
@@ -15393,7 +15393,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420d3b0:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420d3b7:	00 00 00 
   800420d3ba:	ff d0                	callq  *%rax
-  800420d3bc:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420d3bc:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420d3c3:	00 00 00 
   800420d3c6:	48 98                	cltq   
   800420d3c8:	48 c1 e0 03          	shl    $0x3,%rax
@@ -15419,7 +15419,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420d401:	48 83 ec 20          	sub    $0x20,%rsp
   800420d405:	c7 45 fc 00 00 00 00 	movl   $0x0,-0x4(%rbp)
   800420d40c:	eb 79                	jmp    800420d487 <sched_halt+0x8a>
-  800420d40e:	48 b8 58 c2 49 04 80 	movabs $0x800449c258,%rax
+  800420d40e:	48 b8 58 d2 49 04 80 	movabs $0x800449d258,%rax
   800420d415:	00 00 00 
   800420d418:	48 8b 10             	mov    (%rax),%rdx
   800420d41b:	8b 45 fc             	mov    -0x4(%rbp),%eax
@@ -15429,7 +15429,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420d42a:	8b 80 d4 00 00 00    	mov    0xd4(%rax),%eax
   800420d430:	83 f8 02             	cmp    $0x2,%eax
   800420d433:	74 5f                	je     800420d494 <sched_halt+0x97>
-  800420d435:	48 b8 58 c2 49 04 80 	movabs $0x800449c258,%rax
+  800420d435:	48 b8 58 d2 49 04 80 	movabs $0x800449d258,%rax
   800420d43c:	00 00 00 
   800420d43f:	48 8b 10             	mov    (%rax),%rdx
   800420d442:	8b 45 fc             	mov    -0x4(%rbp),%eax
@@ -15439,7 +15439,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420d451:	8b 80 d4 00 00 00    	mov    0xd4(%rax),%eax
   800420d457:	83 f8 03             	cmp    $0x3,%eax
   800420d45a:	74 38                	je     800420d494 <sched_halt+0x97>
-  800420d45c:	48 b8 58 c2 49 04 80 	movabs $0x800449c258,%rax
+  800420d45c:	48 b8 58 d2 49 04 80 	movabs $0x800449d258,%rax
   800420d463:	00 00 00 
   800420d466:	48 8b 10             	mov    (%rax),%rdx
   800420d469:	8b 45 fc             	mov    -0x4(%rbp),%eax
@@ -15468,7 +15468,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420d4cb:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420d4d2:	00 00 00 
   800420d4d5:	ff d0                	callq  *%rax
-  800420d4d7:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420d4d7:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420d4de:	00 00 00 
   800420d4e1:	48 98                	cltq   
   800420d4e3:	48 c1 e0 03          	shl    $0x3,%rax
@@ -15478,7 +15478,7 @@ xchg(volatile uint32_t *addr,uint32_t newval){
   800420d4f1:	48 01 d0             	add    %rdx,%rax
   800420d4f4:	48 83 c0 08          	add    $0x8,%rax
   800420d4f8:	48 c7 00 00 00 00 00 	movq   $0x0,(%rax)
-  800420d4ff:	48 b8 e8 b5 69 04 80 	movabs $0x800469b5e8,%rax
+  800420d4ff:	48 b8 e8 c5 69 04 80 	movabs $0x800469c5e8,%rax
   800420d506:	00 00 00 
   800420d509:	48 8b 00             	mov    (%rax),%rax
   800420d50c:	48 89 45 f0          	mov    %rax,-0x10(%rbp)
@@ -15518,7 +15518,7 @@ lcr3(uint64_t val)
   800420d580:	48 89 c2             	mov    %rax,%rdx
   800420d583:	48 c1 e2 04          	shl    $0x4,%rdx
   800420d587:	48 01 d0             	add    %rdx,%rax
-  800420d58a:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420d58a:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420d591:	00 00 00 
   800420d594:	48 01 d0             	add    %rdx,%rax
   800420d597:	48 83 c0 04          	add    $0x4,%rax
@@ -15533,7 +15533,7 @@ lcr3(uint64_t val)
   800420d5bb:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420d5c2:	00 00 00 
   800420d5c5:	ff d0                	callq  *%rax
-  800420d5c7:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420d5c7:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420d5ce:	00 00 00 
   800420d5d1:	48 98                	cltq   
   800420d5d3:	48 c1 e0 03          	shl    $0x3,%rax
@@ -15572,7 +15572,7 @@ sys_cputs(const char *s, size_t len)
   800420d60e:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420d615:	00 00 00 
   800420d618:	ff d0                	callq  *%rax
-  800420d61a:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420d61a:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420d621:	00 00 00 
   800420d624:	48 98                	cltq   
   800420d626:	48 c1 e0 03          	shl    $0x3,%rax
@@ -15634,7 +15634,7 @@ sys_getenvid(void)
   800420d698:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420d69f:	00 00 00 
   800420d6a2:	ff d0                	callq  *%rax
-  800420d6a4:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420d6a4:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420d6ab:	00 00 00 
   800420d6ae:	48 98                	cltq   
   800420d6b0:	48 c1 e0 03          	shl    $0x3,%rax
@@ -15721,7 +15721,7 @@ sys_exofork(void)
   800420d739:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420d740:	00 00 00 
   800420d743:	ff d0                	callq  *%rax
-  800420d745:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420d745:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420d74c:	00 00 00 
   800420d74f:	48 98                	cltq   
   800420d751:	48 c1 e0 03          	shl    $0x3,%rax
@@ -15753,7 +15753,7 @@ sys_exofork(void)
   800420d7a4:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420d7ab:	00 00 00 
   800420d7ae:	ff d0                	callq  *%rax
-  800420d7b0:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420d7b0:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420d7b7:	00 00 00 
   800420d7ba:	48 98                	cltq   
   800420d7bc:	48 c1 e0 03          	shl    $0x3,%rax
@@ -15850,7 +15850,7 @@ sys_env_set_trapframe(envid_t envid, struct Trapframe *tf)
   800420d87d:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420d884:	00 00 00 
   800420d887:	ff d0                	callq  *%rax
-  800420d889:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420d889:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420d890:	00 00 00 
   800420d893:	48 98                	cltq   
   800420d895:	48 c1 e0 03          	shl    $0x3,%rax
@@ -16317,7 +16317,7 @@ sys_ipc_try_send(envid_t envid, uint32_t value, void *srcva, unsigned perm)
   800420dd42:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420dd49:	00 00 00 
   800420dd4c:	ff d0                	callq  *%rax
-  800420dd4e:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420dd4e:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420dd55:	00 00 00 
   800420dd58:	48 98                	cltq   
   800420dd5a:	48 c1 e0 03          	shl    $0x3,%rax
@@ -16345,7 +16345,7 @@ sys_ipc_try_send(envid_t envid, uint32_t value, void *srcva, unsigned perm)
   800420dda2:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420dda9:	00 00 00 
   800420ddac:	ff d0                	callq  *%rax
-  800420ddae:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420ddae:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420ddb5:	00 00 00 
   800420ddb8:	48 98                	cltq   
   800420ddba:	48 c1 e0 03          	shl    $0x3,%rax
@@ -16371,7 +16371,7 @@ sys_ipc_try_send(envid_t envid, uint32_t value, void *srcva, unsigned perm)
   800420ddfe:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420de05:	00 00 00 
   800420de08:	ff d0                	callq  *%rax
-  800420de0a:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420de0a:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420de11:	00 00 00 
   800420de14:	48 98                	cltq   
   800420de16:	48 c1 e0 03          	shl    $0x3,%rax
@@ -16409,7 +16409,7 @@ sys_ipc_try_send(envid_t envid, uint32_t value, void *srcva, unsigned perm)
   800420de78:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420de7f:	00 00 00 
   800420de82:	ff d0                	callq  *%rax
-  800420de84:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420de84:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420de8b:	00 00 00 
   800420de8e:	48 98                	cltq   
   800420de90:	48 c1 e0 03          	shl    $0x3,%rax
@@ -16451,7 +16451,7 @@ sys_ipc_try_send(envid_t envid, uint32_t value, void *srcva, unsigned perm)
   800420df0a:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420df11:	00 00 00 
   800420df14:	ff d0                	callq  *%rax
-  800420df16:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420df16:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420df1d:	00 00 00 
   800420df20:	48 98                	cltq   
   800420df22:	48 c1 e0 03          	shl    $0x3,%rax
@@ -16496,7 +16496,7 @@ sys_ipc_try_send(envid_t envid, uint32_t value, void *srcva, unsigned perm)
   800420df99:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420dfa0:	00 00 00 
   800420dfa3:	ff d0                	callq  *%rax
-  800420dfa5:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420dfa5:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420dfac:	00 00 00 
   800420dfaf:	48 98                	cltq   
   800420dfb1:	48 c1 e0 03          	shl    $0x3,%rax
@@ -16543,7 +16543,7 @@ sys_ipc_recv(void *dstva)
   800420e014:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420e01b:	00 00 00 
   800420e01e:	ff d0                	callq  *%rax
-  800420e020:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420e020:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420e027:	00 00 00 
   800420e02a:	48 98                	cltq   
   800420e02c:	48 c1 e0 03          	shl    $0x3,%rax
@@ -16571,7 +16571,7 @@ sys_ipc_recv(void *dstva)
   800420e079:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420e080:	00 00 00 
   800420e083:	ff d0                	callq  *%rax
-  800420e085:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420e085:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420e08c:	00 00 00 
   800420e08f:	48 98                	cltq   
   800420e091:	48 c1 e0 03          	shl    $0x3,%rax
@@ -16586,7 +16586,7 @@ sys_ipc_recv(void *dstva)
   800420e0b0:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420e0b7:	00 00 00 
   800420e0ba:	ff d0                	callq  *%rax
-  800420e0bc:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420e0bc:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420e0c3:	00 00 00 
   800420e0c6:	48 98                	cltq   
   800420e0c8:	48 c1 e0 03          	shl    $0x3,%rax
@@ -16602,7 +16602,7 @@ sys_ipc_recv(void *dstva)
   800420e0eb:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420e0f2:	00 00 00 
   800420e0f5:	ff d0                	callq  *%rax
-  800420e0f7:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420e0f7:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420e0fe:	00 00 00 
   800420e101:	48 98                	cltq   
   800420e103:	48 c1 e0 03          	shl    $0x3,%rax
@@ -16650,7 +16650,7 @@ sys_net_transmit(const void *data, size_t len)
   800420e153:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420e15a:	00 00 00 
   800420e15d:	ff d0                	callq  *%rax
-  800420e15f:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420e15f:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420e166:	00 00 00 
   800420e169:	48 98                	cltq   
   800420e16b:	48 c1 e0 03          	shl    $0x3,%rax
@@ -16694,7 +16694,7 @@ sys_net_receive(void *buf, size_t len)
   800420e1cc:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420e1d3:	00 00 00 
   800420e1d6:	ff d0                	callq  *%rax
-  800420e1d8:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420e1d8:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420e1df:	00 00 00 
   800420e1e2:	48 98                	cltq   
   800420e1e4:	48 c1 e0 03          	shl    $0x3,%rax
@@ -17407,7 +17407,7 @@ syscall(uint64_t syscallno, uint64_t a1, uint64_t a2, uint64_t a3, uint64_t a4, 
   800420ec94:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420ec9b:	00 00 00 
   800420ec9e:	ff d0                	callq  *%rax
-  800420eca0:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420eca0:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420eca7:	00 00 00 
   800420ecaa:	48 98                	cltq   
   800420ecac:	48 c1 e0 03          	shl    $0x3,%rax
@@ -17417,7 +17417,7 @@ syscall(uint64_t syscallno, uint64_t a1, uint64_t a2, uint64_t a3, uint64_t a4, 
   800420ecba:	48 01 d0             	add    %rdx,%rax
   800420ecbd:	48 83 c0 08          	add    $0x8,%rax
   800420ecc1:	48 8b 10             	mov    (%rax),%rdx
-  800420ecc4:	48 b8 98 d2 49 04 80 	movabs $0x800449d298,%rax
+  800420ecc4:	48 b8 98 e2 49 04 80 	movabs $0x800449e298,%rax
   800420eccb:	00 00 00 
   800420ecce:	48 8b 00             	mov    (%rax),%rax
   800420ecd1:	48 39 c2             	cmp    %rax,%rdx
@@ -17425,7 +17425,7 @@ syscall(uint64_t syscallno, uint64_t a1, uint64_t a2, uint64_t a3, uint64_t a4, 
   800420ecda:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420ece1:	00 00 00 
   800420ece4:	ff d0                	callq  *%rax
-  800420ece6:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420ece6:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420eced:	00 00 00 
   800420ecf0:	48 98                	cltq   
   800420ecf2:	48 c1 e0 03          	shl    $0x3,%rax
@@ -17443,7 +17443,7 @@ syscall(uint64_t syscallno, uint64_t a1, uint64_t a2, uint64_t a3, uint64_t a4, 
   800420ed20:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420ed27:	00 00 00 
   800420ed2a:	ff d0                	callq  *%rax
-  800420ed2c:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420ed2c:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420ed33:	00 00 00 
   800420ed36:	48 98                	cltq   
   800420ed38:	48 c1 e0 03          	shl    $0x3,%rax
@@ -17453,13 +17453,13 @@ syscall(uint64_t syscallno, uint64_t a1, uint64_t a2, uint64_t a3, uint64_t a4, 
   800420ed46:	48 01 d0             	add    %rdx,%rax
   800420ed49:	48 83 c0 08          	add    $0x8,%rax
   800420ed4d:	48 8b 10             	mov    (%rax),%rdx
-  800420ed50:	48 b8 98 d2 49 04 80 	movabs $0x800449d298,%rax
+  800420ed50:	48 b8 98 e2 49 04 80 	movabs $0x800449e298,%rax
   800420ed57:	00 00 00 
   800420ed5a:	48 89 10             	mov    %rdx,(%rax)
   800420ed5d:	48 b8 72 6f 21 04 80 	movabs $0x8004216f72,%rax
   800420ed64:	00 00 00 
   800420ed67:	ff d0                	callq  *%rax
-  800420ed69:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  800420ed69:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   800420ed70:	00 00 00 
   800420ed73:	48 98                	cltq   
   800420ed75:	48 c1 e0 03          	shl    $0x3,%rax
@@ -18499,7 +18499,7 @@ syscall(uint64_t syscallno, uint64_t a1, uint64_t a2, uint64_t a3, uint64_t a4, 
   800420fc09:	89 55 fc             	mov    %edx,-0x4(%rbp)
   800420fc0c:	8b 55 f4             	mov    -0xc(%rbp),%edx
   800420fc0f:	89 d1                	mov    %edx,%ecx
-  800420fc11:	48 ba a0 d2 49 04 80 	movabs $0x800449d2a0,%rdx
+  800420fc11:	48 ba a0 e2 49 04 80 	movabs $0x800449e2a0,%rdx
   800420fc18:	00 00 00 
   800420fc1b:	48 98                	cltq   
   800420fc1d:	88 0c 02             	mov    %cl,(%rdx,%rax,1)
@@ -18514,12 +18514,12 @@ syscall(uint64_t syscallno, uint64_t a1, uint64_t a2, uint64_t a3, uint64_t a4, 
   800420fc39:	48 b8 3a 13 20 04 80 	movabs $0x800420133a,%rax
   800420fc40:	00 00 00 
   800420fc43:	ff d0                	callq  *%rax
-  800420fc45:	48 ba a0 d2 49 04 80 	movabs $0x800449d2a0,%rdx
+  800420fc45:	48 ba a0 e2 49 04 80 	movabs $0x800449e2a0,%rdx
   800420fc4c:	00 00 00 
   800420fc4f:	8b 45 fc             	mov    -0x4(%rbp),%eax
   800420fc52:	48 98                	cltq   
   800420fc54:	c6 04 02 00          	movb   $0x0,(%rdx,%rax,1)
-  800420fc58:	48 b8 a0 d2 49 04 80 	movabs $0x800449d2a0,%rax
+  800420fc58:	48 b8 a0 e2 49 04 80 	movabs $0x800449e2a0,%rax
   800420fc5f:	00 00 00 
   800420fc62:	eb 05                	jmp    800420fc69 <readline+0x153>
   800420fc64:	e9 fd fe ff ff       	jmpq   800420fb66 <readline+0x50>
@@ -22362,7 +22362,7 @@ _dwarf_frame_regtable_copy(Dwarf_Debug dbg, Dwarf_Regtable3 **dest,
   800421252a:	75 39                	jne    8004212565 <_dwarf_frame_regtable_copy+0xd6>
 		*dest = &global_rt_table_shadow;
   800421252c:	48 8b 45 d0          	mov    -0x30(%rbp),%rax
-  8004212530:	48 bb e0 d6 49 04 80 	movabs $0x800449d6e0,%rbx
+  8004212530:	48 bb e0 e6 49 04 80 	movabs $0x800449e6e0,%rbx
   8004212537:	00 00 00 
   800421253a:	48 89 18             	mov    %rbx,(%rax)
 		(*dest)->rt3_reg_table_size = src->rt3_reg_table_size;
@@ -22374,7 +22374,7 @@ _dwarf_frame_regtable_copy(Dwarf_Debug dbg, Dwarf_Regtable3 **dest,
 		(*dest)->rt3_rules = global_rules_shadow;
   8004212550:	48 8b 45 d0          	mov    -0x30(%rbp),%rax
   8004212554:	48 8b 00             	mov    (%rax),%rax
-  8004212557:	48 bb e0 b7 69 04 80 	movabs $0x800469b7e0,%rbx
+  8004212557:	48 bb e0 c7 69 04 80 	movabs $0x800469c7e0,%rbx
   800421255e:	00 00 00 
   8004212561:	48 89 58 20          	mov    %rbx,0x20(%rax)
 	}
@@ -25466,7 +25466,7 @@ _dwarf_frame_interal_table_init(Dwarf_Debug dbg, Dwarf_Error *error)
   8004214573:	48 89 7d e8          	mov    %rdi,-0x18(%rbp)
   8004214577:	48 89 75 e0          	mov    %rsi,-0x20(%rbp)
 	Dwarf_Regtable3 *rt = &global_rt_table;
-  800421457b:	48 b8 a0 d6 49 04 80 	movabs $0x800449d6a0,%rax
+  800421457b:	48 b8 a0 e6 49 04 80 	movabs $0x800449e6a0,%rax
   8004214582:	00 00 00 
   8004214585:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
 
@@ -25486,7 +25486,7 @@ _dwarf_frame_interal_table_init(Dwarf_Debug dbg, Dwarf_Error *error)
   80042145a9:	66 89 50 18          	mov    %dx,0x18(%rax)
 	rt->rt3_rules = global_rules;
   80042145ad:	48 8b 45 f8          	mov    -0x8(%rbp),%rax
-  80042145b1:	48 b9 20 be 69 04 80 	movabs $0x800469be20,%rcx
+  80042145b1:	48 b9 20 ce 69 04 80 	movabs $0x800469ce20,%rcx
   80042145b8:	00 00 00 
   80042145bb:	48 89 48 20          	mov    %rcx,0x20(%rax)
 
@@ -26680,7 +26680,7 @@ _dwarf_lineno_init(Dwarf_Die *die, uint64_t offset, Dwarf_LineInfo linfo, Dwarf_
 
 	li->li_oplen = global_std_op;
   80042152ce:	48 8b 45 c0          	mov    -0x40(%rbp),%rax
-  80042152d2:	48 bb 60 c4 69 04 80 	movabs $0x800469c460,%rbx
+  80042152d2:	48 bb 60 d4 69 04 80 	movabs $0x800469d460,%rbx
   80042152d9:	00 00 00 
   80042152dc:	48 89 58 20          	mov    %rbx,0x20(%rax)
 
@@ -28012,7 +28012,7 @@ start64:
 
 	# Switch to the per-cpu stack allocated in boot_aps()
 	movabs    mpentry_kstack, %rax
-  80042163e0:	48 a1 d8 b5 69 04 80 	movabs 0x800469b5d8,%rax
+  80042163e0:	48 a1 d8 c5 69 04 80 	movabs 0x800469c5d8,%rax
   80042163e7:	00 00 00 
 	movq    %rax,%rsp
   80042163ea:	48 89 c4             	mov    %rax,%rsp
@@ -28118,7 +28118,7 @@ mpentry_end:
   80042164a8:	48 c1 e8 0c          	shr    $0xc,%rax
   80042164ac:	89 45 ec             	mov    %eax,-0x14(%rbp)
   80042164af:	8b 55 ec             	mov    -0x14(%rbp),%edx
-  80042164b2:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  80042164b2:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   80042164b9:	00 00 00 
   80042164bc:	48 8b 00             	mov    (%rax),%rax
   80042164bf:	48 39 c2             	cmp    %rax,%rdx
@@ -28148,7 +28148,7 @@ mpentry_end:
   8004216520:	48 c1 e8 0c          	shr    $0xc,%rax
   8004216524:	89 45 dc             	mov    %eax,-0x24(%rbp)
   8004216527:	8b 55 dc             	mov    -0x24(%rbp),%edx
-  800421652a:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  800421652a:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004216531:	00 00 00 
   8004216534:	48 8b 00             	mov    (%rax),%rax
   8004216537:	48 39 c2             	cmp    %rax,%rdx
@@ -28208,7 +28208,7 @@ mpentry_end:
   80042165f7:	48 c1 e8 0c          	shr    $0xc,%rax
   80042165fb:	89 45 f4             	mov    %eax,-0xc(%rbp)
   80042165fe:	8b 55 f4             	mov    -0xc(%rbp),%edx
-  8004216601:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  8004216601:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004216608:	00 00 00 
   800421660b:	48 8b 00             	mov    (%rax),%rax
   800421660e:	48 39 c2             	cmp    %rax,%rdx
@@ -28312,7 +28312,7 @@ mpentry_end:
   8004216772:	48 c1 e8 0c          	shr    $0xc,%rax
   8004216776:	89 45 ec             	mov    %eax,-0x14(%rbp)
   8004216779:	8b 55 ec             	mov    -0x14(%rbp),%edx
-  800421677c:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  800421677c:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004216783:	00 00 00 
   8004216786:	48 8b 00             	mov    (%rax),%rax
   8004216789:	48 39 c2             	cmp    %rax,%rdx
@@ -28427,9 +28427,9 @@ mpentry_end:
   800421691e:	48 89 e5             	mov    %rsp,%rbp
   8004216921:	53                   	push   %rbx
   8004216922:	48 83 ec 58          	sub    $0x58,%rsp
-  8004216926:	48 b8 40 d2 69 04 80 	movabs $0x800469d240,%rax
+  8004216926:	48 b8 40 e2 69 04 80 	movabs $0x800469e240,%rax
   800421692d:	00 00 00 
-  8004216930:	48 bb 20 d0 69 04 80 	movabs $0x800469d020,%rbx
+  8004216930:	48 bb 20 e0 69 04 80 	movabs $0x800469e020,%rbx
   8004216937:	00 00 00 
   800421693a:	48 89 18             	mov    %rbx,(%rax)
   800421693d:	48 8d 45 b0          	lea    -0x50(%rbp),%rax
@@ -28441,13 +28441,13 @@ mpentry_end:
   8004216954:	48 83 7d d8 00       	cmpq   $0x0,-0x28(%rbp)
   8004216959:	75 05                	jne    8004216960 <mp_init+0x43>
   800421695b:	e9 d2 03 00 00       	jmpq   8004216d32 <mp_init+0x415>
-  8004216960:	48 b8 00 d0 69 04 80 	movabs $0x800469d000,%rax
+  8004216960:	48 b8 00 e0 69 04 80 	movabs $0x800469e000,%rax
   8004216967:	00 00 00 
   800421696a:	c7 00 01 00 00 00    	movl   $0x1,(%rax)
   8004216970:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
   8004216974:	8b 40 24             	mov    0x24(%rax),%eax
   8004216977:	89 c2                	mov    %eax,%edx
-  8004216979:	48 b8 00 e0 6d 04 80 	movabs $0x80046de000,%rax
+  8004216979:	48 b8 00 f0 6d 04 80 	movabs $0x80046df000,%rax
   8004216980:	00 00 00 
   8004216983:	48 89 10             	mov    %rdx,(%rax)
   8004216986:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
@@ -28473,7 +28473,7 @@ mpentry_end:
   80042169d5:	83 e0 02             	and    $0x2,%eax
   80042169d8:	85 c0                	test   %eax,%eax
   80042169da:	74 51                	je     8004216a2d <mp_init+0x110>
-  80042169dc:	48 b8 48 d2 69 04 80 	movabs $0x800469d248,%rax
+  80042169dc:	48 b8 48 e2 69 04 80 	movabs $0x800469e248,%rax
   80042169e3:	00 00 00 
   80042169e6:	8b 00                	mov    (%rax),%eax
   80042169e8:	48 98                	cltq   
@@ -28481,10 +28481,10 @@ mpentry_end:
   80042169ee:	48 89 c2             	mov    %rax,%rdx
   80042169f1:	48 c1 e2 04          	shl    $0x4,%rdx
   80042169f5:	48 01 d0             	add    %rdx,%rax
-  80042169f8:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  80042169f8:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   80042169ff:	00 00 00 
   8004216a02:	48 01 c2             	add    %rax,%rdx
-  8004216a05:	48 b8 40 d2 69 04 80 	movabs $0x800469d240,%rax
+  8004216a05:	48 b8 40 e2 69 04 80 	movabs $0x800469e240,%rax
   8004216a0c:	00 00 00 
   8004216a0f:	48 89 10             	mov    %rdx,(%rax)
   8004216a12:	48 bf 9d b2 21 04 80 	movabs $0x800421b29d,%rdi
@@ -28493,7 +28493,7 @@ mpentry_end:
   8004216a21:	48 ba 1f 95 20 04 80 	movabs $0x800420951f,%rdx
   8004216a28:	00 00 00 
   8004216a2b:	ff d2                	callq  *%rdx
-  8004216a2d:	48 b8 48 d2 69 04 80 	movabs $0x800469d248,%rax
+  8004216a2d:	48 b8 48 e2 69 04 80 	movabs $0x800469e248,%rax
   8004216a34:	00 00 00 
   8004216a37:	8b 00                	mov    (%rax),%eax
   8004216a39:	83 f8 03             	cmp    $0x3,%eax
@@ -28533,14 +28533,14 @@ mpentry_end:
   8004216abb:	83 e0 01             	and    $0x1,%eax
   8004216abe:	85 c0                	test   %eax,%eax
   8004216ac0:	74 57                	je     8004216b19 <mp_init+0x1fc>
-  8004216ac2:	48 b8 48 d2 69 04 80 	movabs $0x800469d248,%rax
+  8004216ac2:	48 b8 48 e2 69 04 80 	movabs $0x800469e248,%rax
   8004216ac9:	00 00 00 
   8004216acc:	8b 30                	mov    (%rax),%esi
-  8004216ace:	48 b8 48 d2 69 04 80 	movabs $0x800469d248,%rax
+  8004216ace:	48 b8 48 e2 69 04 80 	movabs $0x800469e248,%rax
   8004216ad5:	00 00 00 
   8004216ad8:	8b 00                	mov    (%rax),%eax
   8004216ada:	89 c2                	mov    %eax,%edx
-  8004216adc:	48 b9 20 d0 69 04 80 	movabs $0x800469d020,%rcx
+  8004216adc:	48 b9 20 e0 69 04 80 	movabs $0x800469e020,%rcx
   8004216ae3:	00 00 00 
   8004216ae6:	48 63 c6             	movslq %esi,%rax
   8004216ae9:	48 c1 e0 03          	shl    $0x3,%rax
@@ -28549,11 +28549,11 @@ mpentry_end:
   8004216af4:	48 01 f0             	add    %rsi,%rax
   8004216af7:	48 01 c8             	add    %rcx,%rax
   8004216afa:	88 10                	mov    %dl,(%rax)
-  8004216afc:	48 b8 48 d2 69 04 80 	movabs $0x800469d248,%rax
+  8004216afc:	48 b8 48 e2 69 04 80 	movabs $0x800469e248,%rax
   8004216b03:	00 00 00 
   8004216b06:	8b 00                	mov    (%rax),%eax
   8004216b08:	8d 50 01             	lea    0x1(%rax),%edx
-  8004216b0b:	48 b8 48 d2 69 04 80 	movabs $0x800469d248,%rax
+  8004216b0b:	48 b8 48 e2 69 04 80 	movabs $0x800469e248,%rax
   8004216b12:	00 00 00 
   8004216b15:	89 10                	mov    %edx,(%rax)
   8004216b17:	eb 45                	jmp    8004216b5e <mp_init+0x241>
@@ -28588,7 +28588,7 @@ mpentry_end:
   8004216b87:	48 ba 1f 95 20 04 80 	movabs $0x800420951f,%rdx
   8004216b8e:	00 00 00 
   8004216b91:	ff d2                	callq  *%rdx
-  8004216b93:	48 b8 00 d0 69 04 80 	movabs $0x800469d000,%rax
+  8004216b93:	48 b8 00 e0 69 04 80 	movabs $0x800469e000,%rax
   8004216b9a:	00 00 00 
   8004216b9d:	c7 00 00 00 00 00    	movl   $0x0,(%rax)
   8004216ba3:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
@@ -28603,7 +28603,7 @@ mpentry_end:
   8004216bc3:	0f 87 d5 fd ff ff    	ja     800421699e <mp_init+0x81>
   8004216bc9:	c7 45 e4 00 00 00 00 	movl   $0x0,-0x1c(%rbp)
   8004216bd0:	eb 53                	jmp    8004216c25 <mp_init+0x308>
-  8004216bd2:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  8004216bd2:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   8004216bd9:	00 00 00 
   8004216bdc:	8b 45 e4             	mov    -0x1c(%rbp),%eax
   8004216bdf:	48 c1 e0 03          	shl    $0x3,%rax
@@ -28613,7 +28613,7 @@ mpentry_end:
   8004216bed:	48 01 d0             	add    %rdx,%rax
   8004216bf0:	48 83 c0 70          	add    $0x70,%rax
   8004216bf4:	c6 40 08 00          	movb   $0x0,0x8(%rax)
-  8004216bf8:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  8004216bf8:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   8004216bff:	00 00 00 
   8004216c02:	8b 45 e4             	mov    -0x1c(%rbp),%eax
   8004216c05:	48 c1 e0 03          	shl    $0x3,%rax
@@ -28626,19 +28626,19 @@ mpentry_end:
   8004216c21:	83 45 e4 01          	addl   $0x1,-0x1c(%rbp)
   8004216c25:	83 7d e4 03          	cmpl   $0x3,-0x1c(%rbp)
   8004216c29:	76 a7                	jbe    8004216bd2 <mp_init+0x2b5>
-  8004216c2b:	48 b8 40 d2 69 04 80 	movabs $0x800469d240,%rax
+  8004216c2b:	48 b8 40 e2 69 04 80 	movabs $0x800469e240,%rax
   8004216c32:	00 00 00 
   8004216c35:	48 8b 00             	mov    (%rax),%rax
   8004216c38:	c7 40 04 01 00 00 00 	movl   $0x1,0x4(%rax)
-  8004216c3f:	48 b8 00 d0 69 04 80 	movabs $0x800469d000,%rax
+  8004216c3f:	48 b8 00 e0 69 04 80 	movabs $0x800469e000,%rax
   8004216c46:	00 00 00 
   8004216c49:	8b 00                	mov    (%rax),%eax
   8004216c4b:	85 c0                	test   %eax,%eax
   8004216c4d:	75 41                	jne    8004216c90 <mp_init+0x373>
-  8004216c4f:	48 b8 48 d2 69 04 80 	movabs $0x800469d248,%rax
+  8004216c4f:	48 b8 48 e2 69 04 80 	movabs $0x800469e248,%rax
   8004216c56:	00 00 00 
   8004216c59:	c7 00 01 00 00 00    	movl   $0x1,(%rax)
-  8004216c5f:	48 b8 00 e0 6d 04 80 	movabs $0x80046de000,%rax
+  8004216c5f:	48 b8 00 f0 6d 04 80 	movabs $0x80046df000,%rax
   8004216c66:	00 00 00 
   8004216c69:	48 c7 00 00 00 00 00 	movq   $0x0,(%rax)
   8004216c70:	48 bf 78 b3 21 04 80 	movabs $0x800421b378,%rdi
@@ -28648,10 +28648,10 @@ mpentry_end:
   8004216c86:	00 00 00 
   8004216c89:	ff d2                	callq  *%rdx
   8004216c8b:	e9 a2 00 00 00       	jmpq   8004216d32 <mp_init+0x415>
-  8004216c90:	48 b8 48 d2 69 04 80 	movabs $0x800469d248,%rax
+  8004216c90:	48 b8 48 e2 69 04 80 	movabs $0x800469e248,%rax
   8004216c97:	00 00 00 
   8004216c9a:	8b 10                	mov    (%rax),%edx
-  8004216c9c:	48 b8 40 d2 69 04 80 	movabs $0x800469d240,%rax
+  8004216c9c:	48 b8 40 e2 69 04 80 	movabs $0x800469e240,%rax
   8004216ca3:	00 00 00 
   8004216ca6:	48 8b 00             	mov    (%rax),%rax
   8004216ca9:	0f b6 00             	movzbl (%rax),%eax
@@ -28721,7 +28721,7 @@ outb(int port, uint8_t data)
   8004216d3d:	48 83 ec 08          	sub    $0x8,%rsp
   8004216d41:	89 7d fc             	mov    %edi,-0x4(%rbp)
   8004216d44:	89 75 f8             	mov    %esi,-0x8(%rbp)
-  8004216d47:	48 b8 08 e0 6d 04 80 	movabs $0x80046de008,%rax
+  8004216d47:	48 b8 08 f0 6d 04 80 	movabs $0x80046df008,%rax
   8004216d4e:	00 00 00 
   8004216d51:	48 8b 00             	mov    (%rax),%rax
   8004216d54:	8b 55 fc             	mov    -0x4(%rbp),%edx
@@ -28730,7 +28730,7 @@ outb(int port, uint8_t data)
   8004216d5e:	48 01 c2             	add    %rax,%rdx
   8004216d61:	8b 45 f8             	mov    -0x8(%rbp),%eax
   8004216d64:	89 02                	mov    %eax,(%rdx)
-  8004216d66:	48 b8 08 e0 6d 04 80 	movabs $0x80046de008,%rax
+  8004216d66:	48 b8 08 f0 6d 04 80 	movabs $0x80046df008,%rax
   8004216d6d:	00 00 00 
   8004216d70:	48 8b 00             	mov    (%rax),%rax
   8004216d73:	48 83 c0 20          	add    $0x20,%rax
@@ -28741,13 +28741,13 @@ outb(int port, uint8_t data)
 0000008004216d7b <lapic_init>:
   8004216d7b:	55                   	push   %rbp
   8004216d7c:	48 89 e5             	mov    %rsp,%rbp
-  8004216d7f:	48 b8 00 e0 6d 04 80 	movabs $0x80046de000,%rax
+  8004216d7f:	48 b8 00 f0 6d 04 80 	movabs $0x80046df000,%rax
   8004216d86:	00 00 00 
   8004216d89:	48 8b 00             	mov    (%rax),%rax
   8004216d8c:	48 85 c0             	test   %rax,%rax
   8004216d8f:	75 05                	jne    8004216d96 <lapic_init+0x1b>
   8004216d91:	e9 da 01 00 00       	jmpq   8004216f70 <lapic_init+0x1f5>
-  8004216d96:	48 b8 00 e0 6d 04 80 	movabs $0x80046de000,%rax
+  8004216d96:	48 b8 00 f0 6d 04 80 	movabs $0x80046df000,%rax
   8004216d9d:	00 00 00 
   8004216da0:	48 8b 00             	mov    (%rax),%rax
   8004216da3:	be 00 10 00 00       	mov    $0x1000,%esi
@@ -28755,7 +28755,7 @@ outb(int port, uint8_t data)
   8004216dab:	48 b8 8f 40 20 04 80 	movabs $0x800420408f,%rax
   8004216db2:	00 00 00 
   8004216db5:	ff d0                	callq  *%rax
-  8004216db7:	48 ba 08 e0 6d 04 80 	movabs $0x80046de008,%rdx
+  8004216db7:	48 ba 08 f0 6d 04 80 	movabs $0x80046df008,%rdx
   8004216dbe:	00 00 00 
   8004216dc1:	48 89 02             	mov    %rax,(%rdx)
   8004216dc4:	be 27 01 00 00       	mov    $0x127,%esi
@@ -28786,10 +28786,10 @@ outb(int port, uint8_t data)
   8004216e2e:	48 89 c2             	mov    %rax,%rdx
   8004216e31:	48 c1 e2 04          	shl    $0x4,%rdx
   8004216e35:	48 01 d0             	add    %rdx,%rax
-  8004216e38:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  8004216e38:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   8004216e3f:	00 00 00 
   8004216e42:	48 01 c2             	add    %rax,%rdx
-  8004216e45:	48 b8 40 d2 69 04 80 	movabs $0x800469d240,%rax
+  8004216e45:	48 b8 40 e2 69 04 80 	movabs $0x800469e240,%rax
   8004216e4c:	00 00 00 
   8004216e4f:	48 8b 00             	mov    (%rax),%rax
   8004216e52:	48 39 c2             	cmp    %rax,%rdx
@@ -28804,7 +28804,7 @@ outb(int port, uint8_t data)
   8004216e77:	48 b8 39 6d 21 04 80 	movabs $0x8004216d39,%rax
   8004216e7e:	00 00 00 
   8004216e81:	ff d0                	callq  *%rax
-  8004216e83:	48 b8 08 e0 6d 04 80 	movabs $0x80046de008,%rax
+  8004216e83:	48 b8 08 f0 6d 04 80 	movabs $0x80046df008,%rax
   8004216e8a:	00 00 00 
   8004216e8d:	48 8b 00             	mov    (%rax),%rax
   8004216e90:	48 83 c0 30          	add    $0x30,%rax
@@ -28849,7 +28849,7 @@ outb(int port, uint8_t data)
   8004216f36:	00 00 00 
   8004216f39:	ff d0                	callq  *%rax
   8004216f3b:	90                   	nop
-  8004216f3c:	48 b8 08 e0 6d 04 80 	movabs $0x80046de008,%rax
+  8004216f3c:	48 b8 08 f0 6d 04 80 	movabs $0x80046df008,%rax
   8004216f43:	00 00 00 
   8004216f46:	48 8b 00             	mov    (%rax),%rax
   8004216f49:	48 05 00 03 00 00    	add    $0x300,%rax
@@ -28868,12 +28868,12 @@ outb(int port, uint8_t data)
 0000008004216f72 <cpunum>:
   8004216f72:	55                   	push   %rbp
   8004216f73:	48 89 e5             	mov    %rsp,%rbp
-  8004216f76:	48 b8 08 e0 6d 04 80 	movabs $0x80046de008,%rax
+  8004216f76:	48 b8 08 f0 6d 04 80 	movabs $0x80046df008,%rax
   8004216f7d:	00 00 00 
   8004216f80:	48 8b 00             	mov    (%rax),%rax
   8004216f83:	48 85 c0             	test   %rax,%rax
   8004216f86:	74 18                	je     8004216fa0 <cpunum+0x2e>
-  8004216f88:	48 b8 08 e0 6d 04 80 	movabs $0x80046de008,%rax
+  8004216f88:	48 b8 08 f0 6d 04 80 	movabs $0x80046df008,%rax
   8004216f8f:	00 00 00 
   8004216f92:	48 8b 00             	mov    (%rax),%rax
   8004216f95:	48 83 c0 20          	add    $0x20,%rax
@@ -28887,7 +28887,7 @@ outb(int port, uint8_t data)
 0000008004216fa7 <lapic_eoi>:
   8004216fa7:	55                   	push   %rbp
   8004216fa8:	48 89 e5             	mov    %rsp,%rbp
-  8004216fab:	48 b8 08 e0 6d 04 80 	movabs $0x80046de008,%rax
+  8004216fab:	48 b8 08 f0 6d 04 80 	movabs $0x80046df008,%rax
   8004216fb2:	00 00 00 
   8004216fb5:	48 8b 00             	mov    (%rax),%rax
   8004216fb8:	48 85 c0             	test   %rax,%rax
@@ -28931,7 +28931,7 @@ outb(int port, uint8_t data)
   8004217024:	48 c1 e8 0c          	shr    $0xc,%rax
   8004217028:	89 45 ec             	mov    %eax,-0x14(%rbp)
   800421702b:	8b 55 ec             	mov    -0x14(%rbp),%edx
-  800421702e:	48 b8 f0 b5 69 04 80 	movabs $0x800469b5f0,%rax
+  800421702e:	48 b8 f0 c5 69 04 80 	movabs $0x800469c5f0,%rax
   8004217035:	00 00 00 
   8004217038:	48 8b 00             	mov    (%rax),%rax
   800421703b:	48 39 c2             	cmp    %rax,%rdx
@@ -29024,7 +29024,7 @@ outb(int port, uint8_t data)
   8004217186:	00 00 00 
   8004217189:	ff d0                	callq  *%rax
   800421718b:	90                   	nop
-  800421718c:	48 b8 08 e0 6d 04 80 	movabs $0x80046de008,%rax
+  800421718c:	48 b8 08 f0 6d 04 80 	movabs $0x80046df008,%rax
   8004217193:	00 00 00 
   8004217196:	48 8b 00             	mov    (%rax),%rax
   8004217199:	48 05 00 03 00 00    	add    $0x300,%rax
@@ -29136,7 +29136,7 @@ read_rbp(void)
   800421729a:	48 89 c2             	mov    %rax,%rdx
   800421729d:	48 c1 e2 04          	shl    $0x4,%rdx
   80042172a1:	48 01 d0             	add    %rdx,%rax
-  80042172a4:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  80042172a4:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   80042172ab:	00 00 00 
   80042172ae:	48 01 d0             	add    %rdx,%rax
   80042172b1:	48 39 c3             	cmp    %rax,%rbx
@@ -29213,7 +29213,7 @@ read_rbp(void)
   8004217397:	48 89 c2             	mov    %rax,%rdx
   800421739a:	48 c1 e2 04          	shl    $0x4,%rdx
   800421739e:	48 01 d0             	add    %rdx,%rax
-  80042173a1:	48 ba 20 d0 69 04 80 	movabs $0x800469d020,%rdx
+  80042173a1:	48 ba 20 e0 69 04 80 	movabs $0x800469e020,%rdx
   80042173a8:	00 00 00 
   80042173ab:	48 01 c2             	add    %rax,%rdx
   80042173ae:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
@@ -29393,7 +29393,7 @@ read_rbp(void)
   8004217655:	48 b8 8f 40 20 04 80 	movabs $0x800420408f,%rax
   800421765c:	00 00 00 
   800421765f:	ff d0                	callq  *%rax
-  8004217661:	48 ba 20 d7 49 04 80 	movabs $0x800449d720,%rdx
+  8004217661:	48 ba 20 e7 49 04 80 	movabs $0x800449e720,%rdx
   8004217668:	00 00 00 
   800421766b:	48 89 02             	mov    %rax,(%rdx)
   800421766e:	c7 45 fc 00 00 00 00 	movl   $0x0,-0x4(%rbp)
@@ -29401,7 +29401,7 @@ read_rbp(void)
   800421767a:	8b 45 fc             	mov    -0x4(%rbp),%eax
   800421767d:	48 98                	cltq   
   800421767f:	48 69 d0 ee 05 00 00 	imul   $0x5ee,%rax,%rdx
-  8004217686:	48 b8 40 d8 49 04 80 	movabs $0x800449d840,%rax
+  8004217686:	48 b8 40 e8 49 04 80 	movabs $0x800449e840,%rax
   800421768d:	00 00 00 
   8004217690:	48 01 d0             	add    %rdx,%rax
   8004217693:	48 89 45 f0          	mov    %rax,-0x10(%rbp)
@@ -29424,14 +29424,14 @@ read_rbp(void)
   80042176e0:	ff ff ff 
   80042176e3:	48 8b 45 f0          	mov    -0x10(%rbp),%rax
   80042176e7:	48 01 c2             	add    %rax,%rdx
-  80042176ea:	48 b8 30 d7 49 04 80 	movabs $0x800449d730,%rax
+  80042176ea:	48 b8 30 e7 49 04 80 	movabs $0x800449e730,%rax
   80042176f1:	00 00 00 
   80042176f4:	8b 4d fc             	mov    -0x4(%rbp),%ecx
   80042176f7:	48 63 c9             	movslq %ecx,%rcx
   80042176fa:	48 c1 e1 04          	shl    $0x4,%rcx
   80042176fe:	48 01 c8             	add    %rcx,%rax
   8004217701:	48 89 10             	mov    %rdx,(%rax)
-  8004217704:	48 b8 30 d7 49 04 80 	movabs $0x800449d730,%rax
+  8004217704:	48 b8 30 e7 49 04 80 	movabs $0x800449e730,%rax
   800421770b:	00 00 00 
   800421770e:	8b 55 fc             	mov    -0x4(%rbp),%edx
   8004217711:	48 63 d2             	movslq %edx,%rdx
@@ -29441,11 +29441,11 @@ read_rbp(void)
   800421771f:	83 45 fc 01          	addl   $0x1,-0x4(%rbp)
   8004217723:	83 7d fc 0f          	cmpl   $0xf,-0x4(%rbp)
   8004217727:	0f 8e 4d ff ff ff    	jle    800421767a <e1000_attach+0x5c>
-  800421772d:	48 b8 20 d7 49 04 80 	movabs $0x800449d720,%rax
+  800421772d:	48 b8 20 e7 49 04 80 	movabs $0x800449e720,%rax
   8004217734:	00 00 00 
   8004217737:	48 8b 00             	mov    (%rax),%rax
   800421773a:	48 8d 90 00 38 00 00 	lea    0x3800(%rax),%rdx
-  8004217741:	48 b8 30 d7 49 04 80 	movabs $0x800449d730,%rax
+  8004217741:	48 b8 30 e7 49 04 80 	movabs $0x800449e730,%rax
   8004217748:	00 00 00 
   800421774b:	48 89 45 e8          	mov    %rax,-0x18(%rbp)
   800421774f:	48 b8 ff ff ff 03 80 	movabs $0x8003ffffff,%rax
@@ -29468,28 +29468,28 @@ read_rbp(void)
   800421779b:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
   800421779f:	48 01 c8             	add    %rcx,%rax
   80042177a2:	89 02                	mov    %eax,(%rdx)
-  80042177a4:	48 b8 20 d7 49 04 80 	movabs $0x800449d720,%rax
+  80042177a4:	48 b8 20 e7 49 04 80 	movabs $0x800449e720,%rax
   80042177ab:	00 00 00 
   80042177ae:	48 8b 00             	mov    (%rax),%rax
   80042177b1:	48 05 08 38 00 00    	add    $0x3808,%rax
   80042177b7:	c7 00 00 01 00 00    	movl   $0x100,(%rax)
-  80042177bd:	48 b8 20 d7 49 04 80 	movabs $0x800449d720,%rax
+  80042177bd:	48 b8 20 e7 49 04 80 	movabs $0x800449e720,%rax
   80042177c4:	00 00 00 
   80042177c7:	48 8b 00             	mov    (%rax),%rax
   80042177ca:	48 8d 90 10 38 00 00 	lea    0x3810(%rax),%rdx
-  80042177d1:	48 b8 20 d7 49 04 80 	movabs $0x800449d720,%rax
+  80042177d1:	48 b8 20 e7 49 04 80 	movabs $0x800449e720,%rax
   80042177d8:	00 00 00 
   80042177db:	48 8b 00             	mov    (%rax),%rax
   80042177de:	48 8d 88 18 38 00 00 	lea    0x3818(%rax),%rcx
   80042177e5:	b8 00 00 00 00       	mov    $0x0,%eax
   80042177ea:	89 01                	mov    %eax,(%rcx)
   80042177ec:	89 02                	mov    %eax,(%rdx)
-  80042177ee:	48 b8 20 d7 49 04 80 	movabs $0x800449d720,%rax
+  80042177ee:	48 b8 20 e7 49 04 80 	movabs $0x800449e720,%rax
   80042177f5:	00 00 00 
   80042177f8:	48 8b 00             	mov    (%rax),%rax
   80042177fb:	48 05 00 04 00 00    	add    $0x400,%rax
   8004217801:	c7 00 0a 01 04 00    	movl   $0x4010a,(%rax)
-  8004217807:	48 b8 20 d7 49 04 80 	movabs $0x800449d720,%rax
+  8004217807:	48 b8 20 e7 49 04 80 	movabs $0x800449e720,%rax
   800421780e:	00 00 00 
   8004217811:	48 8b 00             	mov    (%rax),%rax
   8004217814:	48 05 10 04 00 00    	add    $0x410,%rax
@@ -29500,7 +29500,7 @@ read_rbp(void)
   800421782f:	48 98                	cltq   
   8004217831:	48 c1 e0 0b          	shl    $0xb,%rax
   8004217835:	48 89 c2             	mov    %rax,%rdx
-  8004217838:	48 b8 a0 75 4a 04 80 	movabs $0x80044a75a0,%rax
+  8004217838:	48 b8 a0 85 4a 04 80 	movabs $0x80044a85a0,%rax
   800421783f:	00 00 00 
   8004217842:	48 01 d0             	add    %rdx,%rax
   8004217845:	48 89 45 e0          	mov    %rax,-0x20(%rbp)
@@ -29523,7 +29523,7 @@ read_rbp(void)
   8004217892:	ff ff ff 
   8004217895:	48 8b 45 e0          	mov    -0x20(%rbp),%rax
   8004217899:	48 01 c2             	add    %rax,%rdx
-  800421789c:	48 b8 20 37 4a 04 80 	movabs $0x80044a3720,%rax
+  800421789c:	48 b8 20 47 4a 04 80 	movabs $0x80044a4720,%rax
   80042178a3:	00 00 00 
   80042178a6:	8b 4d fc             	mov    -0x4(%rbp),%ecx
   80042178a9:	48 63 c9             	movslq %ecx,%rcx
@@ -29533,11 +29533,11 @@ read_rbp(void)
   80042178b6:	83 45 fc 01          	addl   $0x1,-0x4(%rbp)
   80042178ba:	81 7d fc e7 03 00 00 	cmpl   $0x3e7,-0x4(%rbp)
   80042178c1:	0f 8e 65 ff ff ff    	jle    800421782c <e1000_attach+0x20e>
-  80042178c7:	48 b8 20 d7 49 04 80 	movabs $0x800449d720,%rax
+  80042178c7:	48 b8 20 e7 49 04 80 	movabs $0x800449e720,%rax
   80042178ce:	00 00 00 
   80042178d1:	48 8b 00             	mov    (%rax),%rax
   80042178d4:	48 8d 90 00 28 00 00 	lea    0x2800(%rax),%rdx
-  80042178db:	48 b8 20 37 4a 04 80 	movabs $0x80044a3720,%rax
+  80042178db:	48 b8 20 47 4a 04 80 	movabs $0x80044a4720,%rax
   80042178e2:	00 00 00 
   80042178e5:	48 89 45 d8          	mov    %rax,-0x28(%rbp)
   80042178e9:	48 b8 ff ff ff 03 80 	movabs $0x8003ffffff,%rax
@@ -29560,22 +29560,22 @@ read_rbp(void)
   8004217935:	48 8b 45 d8          	mov    -0x28(%rbp),%rax
   8004217939:	48 01 c8             	add    %rcx,%rax
   800421793c:	89 02                	mov    %eax,(%rdx)
-  800421793e:	48 b8 20 d7 49 04 80 	movabs $0x800449d720,%rax
+  800421793e:	48 b8 20 e7 49 04 80 	movabs $0x800449e720,%rax
   8004217945:	00 00 00 
   8004217948:	48 8b 00             	mov    (%rax),%rax
   800421794b:	48 05 08 28 00 00    	add    $0x2808,%rax
   8004217951:	c7 00 80 3e 00 00    	movl   $0x3e80,(%rax)
-  8004217957:	48 b8 20 d7 49 04 80 	movabs $0x800449d720,%rax
+  8004217957:	48 b8 20 e7 49 04 80 	movabs $0x800449e720,%rax
   800421795e:	00 00 00 
   8004217961:	48 8b 00             	mov    (%rax),%rax
   8004217964:	48 05 10 28 00 00    	add    $0x2810,%rax
   800421796a:	c7 00 00 00 00 00    	movl   $0x0,(%rax)
-  8004217970:	48 b8 20 d7 49 04 80 	movabs $0x800449d720,%rax
+  8004217970:	48 b8 20 e7 49 04 80 	movabs $0x800449e720,%rax
   8004217977:	00 00 00 
   800421797a:	48 8b 00             	mov    (%rax),%rax
   800421797d:	48 05 18 28 00 00    	add    $0x2818,%rax
   8004217983:	c7 00 e7 03 00 00    	movl   $0x3e7,(%rax)
-  8004217989:	48 b8 20 d7 49 04 80 	movabs $0x800449d720,%rax
+  8004217989:	48 b8 20 e7 49 04 80 	movabs $0x800449e720,%rax
   8004217990:	00 00 00 
   8004217993:	48 8b 00             	mov    (%rax),%rax
   8004217996:	48 05 00 01 00 00    	add    $0x100,%rax
@@ -29590,7 +29590,7 @@ read_rbp(void)
   80042179ad:	48 83 ec 20          	sub    $0x20,%rsp
   80042179b1:	48 89 7d e8          	mov    %rdi,-0x18(%rbp)
   80042179b5:	89 75 e4             	mov    %esi,-0x1c(%rbp)
-  80042179b8:	48 b8 20 d7 49 04 80 	movabs $0x800449d720,%rax
+  80042179b8:	48 b8 20 e7 49 04 80 	movabs $0x800449e720,%rax
   80042179bf:	00 00 00 
   80042179c2:	48 8b 00             	mov    (%rax),%rax
   80042179c5:	48 85 c0             	test   %rax,%rax
@@ -29599,13 +29599,13 @@ read_rbp(void)
   80042179d1:	76 0a                	jbe    80042179dd <e1000_transmit+0x34>
   80042179d3:	b8 fd ff ff ff       	mov    $0xfffffffd,%eax
   80042179d8:	e9 39 01 00 00       	jmpq   8004217b16 <e1000_transmit+0x16d>
-  80042179dd:	48 b8 20 d7 49 04 80 	movabs $0x800449d720,%rax
+  80042179dd:	48 b8 20 e7 49 04 80 	movabs $0x800449e720,%rax
   80042179e4:	00 00 00 
   80042179e7:	48 8b 00             	mov    (%rax),%rax
   80042179ea:	48 05 18 38 00 00    	add    $0x3818,%rax
   80042179f0:	8b 00                	mov    (%rax),%eax
   80042179f2:	89 45 fc             	mov    %eax,-0x4(%rbp)
-  80042179f5:	48 b8 30 d7 49 04 80 	movabs $0x800449d730,%rax
+  80042179f5:	48 b8 30 e7 49 04 80 	movabs $0x800449e730,%rax
   80042179fc:	00 00 00 
   80042179ff:	8b 55 fc             	mov    -0x4(%rbp),%edx
   8004217a02:	48 63 d2             	movslq %edx,%rdx
@@ -29628,7 +29628,7 @@ read_rbp(void)
   8004217a42:	8b 45 fc             	mov    -0x4(%rbp),%eax
   8004217a45:	48 98                	cltq   
   8004217a47:	48 69 c8 ee 05 00 00 	imul   $0x5ee,%rax,%rcx
-  8004217a4e:	48 b8 40 d8 49 04 80 	movabs $0x800449d840,%rax
+  8004217a4e:	48 b8 40 e8 49 04 80 	movabs $0x800449e840,%rax
   8004217a55:	00 00 00 
   8004217a58:	48 01 c1             	add    %rax,%rcx
   8004217a5b:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
@@ -29638,14 +29638,14 @@ read_rbp(void)
   8004217a6c:	00 00 00 
   8004217a6f:	ff d0                	callq  *%rax
   8004217a71:	8b 45 e4             	mov    -0x1c(%rbp),%eax
-  8004217a74:	48 ba 30 d7 49 04 80 	movabs $0x800449d730,%rdx
+  8004217a74:	48 ba 30 e7 49 04 80 	movabs $0x800449e730,%rdx
   8004217a7b:	00 00 00 
   8004217a7e:	8b 4d fc             	mov    -0x4(%rbp),%ecx
   8004217a81:	48 63 c9             	movslq %ecx,%rcx
   8004217a84:	48 c1 e1 04          	shl    $0x4,%rcx
   8004217a88:	48 01 ca             	add    %rcx,%rdx
   8004217a8b:	66 89 42 08          	mov    %ax,0x8(%rdx)
-  8004217a8f:	48 b8 30 d7 49 04 80 	movabs $0x800449d730,%rax
+  8004217a8f:	48 b8 30 e7 49 04 80 	movabs $0x800449e730,%rax
   8004217a96:	00 00 00 
   8004217a99:	8b 55 fc             	mov    -0x4(%rbp),%edx
   8004217a9c:	48 63 d2             	movslq %edx,%rdx
@@ -29654,21 +29654,21 @@ read_rbp(void)
   8004217aa6:	0f b6 40 0c          	movzbl 0xc(%rax),%eax
   8004217aaa:	83 e0 fe             	and    $0xfffffffe,%eax
   8004217aad:	89 c2                	mov    %eax,%edx
-  8004217aaf:	48 b8 30 d7 49 04 80 	movabs $0x800449d730,%rax
+  8004217aaf:	48 b8 30 e7 49 04 80 	movabs $0x800449e730,%rax
   8004217ab6:	00 00 00 
   8004217ab9:	8b 4d fc             	mov    -0x4(%rbp),%ecx
   8004217abc:	48 63 c9             	movslq %ecx,%rcx
   8004217abf:	48 c1 e1 04          	shl    $0x4,%rcx
   8004217ac3:	48 01 c8             	add    %rcx,%rax
   8004217ac6:	88 50 0c             	mov    %dl,0xc(%rax)
-  8004217ac9:	48 b8 30 d7 49 04 80 	movabs $0x800449d730,%rax
+  8004217ac9:	48 b8 30 e7 49 04 80 	movabs $0x800449e730,%rax
   8004217ad0:	00 00 00 
   8004217ad3:	8b 55 fc             	mov    -0x4(%rbp),%edx
   8004217ad6:	48 63 d2             	movslq %edx,%rdx
   8004217ad9:	48 c1 e2 04          	shl    $0x4,%rdx
   8004217add:	48 01 d0             	add    %rdx,%rax
   8004217ae0:	c6 40 0b 09          	movb   $0x9,0xb(%rax)
-  8004217ae4:	48 b8 20 d7 49 04 80 	movabs $0x800449d720,%rax
+  8004217ae4:	48 b8 20 e7 49 04 80 	movabs $0x800449e720,%rax
   8004217aeb:	00 00 00 
   8004217aee:	48 8b 00             	mov    (%rax),%rax
   8004217af1:	48 8d 88 18 38 00 00 	lea    0x3818(%rax),%rcx
@@ -29692,14 +29692,14 @@ read_rbp(void)
   8004217b1c:	48 83 ec 20          	sub    $0x20,%rsp
   8004217b20:	48 89 7d e8          	mov    %rdi,-0x18(%rbp)
   8004217b24:	89 75 e4             	mov    %esi,-0x1c(%rbp)
-  8004217b27:	48 b8 20 d7 49 04 80 	movabs $0x800449d720,%rax
+  8004217b27:	48 b8 20 e7 49 04 80 	movabs $0x800449e720,%rax
   8004217b2e:	00 00 00 
   8004217b31:	48 8b 00             	mov    (%rax),%rax
   8004217b34:	48 85 c0             	test   %rax,%rax
   8004217b37:	75 0a                	jne    8004217b43 <e1000_receive+0x2b>
   8004217b39:	b8 00 00 00 00       	mov    $0x0,%eax
   8004217b3e:	e9 59 01 00 00       	jmpq   8004217c9c <e1000_receive+0x184>
-  8004217b43:	48 b8 20 d7 49 04 80 	movabs $0x800449d720,%rax
+  8004217b43:	48 b8 20 e7 49 04 80 	movabs $0x800449e720,%rax
   8004217b4a:	00 00 00 
   8004217b4d:	48 8b 00             	mov    (%rax),%rax
   8004217b50:	48 05 18 28 00 00    	add    $0x2818,%rax
@@ -29714,7 +29714,7 @@ read_rbp(void)
   8004217b6f:	29 c1                	sub    %eax,%ecx
   8004217b71:	89 c8                	mov    %ecx,%eax
   8004217b73:	89 45 fc             	mov    %eax,-0x4(%rbp)
-  8004217b76:	48 b8 20 37 4a 04 80 	movabs $0x80044a3720,%rax
+  8004217b76:	48 b8 20 47 4a 04 80 	movabs $0x80044a4720,%rax
   8004217b7d:	00 00 00 
   8004217b80:	8b 55 fc             	mov    -0x4(%rbp),%edx
   8004217b83:	48 63 d2             	movslq %edx,%rdx
@@ -29727,7 +29727,7 @@ read_rbp(void)
   8004217b99:	75 0a                	jne    8004217ba5 <e1000_receive+0x8d>
   8004217b9b:	b8 00 00 00 00       	mov    $0x0,%eax
   8004217ba0:	e9 f7 00 00 00       	jmpq   8004217c9c <e1000_receive+0x184>
-  8004217ba5:	48 b8 20 37 4a 04 80 	movabs $0x80044a3720,%rax
+  8004217ba5:	48 b8 20 47 4a 04 80 	movabs $0x80044a4720,%rax
   8004217bac:	00 00 00 
   8004217baf:	8b 55 fc             	mov    -0x4(%rbp),%edx
   8004217bb2:	48 63 d2             	movslq %edx,%rdx
@@ -29751,7 +29751,7 @@ read_rbp(void)
   8004217bfc:	41 ff d0             	callq  *%r8
   8004217bff:	8b 45 e4             	mov    -0x1c(%rbp),%eax
   8004217c02:	89 45 f8             	mov    %eax,-0x8(%rbp)
-  8004217c05:	48 b8 20 37 4a 04 80 	movabs $0x80044a3720,%rax
+  8004217c05:	48 b8 20 47 4a 04 80 	movabs $0x80044a4720,%rax
   8004217c0c:	00 00 00 
   8004217c0f:	8b 55 fc             	mov    -0x4(%rbp),%edx
   8004217c12:	48 63 d2             	movslq %edx,%rdx
@@ -29769,7 +29769,7 @@ read_rbp(void)
   8004217c39:	48 98                	cltq   
   8004217c3b:	48 c1 e0 0b          	shl    $0xb,%rax
   8004217c3f:	48 89 c1             	mov    %rax,%rcx
-  8004217c42:	48 b8 a0 75 4a 04 80 	movabs $0x80044a75a0,%rax
+  8004217c42:	48 b8 a0 85 4a 04 80 	movabs $0x80044a85a0,%rax
   8004217c49:	00 00 00 
   8004217c4c:	48 01 c1             	add    %rax,%rcx
   8004217c4f:	48 8b 45 e8          	mov    -0x18(%rbp),%rax
@@ -29778,14 +29778,14 @@ read_rbp(void)
   8004217c59:	48 b8 fb ff 20 04 80 	movabs $0x800420fffb,%rax
   8004217c60:	00 00 00 
   8004217c63:	ff d0                	callq  *%rax
-  8004217c65:	48 b8 20 37 4a 04 80 	movabs $0x80044a3720,%rax
+  8004217c65:	48 b8 20 47 4a 04 80 	movabs $0x80044a4720,%rax
   8004217c6c:	00 00 00 
   8004217c6f:	8b 55 fc             	mov    -0x4(%rbp),%edx
   8004217c72:	48 63 d2             	movslq %edx,%rdx
   8004217c75:	48 c1 e2 04          	shl    $0x4,%rdx
   8004217c79:	48 01 d0             	add    %rdx,%rax
   8004217c7c:	c6 40 0c 00          	movb   $0x0,0xc(%rax)
-  8004217c80:	48 b8 20 d7 49 04 80 	movabs $0x800449d720,%rax
+  8004217c80:	48 b8 20 e7 49 04 80 	movabs $0x800449e720,%rax
   8004217c87:	00 00 00 
   8004217c8a:	48 8b 00             	mov    (%rax),%rax
   8004217c8d:	48 8d 90 18 28 00 00 	lea    0x2818(%rax),%rdx
@@ -30444,7 +30444,7 @@ outl(int port, uint32_t data)
   80042185ae:	8b 45 ec             	mov    -0x14(%rbp),%eax
   80042185b1:	83 e0 f0             	and    $0xfffffff0,%eax
   80042185b4:	89 45 f4             	mov    %eax,-0xc(%rbp)
-  80042185b7:	48 b8 a0 b5 69 04 80 	movabs $0x800469b5a0,%rax
+  80042185b7:	48 b8 a0 c5 69 04 80 	movabs $0x800469c5a0,%rax
   80042185be:	00 00 00 
   80042185c1:	8b 00                	mov    (%rax),%eax
   80042185c3:	85 c0                	test   %eax,%eax
@@ -30469,7 +30469,7 @@ outl(int port, uint32_t data)
   8004218601:	8b 45 ec             	mov    -0x14(%rbp),%eax
   8004218604:	83 e0 fc             	and    $0xfffffffc,%eax
   8004218607:	89 45 f4             	mov    %eax,-0xc(%rbp)
-  800421860a:	48 b8 a0 b5 69 04 80 	movabs $0x800469b5a0,%rax
+  800421860a:	48 b8 a0 c5 69 04 80 	movabs $0x800469c5a0,%rax
   8004218611:	00 00 00 
   8004218614:	8b 00                	mov    (%rax),%eax
   8004218616:	85 c0                	test   %eax,%eax
@@ -30572,12 +30572,12 @@ outl(int port, uint32_t data)
   800421875d:	48 89 e5             	mov    %rsp,%rbp
   8004218760:	ba 10 00 00 00       	mov    $0x10,%edx
   8004218765:	be 00 00 00 00       	mov    $0x0,%esi
-  800421876a:	48 bf b0 b5 69 04 80 	movabs $0x800469b5b0,%rdi
+  800421876a:	48 bf b0 c5 69 04 80 	movabs $0x800469c5b0,%rdi
   8004218771:	00 00 00 
   8004218774:	48 b8 70 ff 20 04 80 	movabs $0x800420ff70,%rax
   800421877b:	00 00 00 
   800421877e:	ff d0                	callq  *%rax
-  8004218780:	48 bf b0 b5 69 04 80 	movabs $0x800469b5b0,%rdi
+  8004218780:	48 bf b0 c5 69 04 80 	movabs $0x800469c5b0,%rdi
   8004218787:	00 00 00 
   800421878a:	48 b8 2b 81 21 04 80 	movabs $0x800421812b,%rax
   8004218791:	00 00 00 
@@ -30588,7 +30588,7 @@ outl(int port, uint32_t data)
 0000008004218798 <time_init>:
   8004218798:	55                   	push   %rbp
   8004218799:	48 89 e5             	mov    %rsp,%rbp
-  800421879c:	48 b8 c0 b5 69 04 80 	movabs $0x800469b5c0,%rax
+  800421879c:	48 b8 c0 c5 69 04 80 	movabs $0x800469c5c0,%rax
   80042187a3:	00 00 00 
   80042187a6:	c7 00 00 00 00 00    	movl   $0x0,(%rax)
   80042187ac:	5d                   	pop    %rbp
@@ -30597,14 +30597,14 @@ outl(int port, uint32_t data)
 00000080042187ae <time_tick>:
   80042187ae:	55                   	push   %rbp
   80042187af:	48 89 e5             	mov    %rsp,%rbp
-  80042187b2:	48 b8 c0 b5 69 04 80 	movabs $0x800469b5c0,%rax
+  80042187b2:	48 b8 c0 c5 69 04 80 	movabs $0x800469c5c0,%rax
   80042187b9:	00 00 00 
   80042187bc:	8b 00                	mov    (%rax),%eax
   80042187be:	8d 50 01             	lea    0x1(%rax),%edx
-  80042187c1:	48 b8 c0 b5 69 04 80 	movabs $0x800469b5c0,%rax
+  80042187c1:	48 b8 c0 c5 69 04 80 	movabs $0x800469c5c0,%rax
   80042187c8:	00 00 00 
   80042187cb:	89 10                	mov    %edx,(%rax)
-  80042187cd:	48 b8 c0 b5 69 04 80 	movabs $0x800469b5c0,%rax
+  80042187cd:	48 b8 c0 c5 69 04 80 	movabs $0x800469c5c0,%rax
   80042187d4:	00 00 00 
   80042187d7:	8b 10                	mov    (%rax),%edx
   80042187d9:	89 d0                	mov    %edx,%eax
@@ -30612,7 +30612,7 @@ outl(int port, uint32_t data)
   80042187de:	01 d0                	add    %edx,%eax
   80042187e0:	01 c0                	add    %eax,%eax
   80042187e2:	89 c2                	mov    %eax,%edx
-  80042187e4:	48 b8 c0 b5 69 04 80 	movabs $0x800469b5c0,%rax
+  80042187e4:	48 b8 c0 c5 69 04 80 	movabs $0x800469c5c0,%rax
   80042187eb:	00 00 00 
   80042187ee:	8b 00                	mov    (%rax),%eax
   80042187f0:	39 c2                	cmp    %eax,%edx
@@ -30632,7 +30632,7 @@ outl(int port, uint32_t data)
 0000008004218820 <time_msec>:
   8004218820:	55                   	push   %rbp
   8004218821:	48 89 e5             	mov    %rsp,%rbp
-  8004218824:	48 b8 c0 b5 69 04 80 	movabs $0x800469b5c0,%rax
+  8004218824:	48 b8 c0 c5 69 04 80 	movabs $0x800469c5c0,%rax
   800421882b:	00 00 00 
   800421882e:	8b 10                	mov    (%rax),%edx
   8004218830:	89 d0                	mov    %edx,%eax

@@ -88,10 +88,10 @@ envid2env(envid_t envid, struct Env **env_store, bool checkperm)
 	struct Env *e;
 
 	// Following comment is what it should look like
-	// if (envid == 0) {
-	// 	*env_store = curenv;
-	// 	return 0;
-	// }
+	if (envid == 0) {
+		*env_store = curenv;
+		return 0;
+	}
 
 	// Look up the Env structure via the index part of the envid,
 	// then check the env_id field in that struct Env
@@ -111,13 +111,13 @@ envid2env(envid_t envid, struct Env **env_store, bool checkperm)
 	// If checkperm is set, the specified environment
 	// must be either the current environment
 	// or an immediate child of the current environment.
-	if (checkperm && e != curenv && e->env_parent_id != curenv->env_id) {
+	if (checkperm && e != curenv || e->env_parent_id != curenv->env_id) {
 		*env_store = 0;
 		return -E_BAD_ENV;
 	}
 
 	// should be *env_store = e;, this might literaly work tho
-	env_store = &e;
+	env_store = e;
 	return 0;
 }
 
@@ -673,6 +673,7 @@ env_run(struct Env *e)
 		// running
 		curenv = e;
 		e->env_status = ENV_RUNNING;
+        e->env_runs++
 
 		// Hint, Lab 0: An environment has started running. We should keep track of that somewhere, right?
 
