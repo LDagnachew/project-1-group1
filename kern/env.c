@@ -117,7 +117,7 @@ envid2env(envid_t envid, struct Env **env_store, bool checkperm)
 	}
 
 	// should be *env_store = e;, this might literaly work tho
-	env_store = e;
+	*env_store = e;
 	return 0;
 }
 
@@ -673,13 +673,14 @@ env_run(struct Env *e)
 		// running
 		curenv = e;
 		e->env_status = ENV_RUNNING;
-        e->env_runs++
+        e->env_runs++;
 
 		// Hint, Lab 0: An environment has started running. We should keep track of that somewhere, right?
 
 		// restore e's address space
-		if(e->env_type != ENV_TYPE_GUEST)
+		if(e->env_type != ENV_TYPE_GUEST) {
 			lcr3(e->env_cr3);
+		}
 	}
 
 	assert(e->env_status == ENV_RUNNING);

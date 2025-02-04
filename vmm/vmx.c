@@ -60,11 +60,17 @@ bool vmx_sel_resume(int num) {
  */
 bool vmx_check_support() {
 	uint32_t eax, ebx, ecx, edx;
-	cpuid( 0, &eax, &ebx, &ecx, &edx );
+	cpuid( 1, &eax, &ebx, &ecx, &edx );
 	/* Your code here */
-    panic("vmx_check_support not implemented\n");
-	cprintf("[VMM] VMX extension not supported.\n");
-	return false;
+    if(BIT(ecx,5) != 1){
+        panic("vmx_check_support not implemented\n");
+        printf("[VMM] VMX extension not supported.\n");
+	    return false;
+    }
+
+    return true;
+
+
 }
 
 /* This function reads the VMX-specific MSRs
