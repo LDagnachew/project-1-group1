@@ -63,7 +63,7 @@ bool vmx_check_support() {
 	cpuid(1, &eax, &ebx, &ecx, &edx);
 	/* Your code here */
     if(BIT(ecx,5) == 0){
-        printf("[VMM] VMX extension not supported.\n");
+        cprintf("[VMM] VMX extension not supported.\n");
 	    return false;
     }
 
@@ -86,9 +86,9 @@ bool vmx_check_support() {
 bool vmx_check_ept() {
 	/* Your code here */
     int msr_val = read_msr(IA32_VMX_PROCBASED_CTLS);
-    if((msr_val & (1U<<63)) != 0){
+    if((msr_val & (1ULL<<63)) != 0){
         msr_val = read_msr(IA32_VMX_PROCBASED_CTLS2);
-        if((msr_val & (1U<<33)) != 0)
+        if((msr_val & (1ULL<<33)) != 0)
             return true;
     }
 
