@@ -100,7 +100,7 @@ envid2env(envid_t envid, struct Env **env_store, bool checkperm)
 	// that used the same slot in the envs[] array).
 
 	// it should use the ENVX() macro found in inc/env.h, not straight reference
-	e = &envs[envid];
+	e = &envs[ENVX(envid)];
 	if (e->env_status == ENV_FREE || e->env_id != envid) {
 		*env_store = 0;
 		return -E_BAD_ENV;

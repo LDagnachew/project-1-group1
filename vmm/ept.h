@@ -14,6 +14,7 @@ int ept_alloc_static(epte_t *eptrt, struct VmxGuestInfo *ginfo);
 void free_guest_mem(epte_t* eptrt);
 void ept_gpa2hva(epte_t* eptrt, void *gpa, void **hva);
 int ept_page_insert(epte_t* eptrt, struct PageInfo* pp, void* gpa, int perm);
+int ept_lookup_gpa_helper(epte_t *eptrt, void *gpa, int level, int create, epte_t **epte_out);
 
 #define EPT_LEVELS 4
 
@@ -24,6 +25,7 @@ int ept_page_insert(epte_t* eptrt, struct PageInfo* pp, void* gpa, int perm);
 
 #define EPTE_ADDR	(~(PGSIZE - 1))
 #define EPTE_FLAGS	(PGSIZE - 1)
+#define GUEST_PHYS_TOP 0x00400000
 
 #define ADDR_TO_IDX(pa, n) \
     ((((uint64_t) (pa)) >> (12 + 9 * (n))) & ((1 << 9) - 1))

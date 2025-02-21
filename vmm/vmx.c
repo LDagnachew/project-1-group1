@@ -85,12 +85,17 @@ bool vmx_check_support() {
  */
 bool vmx_check_ept() {
 	/* Your code here */
-    int msr_val = read_msr(IA32_VMX_PROCBASED_CTLS);
-    if((msr_val & (1ULL<<63)) != 0){
-        msr_val = read_msr(IA32_VMX_PROCBASED_CTLS2);
-        if((msr_val & (1ULL<<33)) != 0)
-            return true;
+    uint64_t msr_val = read_msr(IA32_VMX_PROCBASED_CTLS);
+    if((msr_val & (1ULL<<63)) == 0){
+        return false;
     }
+
+	msr_val = read_msr(IA32_VMX_PROCBASED_CTLS2);
+
+    /* Check if EPT is supported */
+    if ((msr_val & (1ULL << 33)) != 0) {
+        return true;
+	}
 
 	cprintf("[VMM] EPT extension not supported.\n");
 	return false;
@@ -606,7 +611,6 @@ bitmap_setup(struct VmxGuestInfo *ginfo) {
  * Processor must be in VMX root operation before executing this function.
  */
 int vmx_vmrun( struct Env *e ) {
-
 	if ( e->env_type != ENV_TYPE_GUEST ) {
 		return -E_INVAL;
 	}
@@ -637,7 +641,7 @@ int vmx_vmrun( struct Env *e ) {
 		vmcs_ctls_init(e);
 
 		/* ept_alloc_static(e->env_pml4e, &e->env_vmxinfo); */
-
+		
 	} else {
 		// Make this VMCS working VMCS.
 		error = vmptrld(PADDR(e->env_vmxinfo.vmcs));
@@ -645,7 +649,7 @@ int vmx_vmrun( struct Env *e ) {
 			return -E_VMCS_INIT;
 		}
 	}
-
+	
 	vmcs_write64( VMCS_GUEST_RSP, curenv->env_tf.tf_rsp  );
 	vmcs_write64( VMCS_GUEST_RIP, curenv->env_tf.tf_rip );
     panic("asm_vmrun is incomplete");
