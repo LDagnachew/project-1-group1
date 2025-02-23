@@ -198,7 +198,6 @@ int ept_map_hva2gpa(epte_t *eptrt, void *hva, void *gpa, int perm,
 
     *found_entry = (epte_t)(page2pa(hva) | perm | __EPTE_TYPE(EPTE_TYPE_WB) | __EPTE_IPAT);
     // WE HAVE FOUND THE ENTRY!!!
-    // hva = KADDR(epte_addr(*found_entry));
     // update this entry by mapping GPA -> HPA epte
     // Get Host Physical from Kernel Virtual using KADDR
     return 0;

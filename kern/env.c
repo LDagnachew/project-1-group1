@@ -111,7 +111,7 @@ envid2env(envid_t envid, struct Env **env_store, bool checkperm)
 	// If checkperm is set, the specified environment
 	// must be either the current environment
 	// or an immediate child of the current environment.
-	if (checkperm && (e != curenv || e->env_parent_id != curenv->env_id)) {
+	if (checkperm && (e != curenv && e->env_parent_id != curenv->env_id)) {
 		*env_store = 0;
 		return -E_BAD_ENV;
 	}
@@ -676,7 +676,7 @@ env_run(struct Env *e)
         e->env_runs++;
 
 		// Hint, Lab 0: An environment has started running. We should keep track of that somewhere, right?
-
+		
 		// restore e's address space
 		if(e->env_type != ENV_TYPE_GUEST) {
 			lcr3(e->env_cr3);
@@ -689,6 +689,11 @@ env_run(struct Env *e)
 #ifndef VMM_GUEST
 	if(e->env_type == ENV_TYPE_GUEST) {
 		vmx_vmrun(e);
+		uint64_t error = vmcs_read64(0x4400);
+        cprintf("Error during VMLAUNCH/VMRESUME: VMX Error Code = %lu\n", error);
+		cprintf("VMCS_HOST_CR3 = 0x%lx\n", vmcs_read64(VMCS_HOST_CR3));
+		cprintf("VMCS_HOST_RSP = 0x%lx\n", vmcs_read64(VMCS_HOST_RSP));
+		cprintf("VMCS_HOST_RIP = 0x%lx\n", vmcs_read64(VMCS_HOST_RIP));
 		panic ("vmx_run never returns\n");
 	}
 	else {

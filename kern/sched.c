@@ -41,6 +41,7 @@ sched_yield(void)
 		i = NENV-1;
 	//cprintf("sched_yield searching from %d\n", i);
 
+	int r;
 	// Loop through all the environments at most once.
 	for (j = 1; j <= NENV; j++) {
 		k = (j + i) % NENV;
@@ -50,7 +51,12 @@ sched_yield(void)
             if(envs[k].env_type == ENV_TYPE_GUEST){
 				cprintf("[DEBUG] Attempting to start the guest VM...\n");
                 #ifndef VMM_GUEST
-                    vmxon();
+                vmxon();
+                // r = vmxon();
+                // if (r < 0) {
+                //     env_destroy(&envs[k]);
+                //     continue;
+                // }
                 #endif
             }
             env_run(&envs[k]);
@@ -63,7 +69,11 @@ sched_yield(void)
 			cprintf("[DEBUG] Attempting to start the guest VM...\n");
             #ifndef VMM_GUEST
                 vmxon();
-            #endif
+                // r = vmxon();
+                // if (r < 0) {
+                //     env_destroy(&envs[k]);
+                // }
+			#endif
         }
         env_run(curenv);
 	}

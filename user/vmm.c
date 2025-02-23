@@ -24,7 +24,6 @@ map_in_guest( envid_t guest, uintptr_t gpa, size_t memsz,
     void *srcva;
     size_t i;
     uintptr_t gpa_start = (uintptr_t)gpa;
-    uintptr_t gpa_end = gpa_start + filesz;
 
     //seek once to get to the fileoffset, or return if error.
     if((r = seek(fd, fileoffset)) < 0) {
@@ -34,7 +33,7 @@ map_in_guest( envid_t guest, uintptr_t gpa, size_t memsz,
     // Iterate over each page in the segment
     for (i = 0; i < memsz; i += PGSIZE) {
         // Use UTEMP for temporary page mapping
-        srcva = UTEMP; // Is this right ??
+        srcva = UTEMP;
         if ((r = sys_page_alloc(0, srcva, PTE_P | PTE_U | PTE_W)) < 0) {
             cprintf("1");
             return r; 
@@ -61,8 +60,8 @@ map_in_guest( envid_t guest, uintptr_t gpa, size_t memsz,
         }
 
         // Map the page into the guest's physical memory using sys_ept_map
-        //cprintf("Mapping HVA %p to GPA %p\n", srcva, (void *)(gpa_start + i));
-        if ((r = sys_ept_map(sys_getenvid(), srcva, guest, (void *)(gpa_start + i), __EPTE_READ | __EPTE_WRITE | __EPTE_EXEC)) < 0) {
+       
+        if ((r = sys_ept_map(sys_getenvid(), srcva, guest, (void *)(gpa_start + i), __EPTE_FULL)) < 0) {
             sys_page_unmap(0, srcva);
             return r;
         }
@@ -103,7 +102,6 @@ static int copy_guest_kern_gpa(envid_t guest, char* fname) {
         return -E_NOT_EXEC;
     }
 
-
     // Check ELF header
     if(elf->e_magic!=ELF_MAGIC) {
         return -E_NOT_EXEC;
@@ -141,11 +139,10 @@ static int copy_guest_kern_gpa(envid_t guest, char* fname) {
         if (p->p_type == ELF_PROG_LOAD) {
             // Convert guest virtual address (p_va) to guest physical address (gpa)
             uintptr_t gpa = p->p_pa;
-    
-            // Debugging: Check if GPA is now reasonable
-            cprintf("Mapping p_va=0x%lx to gpa=0x%lx\n", p->p_va, gpa);
-    
-            // Now pass the corrected gpa to map_in_guest()
+
+            // Debugging: Check GPA
+            //cprintf("Mapping p_va=0x%lx to gpa=0x%lx\n", p->p_va, gpa)
+            // Now pass the gpa to map_in_guest()
             if (map_in_guest(guest, p->p_pa, p->p_memsz, fd, p->p_filesz, p->p_offset) < 0) {
                 free(ph);
                 free(elf);
@@ -195,7 +192,6 @@ umain(int argc, char **argv) {
 #ifndef VMM_GUEST	
 	sys_vmx_incr_vmdisk_number();	//increase the vmdisk number
 	//create a new guest disk image
-	
 	vmdisk_number = sys_vmx_get_vmdisk_number();
 	snprintf(filename_buffer, 50, "/vmm/fs%d.img", vmdisk_number);
 	

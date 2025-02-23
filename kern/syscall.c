@@ -484,6 +484,7 @@ sys_ept_map(envid_t srcenvid, void *srcva,
 	// Make sure we have a corresponding page
     pte_t *pte;
     struct PageInfo *pg = page_lookup(src_env->env_pml4e, srcva, &pte);
+    // taken from sys_page_map
     if (perm == 0 || !pg || ((perm & PTE_W) && !(*pte & PTE_W))) {
         return -E_INVAL; 
     }
@@ -513,7 +514,7 @@ sys_env_mkguest(uint64_t gphysz, uint64_t gRIP)
     }
     if ((r = env_guest_alloc(&e, curenv->env_id)) < 0)
         return r;
-    e->env_type = ENV_TYPE_GUEST;
+
     e->env_status = ENV_NOT_RUNNABLE;
     e->env_vmxinfo.phys_sz = gphysz;
     e->env_tf.tf_rip = gRIP;
