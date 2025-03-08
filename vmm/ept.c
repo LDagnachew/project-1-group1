@@ -180,28 +180,33 @@ int ept_page_insert(epte_t *eptrt, struct PageInfo *pp, void *gpa, int perm)
 // Hint: use ept_lookup_gpa to create the intermediate
 //       ept levels, and return the final epte_t pointer.
 //       You should set the type to EPTE_TYPE_WB and set __EPTE_IPAT flag.
-int ept_map_hva2gpa(epte_t *eptrt, void *hva, void *gpa, int perm,
-                    int overwrite)
-{
+int ept_map_hva2gpa(epte_t* eptrt, void* hva, void* gpa, int perm, int overwrite) {
     /* Your code here */
-    epte_t *found_entry;
-    int r;
-    if ((r = ept_lookup_gpa(eptrt, gpa, perm, &found_entry)) < 0)
-    {
-        return r;
-    }
 
-    if (overwrite == 0 && (*found_entry & __EPTE_FULL))
-    {
+    // Check if eptrt is NULL
+    if (eptrt == NULL) {
         return -E_INVAL;
     }
 
-    *found_entry = (epte_t)(page2pa(hva) | perm | __EPTE_TYPE(EPTE_TYPE_WB) | __EPTE_IPAT);
-    // WE HAVE FOUND THE ENTRY!!!
-    // update this entry by mapping GPA -> HPA epte
-    // Get Host Physical from Kernel Virtual using KADDR
+    epte_t *found_entry;
+    int r;
+
+    // Ensure entry creation by passing 1 instead of perm
+    if ((r = ept_lookup_gpa(eptrt, gpa, 1, &found_entry)) < 0) {
+        return r;
+    }
+
+    // Remapping error: If already mapped and overwrite is not allowed
+    if (epte_page_vaddr(*found_entry) == (uintptr_t)hva && !overwrite) {
+        return -E_INVAL;
+    }
+
+    // Update entry: Map GPA -> HPA using PADDR for proper translation
+    *found_entry = (uint64_t)PADDR(hva) | perm | __EPTE_TYPE(EPTE_TYPE_WB) | __EPTE_IPAT;
+
     return 0;
 }
+
 
 int ept_alloc_static(epte_t *eptrt, struct VmxGuestInfo *ginfo)
 {

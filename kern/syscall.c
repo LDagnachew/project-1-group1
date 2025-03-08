@@ -468,7 +468,7 @@ sys_ept_map(envid_t srcenvid, void *srcva,
     int res;
     struct Env *guest_env, *src_env;
     // Check for Alignment and srcva >= UTOP
-    if ((res = envid2env(srcenvid, &src_env, 0)) < 0 || (res = envid2env(guest, &guest_env, 0)) < 0) {
+    if ((res = envid2env(srcenvid, &src_env, 1)) < 0 || (res = envid2env(guest, &guest_env, 1)) < 0) {
         return -E_BAD_ENV;
     }
     if (guest_env->env_type != ENV_TYPE_GUEST) {
@@ -485,11 +485,12 @@ sys_ept_map(envid_t srcenvid, void *srcva,
     pte_t *pte;
     struct PageInfo *pg = page_lookup(src_env->env_pml4e, srcva, &pte);
     // taken from sys_page_map
-    if (perm == 0 || !pg || ((perm & PTE_W) && !(*pte & PTE_W))) {
+    if (!(perm & __EPTE_FULL) || !pg || ((perm & PTE_W) && !(*pte & PTE_W))) {
         return -E_INVAL; 
     }
     // Now we need to do the mapping
-    if ((res = ept_map_hva2gpa(guest_env->env_pml4e, pg, guest_pa, perm, 0)) < 0) {
+    void *kernel_va = page2kva(pg);
+    if ((res = ept_map_hva2gpa((epte_t *)guest_env->env_pml4e, kernel_va, guest_pa, perm, 0)) < 0) {    
         return res;
     }
 
