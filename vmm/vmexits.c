@@ -247,14 +247,15 @@ handle_vmcall(struct Trapframe *tf, struct VmxGuestInfo *gInfo, uint64_t *eptrt)
 	bool handled = false;
 	multiboot_info_t mbinfo;
 	int perm, r;
-	void *gpa_pg, *hva_pg;
-	envid_t to_env;
+	void *gpa_page, *hva_pg;
+	envid_t tgt_env;
 	uint32_t val;
 	// phys address of the multiboot map in the guest.
 	uint64_t multiboot_map_addr = 0x6000;
     memory_map_t arr[3];
     struct PageInfo  *temp_page = NULL;
     pte_t *host_va = NULL;
+	struct Env *env;
 
 	switch(tf->tf_regs.reg_rax) {
 	case VMX_VMCALL_MBMAP:
@@ -304,7 +305,7 @@ handle_vmcall(struct Trapframe *tf, struct VmxGuestInfo *gInfo, uint64_t *eptrt)
 
         handled = true;
 		break;
-	case VMX_VMCALL_IPCSEND:
+		case VMX_VMCALL_IPCSEND:
         /* Hint: */
 		// Issue the sys_ipc_send call to the host.
 		// 
@@ -315,6 +316,23 @@ handle_vmcall(struct Trapframe *tf, struct VmxGuestInfo *gInfo, uint64_t *eptrt)
 		//  this to a host virtual address for the IPC to work properly.
         //  Then you should call sys_ipc_try_send()
 		/* Your code here */
+			val = tf->tf_regs.reg_rcx;
+			perm = tf->tf_regs.reg_rsi;
+			tgt_env = tf->tf_regs.reg_rbx;
+			gpa_page = (void *)tf->tf_regs.reg_rdx;
+			int i;
+			if (tgt_env == VMX_HOST_FS_ENV && curenv->env_type == ENV_TYPE_GUEST) {
+			for (i = 0; i < NENV; i++) {
+				if (envs[i].env_type == ENV_TYPE_FS) {
+					env = &envs[i];
+					tgt_env = envs[i].env_id;
+					break;
+				}
+			}
+    }
+    ept_gpa2hva(eptrt, gpa_page, &hva_pg);
+    syscall(SYS_ipc_try_send, tgt_env, val, (uint64_t)hva_pg, perm, 0);
+    handled = true;
 		break;
 
 	case VMX_VMCALL_IPCRECV:
@@ -322,6 +340,9 @@ handle_vmcall(struct Trapframe *tf, struct VmxGuestInfo *gInfo, uint64_t *eptrt)
 		// NB: because recv can call schedule, clobbering the VMCS, 
 		// you should go ahead and increment rip before this call.
 		/* Your code here */
+    tf->tf_rip += vmcs_read32(VMCS_32BIT_VMEXIT_INSTRUCTION_LENGTH);
+    tf->tf_regs.reg_rax = syscall(SYS_ipc_recv, tf->tf_regs.reg_rbx, 0, 0, 0, 0);
+    handled = true;
 		break;
 	case VMX_VMCALL_LAPICEOI:
 		lapic_eoi();

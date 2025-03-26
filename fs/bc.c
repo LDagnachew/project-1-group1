@@ -52,12 +52,14 @@ bc_pgfault(struct UTrapframe *utf)
 		panic("in bc_pgfault, sys_page_alloc: %e", r);
 
 #ifndef VMM_GUEST
-
+  
 	if ((r = ide_read(blockno * BLKSECTS, addr, BLKSECTS)) < 0)
 		panic("in bc_pgfault, ide_read: %e", r);
 
 #else  // VMM GUEST
-
+  // now it's vm guest, r = host_read
+  if ((r = host_read(blockno * BLKSECTS, addr, BLKSECTS) < 0))
+      panic("in bc_pgfault, host_read: %e", r);
 	/* FIXME DP: Should be lab 8 */
     /* Your code here */
 
@@ -99,7 +101,8 @@ flush_block(void *addr)
 	ide_write(blockno * BLKSECTS, (void*) addr, BLKSECTS);
 
 #else
-
+  host_write(blockno * BLKSECTS, (void*) addr, BLKSECTS);
+  // host write
 	/* FIXME DP: Should be lab 8 */
     /* Your code here */
 
@@ -107,6 +110,7 @@ flush_block(void *addr)
 
 	sys_page_map(0, addr, 0, addr, uvpt[PGNUM(addr)] & PTE_SYSCALL);
 }
+
 
 // Test that the block cache works, by smashing the superblock and
 // reading it back.

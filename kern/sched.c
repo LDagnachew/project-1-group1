@@ -49,7 +49,7 @@ sched_yield(void)
 		if (envs[k].env_status == ENV_RUNNABLE) {
             /* Your code here */
             if(envs[k].env_type == ENV_TYPE_GUEST){
-				cprintf("[DEBUG] Attempting to start the guest VM...\n");
+				//cprintf("[DEBUG] Attempting to start the guest VM...\n");
                 #ifndef VMM_GUEST
                 vmxon();
                 // r = vmxon();
@@ -66,7 +66,7 @@ sched_yield(void)
 	if (curenv && curenv->env_status == ENV_RUNNING) {
         //cprintf("%d\n", curenv->env_type);
         if(curenv->env_type == ENV_TYPE_GUEST){
-			cprintf("[DEBUG] Attempting to start the guest VM...\n");
+			//cprintf("[DEBUG] Attempting to start the guest VM...\n");
             #ifndef VMM_GUEST
                 vmxon();
                 // r = vmxon();

@@ -1,0 +1,39 @@
+PRELAB
+
+1.	An easy way we can help prevent code duplication is by using macros in functions. We saw one example of 
+	this in Lab 1 with the VMM_GUEST macro. In many of the hypercalls we have in JOS, we need to 
+	differentiate when we are running in the guest or host. Give an example of a C program that 
+	adds up all the numbers in an array when the macro is set, and multiplies them when the macro is not set.
+
+	int compute_array(int array[], size) {
+		int result;
+	##ifdef VMM_GUEST
+			result = 0;
+			for (int i = 0; i < size; i++) {
+				result += arr[i];
+			}
+	##else
+			result = 1;
+			for (int i = 0; i < size; i++) {
+				result *= arr[i];
+			}
+	##endif
+		return result;
+	}
+
+	2.	In this lab, you will write some code to implement demand paging for JOS VMs. What is a buffer 
+	cache? What is demand paging? How do these methods impact the performance of the file system?
+
+	A buffer cache is essentially a portion of memory that the OS uses to store frequently accessed disk data. 
+	For example, if a file is read from the disk, it is stored in the buffer cache. For future reads, 
+	the OS can read from the buffer cache rather than having to access the disk again - improving latency and retrieval times.
+	Demand paging is a technique that loads pages of data into physical memory only when they are needed, 
+	rather than preloading all pages at the start (page faults). This approach allows for more efficient use of memory, 
+	as only the necessary pages are loaded, enabling the system to run larger applications with less physical memory. 
+	In the context of file systems, buffer caches reduce repeated I/O disk operations, 
+	leading to better file access time and overall better system performance, and demand paging optimizes memory utilization 
+	(particularly for larger applications) by loading only necessary memory into data at a time.
+
+	3.	After completing the lab, provide a simple diagram (you can just use function names and arrows) of the workflow of the functions that get called when a guest VM tries to read from a file.
+	Guest sys_call → vmcall → handle_vmcall(IPC_SEND) → sys_ipc_try_send (guest -> host) → ipc_host_recv → 
+	file_read → sys_ipc_try_send (host -> guest) → handle_vmcall (IPC_RECV) → sys_ipc_recv → guest resumes its execution
