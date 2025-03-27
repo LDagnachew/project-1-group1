@@ -106,13 +106,11 @@ ipc_host_send(envid_t to_env, uint32_t val, void *pg, int perm)
     	pg = (void*) UTOP;
 
     physaddr_t pa = PTE_ADDR(uvpt[PGNUM(pg)]);
-    asm("vmcall": "=a"(r): "0"(VMX_VMCALL_IPCSEND), "b"(to_env), "c"(val),
-      "d"(pa), "S"(perm));
+    asm("vmcall": "=a"(r): "0"(VMX_VMCALL_IPCSEND), "b"(to_env), "c"(val), "d"(pa), "S"(perm));
     // ISSUE FIRST VMCALL
     while(r == -E_IPC_NOT_RECV) {
 		sys_yield();
-    asm("vmcall": "=a"(r): "0"(VMX_VMCALL_IPCSEND), "b"(to_env), "c"(val),
-      "d"(pa), "S"(perm));
+		asm("vmcall": "=a"(r): "0"(VMX_VMCALL_IPCSEND), "b"(to_env), "c"(val), "d"(pa), "S"(perm));
 		// TRY VMCALL REPEATEDLY UNTIL YOU GET A RESPONSE
 	}
 	if (r < 0)

@@ -322,17 +322,17 @@ handle_vmcall(struct Trapframe *tf, struct VmxGuestInfo *gInfo, uint64_t *eptrt)
 			gpa_page = (void *)tf->tf_regs.reg_rdx;
 			int i;
 			if (tgt_env == VMX_HOST_FS_ENV && curenv->env_type == ENV_TYPE_GUEST) {
-			for (i = 0; i < NENV; i++) {
-				if (envs[i].env_type == ENV_TYPE_FS) {
-					env = &envs[i];
-					tgt_env = envs[i].env_id;
-					break;
+				for (i = 0; i < NENV; i++) {
+					if (envs[i].env_type == ENV_TYPE_FS) {
+						env = &envs[i];
+						tgt_env = envs[i].env_id;
+						break;
+					}
 				}
-			}
-    }
-    ept_gpa2hva(eptrt, gpa_page, &hva_pg);
-    syscall(SYS_ipc_try_send, tgt_env, val, (uint64_t)hva_pg, perm, 0);
-    handled = true;
+    	}
+		ept_gpa2hva(eptrt, gpa_page, &hva_pg);
+		syscall(SYS_ipc_try_send, tgt_env, val, (uint64_t)hva_pg, perm, 0);
+		handled = true;
 		break;
 
 	case VMX_VMCALL_IPCRECV:
@@ -340,9 +340,9 @@ handle_vmcall(struct Trapframe *tf, struct VmxGuestInfo *gInfo, uint64_t *eptrt)
 		// NB: because recv can call schedule, clobbering the VMCS, 
 		// you should go ahead and increment rip before this call.
 		/* Your code here */
-    tf->tf_rip += vmcs_read32(VMCS_32BIT_VMEXIT_INSTRUCTION_LENGTH);
-    tf->tf_regs.reg_rax = syscall(SYS_ipc_recv, tf->tf_regs.reg_rbx, 0, 0, 0, 0);
-    handled = true;
+		tf->tf_rip += vmcs_read32(VMCS_32BIT_VMEXIT_INSTRUCTION_LENGTH);
+		tf->tf_regs.reg_rax = syscall(SYS_ipc_recv, tf->tf_regs.reg_rbx, 0, 0, 0, 0);
+		handled = true;
 		break;
 	case VMX_VMCALL_LAPICEOI:
 		lapic_eoi();
